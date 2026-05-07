@@ -1,0 +1,77 @@
+
+// Text Align Mixin
+@each $align in (center, left, right) {
+	.text-#{$align} {
+		text-align: #{$align} !important;
+	}
+}
+
+
+// Mixin for text alignment
+@mixin generate-align($prefix) {
+    @each $align in (center, left, right) {
+        .#{$prefix}-text-#{$align} {
+            text-align: #{$align} !important;
+        }
+    }
+}
+
+// Mixin for additional display utilities
+@mixin generate-display($prefix) {
+    @each $display in (none, block, flex, inline-block) {
+        .#{$prefix}-d-#{$display} {
+            display: #{$display} !important;
+        }
+    }
+}
+
+// Include utility classes
+@mixin generate-utilities($prefix) {
+    @include generate-align($prefix);
+    @include generate-display($prefix);
+}
+
+// Generate utility classes for each breakpoint
+@include hd {
+    @include generate-utilities('hd');
+}
+
+@include xxl {
+    @include generate-utilities('xxl');
+}
+
+@include ml {
+    @include generate-utilities('ml');
+}
+
+@include xl {
+    @include generate-utilities('xl');
+}
+
+@include lg {
+    @include generate-utilities('lg');
+}
+
+@include md {
+    @include generate-utilities('md');
+}
+
+@include sm {
+    @include generate-utilities('sm');
+}
+
+@include xs {
+    @include generate-utilities('xs');
+}
+
+@include vxs {
+    @include generate-utilities('vxs');
+}
+
+@include laptop-m {
+    @include generate-utilities('ltm');
+}
+
+@include nestHub {
+    @include generate-utilities('nhb');
+}

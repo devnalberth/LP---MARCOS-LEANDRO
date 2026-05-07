@@ -1,0 +1,133 @@
+/*==== Video Section Three =====================*/
+.video-section {
+	&.style-3 {
+		position: relative;
+		z-index: 1;
+		background-image: none;
+		.video-area {
+			.video-box {
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				top: 50%;
+
+				@include xl{
+					top: 40%;
+				}
+				@include laptop-m{
+					top: 50%;
+				}
+
+				a {
+					@include center-flex;
+					width: 100px;
+					height: 100px;
+					border-radius: 50%;
+					background-color: $bg-color14;
+					backdrop-filter: blur(15px);
+					font-size: 24px;
+					color: $white-color;
+					i {
+						color: $theme-color;
+					}
+				}
+			}
+			.thumb{
+				img{
+					width: 100%;
+				}
+			}
+		}
+
+		.stats-container {
+			display: flex;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+			@include nestHub {
+				display: none;
+			}
+
+			@include md {
+				position: relative;
+			}
+
+			@include mobile-xl {
+				flex-direction: column;
+				gap: 0px;
+			}
+
+			.stat-box {
+				padding: 45px 0 48px 50px;
+				flex: inherit;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 324px;
+				@include respond-between($md + 1, $laptop-m) {
+					padding: 35px;
+				}
+
+				@include md {
+					width: 100%;
+					border-radius: 0;
+				}
+
+
+				@include tablet-s {
+					padding: 40px;
+				}
+
+				@include vxs {
+					padding: 30px;
+				}
+
+				@include md {
+					&:first-child {
+						border-bottom-left-radius: 0px;
+					}
+
+					&:nth-child(2) {
+						border-top-right-radius: 0px;
+					}
+				}
+
+				@include mobile-xl {
+					border-radius: 0;
+				}
+
+				.count-box {
+					font-size: 50px;
+					line-height: 1;
+					font-weight: 600;
+					margin-bottom: 0;
+					display: flex;
+					align-items: center;
+				}
+
+				.text {
+					font-size: 18px;
+					margin: 0;
+				}
+
+				&.white {
+					.count-box,
+					.text {
+						color: $white-color;
+					}
+				}
+
+				&.dark {
+					.count-box {
+						color: $dark-color;
+					}
+
+					.text {
+						color: $gray-color;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+/*-- Border Radius --*/
+@for $i from 0 through $space-count {
+	$size: 5 * $i;
+
+	.br-#{$size} {
+		border-radius: #{$size}px;
+	}
+
+	.br_tl-#{$size} {
+		border-top-left-radius: #{$size}px;
+	}
+
+	.br_tr-#{$size} {
+		border-top-right-radius: #{$size}px;
+	}
+
+	.br_bl-#{$size} {
+		border-bottom-left-radius: #{$size}px;
+	}
+
+	.br_br-#{$size} {
+		border-bottom-right-radius: #{$size}px;
+	}
+}
+
+/*-- Border Radius 0 --*/
+.br-0 {
+	border-radius: 0 !important;
+}
+
+.br_tl-0 {
+	border-top-left-radius: 0 !important;
+}
+
+.br_tr-0 {
+	border-top-right-radius: 0 !important;
+}
+
+.br_bl-0 {
+	border-bottom-left-radius: 0 !important;
+}
+
+.br_br-0 {
+	border-bottom-right-radius: 0 !important;
+}
+
+/*-- Mixin to Generate Border Radius Classes --*/
+@mixin generate-border-radius($prefix: '') {
+	@for $i from 0 through $space-count {
+		$size: 5 * $i;
+
+		.#{$prefix}br-#{$size} {
+			border-radius: #{$size}px;
+		}
+
+		.#{$prefix}br_tl-#{$size} {
+			border-top-left-radius: #{$size}px;
+		}
+
+		.#{$prefix}br_tr-#{$size} {
+			border-top-right-radius: #{$size}px;
+		}
+
+		.#{$prefix}br_bl-#{$size} {
+			border-bottom-left-radius: #{$size}px;
+		}
+
+		.#{$prefix}br_br-#{$size} {
+			border-bottom-right-radius: #{$size}px;
+		}
+	}
+}
+
+/*-- Default Global Classes --*/
+@include generate-border-radius();
+
+/*-- Responsive Breakpoints --*/
+@mixin responsive-border-radius($prefix) {
+	@include generate-border-radius('#{$prefix}-');
+}
+
+@include hd {
+	@include responsive-border-radius('hd');
+}
+
+@include xxl {
+	@include responsive-border-radius('xxl');
+}
+
+@include ml {
+	@include responsive-border-radius('ml');
+}
+
+@include xl {
+	@include responsive-border-radius('xl');
+}
+
+@include lg {
+	@include responsive-border-radius('lg');
+}
+
+@include md {
+	@include responsive-border-radius('md');
+}
+
+@include sm {
+	@include responsive-border-radius('sm');
+}
+
+@include xs {
+	@include responsive-border-radius('xs');
+}
+
+@include vxs {
+	@include responsive-border-radius('vxs');
+}
+
+@include laptop-m {
+	@include responsive-border-radius('ltm');
+}
+
+@include nestHub {
+	@include responsive-border-radius('nhb');
+}

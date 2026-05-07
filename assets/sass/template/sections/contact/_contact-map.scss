@@ -1,0 +1,17 @@
+/*==== Contact Map =====================*/
+.map-box {
+  line-height: 0;
+
+  .map-canvas {
+    height: 600px;
+    @include transition;
+
+    @include sm {
+      height: 520px;
+    }
+
+    @include xs {
+      height: 420px;
+    }
+  }
+}

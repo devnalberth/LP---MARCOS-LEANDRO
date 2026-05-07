@@ -1,0 +1,434 @@
+/*==== Hero Section Three =====================*/
+.hero-section.style-3 {
+    background-color: $dark-color;
+
+    @include md {
+        padding: 60px 0 0;
+    }
+
+    .outer-box {
+        position: relative;
+
+        @include ml {
+            padding: 0 12px;
+        }
+
+        @include mobile-m {
+            padding: 0;
+        }
+    }
+
+    .content-area {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 30px;
+        padding: 100px 0;
+
+        @include lg {
+            padding: 80px 0;
+        }
+
+        @include vxs {
+            padding: 60px 0;
+        }
+    }
+
+    .hero-content {
+        padding: 0;
+
+        .sub-title {
+            font-size: 18px;
+            color: $dark-color;
+            font-weight: 500;
+
+            @include mobile-xl {
+                font-size: 16px;
+            }
+
+            @include vxs {
+                flex-direction: column;
+                align-items: baseline;
+            }
+        }
+
+        .title {
+            font-size: 56px;
+            line-height: 1.18;
+            color: $dark-color;
+            font-weight: 700;
+            letter-spacing: normal;
+            margin-bottom: 0;
+
+            @include ml {
+                font-size: 48px;
+            }
+
+            @include nestHub {
+                font-size: 38px;
+            }
+
+            @include xs {
+                font-size: 45px;
+            }
+
+            @include tablet-s {
+                font-size: 42px;
+            }
+
+            @include mobile-xl {
+                font-size: 34px;
+            }
+
+            @include mobile-l {
+                font-size: 32px;
+            }
+
+            @include mobile-s {
+                font-size: 30px;
+            }
+        }
+
+        .border {
+            &::before {
+                @include absolute-content(60px, 2px, $theme-color);
+                animation: moveBorder 10s linear infinite;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 26px;
+            color: $gray-color;
+            margin: -3px 0 41px;
+
+            @include nestHub {
+                br {
+                    display: none;
+                }
+            }
+
+            @include xs {
+                br {
+                    display: none;
+                }
+            }
+
+        }
+
+        @include nestHub {
+            .hero-btn {
+                flex-direction: column;
+                align-items: start !important;
+            }
+        }
+
+        @include mobile-xl {
+            .hero-btn {
+                flex-direction: column;
+                align-items: start !important;
+            }
+        }
+
+        .contact-info {
+            @include center-flex;
+            justify-content: flex-start;
+            gap: 10px;
+
+            &:hover {
+                .number {
+                    color: $theme-color;
+                }
+            }
+
+            .icon {
+                @include center-flex;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background-color: $theme-color;
+                font-size: 24px;
+                color: $white-color;
+
+                i {
+                    @include filter-white-color;
+                }
+            }
+
+            .number {
+                font-size: 16px;
+                line-height: 26px;
+                color: $dark-color;
+                font-weight: 600;
+                @include transition;
+            }
+        }
+    }
+
+    .hero-right {
+        position: relative;
+        padding-left: 38px;
+
+        @include lg {
+            padding-left: 0;
+        }
+
+        .image-box {
+            position: relative;
+
+            .image-group {
+                .image2 {
+                    display: flex;
+                    justify-content: end;
+                    margin-top: -140px;
+                    margin-right: -50px;
+
+                    @include xxl {
+                        margin-right: -20px
+                    }
+
+                    @include ml {
+                        margin-right: -40px
+                    }
+
+                    @include xl {
+                        margin-right: 10px
+                    }
+
+                    @include nestHub {
+                        margin-right: 0
+                    }
+
+                    @include md {
+                        margin-right: 270px;
+                    }
+
+                    @include tablet-l {
+                        margin-right: 121px;
+                    }
+
+                    @include tablet-s {
+                        margin-right: 0;
+                        justify-content: center;
+                    }
+
+                    @include mobile-xl {
+                        margin-top: 30px
+                    }
+
+                    .inner-box {
+                        @include center-flex;
+                        align-items: flex-end;
+                        width: 300px;
+                        height: 350px;
+                        border-radius: 10px;
+                        background-color: $dark-color3;
+                        position: relative;
+                        z-index: 1;
+                        overflow: hidden;
+
+                        @include mobile-xl {
+                            width: 100%;
+                        }
+
+                        .img {
+                            width: 260px;
+                            height: 212px;
+                            object-fit: cover;
+                        }
+
+                        .ellipse-path {
+                            @include absolute-content(453px, 453px, rgba(255, 255, 255, 0.07));
+                            border-radius: 50%;
+                            bottom: -285px;
+                            z-index: -1;
+                        }
+
+                        .downloads-card {
+                            @include absolute-centerX;
+                            top: 45px;
+                            text-align: center;
+
+
+                            .download {
+                                font-size: 14px;
+                                color: $white-color;
+                                font-weight: 400;
+                                margin-bottom: 13px;
+                            }
+
+                            .count-box {
+                                font-size: 50px;
+                                color: $theme-color2;
+                                font-weight: 600;
+                                display: flex;
+                                align-items: center;
+                                gap: 15px;
+
+                                .icon {
+                                    @include center-flex;
+                                    width: 42px;
+                                    height: 42px;
+                                    border-radius: 50%;
+                                    background-color: $theme-color2;
+                                    font-size: 24px;
+                                    color: $dark-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .info-box {
+                @include center-flex;
+                gap: 15px;
+                width: 310px;
+                height: 120px;
+                border-radius: 10px;
+                filter: drop-shadow(0px 20px 25px rgba(204, 219, 219, 0.3));
+                background-color: $white-color;
+                position: absolute;
+                bottom: 40px;
+
+                @include xl {
+                    bottom: 70px;
+                    z-index: 1;
+                }
+
+                @include nestHub {
+                    display: none
+                }
+
+                @include md {
+                    bottom: 40px;
+                }
+
+                @include xs {
+                    display: none;
+                }
+
+                .img {
+                    border-radius: 50%;
+                }
+
+                .info {
+                    .name {
+                        font-size: 20px;
+                        color: $dark-color;
+                        font-weight: 500;
+                        margin-bottom: 0;
+                    }
+
+                    .position {
+                        font-size: 15px;
+                        color: $gray-color;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .agency-info {
+            @include center-flex;
+            flex-direction: column;
+            width: 140px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: $theme-color2;
+            position: absolute;
+            top: 120px;
+            right: -140px;
+            z-index: 2;
+
+            @include xxl {
+                top: 48px;
+                right: -20px;
+            }
+
+            @include xl {
+                right: 10px;
+            }
+
+            @include nestHub {
+                display: none
+            }
+
+            @include md {
+                right: 171px;
+                top: 120px;
+            }
+
+            @include tablet-l {
+                right: 33px;
+            }
+
+            @include mobile-xl {
+                display: none;
+            }
+
+            &:hover .icon i {
+                @include animation(mirrorEffect, 0.5s, ease-in-out);
+            }
+
+            .icon {
+                @include center-flex;
+                width: 48px;
+                height: 48px;
+                font-size: 25px;
+                color: $theme-color2;
+                background-color: $dark-color;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 20px;
+                color: $dark-color;
+                font-weight: 500;
+                margin-bottom: 0;
+                text-align: center;
+            }
+        }
+
+        .dot-shape {
+            position: absolute;
+            top: 119px;
+            right: 20px;
+
+            @include md {
+                right: 333px;
+            }
+
+            @include tablet-l {
+                right: 195px;
+            }
+
+            @include xs {
+                display: none;
+            }
+        }
+
+        .circle-path_shape {
+            position: absolute;
+            content: "";
+            left: 277px;
+            top: 220px;
+            width: 258px;
+            height: 258px;
+            border-radius: 50%;
+            background-color: $theme-color;
+            z-index: -1;
+
+            @include mobile-xl {
+                top: 150px;
+            }
+
+            @include vxs {
+                top: 125px;
+            }
+        }
+    }
+
+}

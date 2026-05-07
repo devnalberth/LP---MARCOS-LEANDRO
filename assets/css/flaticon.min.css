@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'flaticon';
+  src: url('../fonts/flaticon.eot?hh7uw3');
+  src: url('../fonts/flaticon.eot?hh7uw3#iefix') format('embedded-opentype'),
+    url('../fonts/flaticon.ttf?hh7uw3') format('truetype'),
+    url('../fonts/flaticon.woff?hh7uw3') format('woff'),
+    url('../fonts/flaticon.svg?hh7uw3#flaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="flaticon-"],
+[class*=" flaticon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'flaticon' !important;
+  display: inline-block;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-affiliate-marketing:before {
+  content: "\e900";
+}
+.flaticon-arrows:before {
+  content: "\e901";
+}
+.flaticon-exchange:before {
+  content: "\e902";
+}
+.flaticon-faq:before {
+  content: "\e903";
+}
+.flaticon-help:before {
+  content: "\e904";
+}
+.flaticon-money-xchange:before {
+  content: "\e905";
+}
+.flaticon-multiple-users:before {
+  content: "\e906";
+}
+.flaticon-people:before {
+  content: "\e907";
+}
+.flaticon-quote:before {
+  content: "\e908";
+}
+.flaticon-right-up:before {
+  content: "\e909";
+}
+.flaticon-service:before {
+  content: "\e90a";
+}
+.flaticon-star-of-david:before {
+  content: "\e90b";
+}
+.flaticon-stock-exchange:before {
+  content: "\e90c";
+}

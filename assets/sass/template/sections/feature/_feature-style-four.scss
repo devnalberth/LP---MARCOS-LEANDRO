@@ -1,0 +1,175 @@
+/*==== Feature Section Four =====================*/
+.feature-section {
+	&.style-4 {
+		.feature-title-area {
+			@include xs{
+				flex-direction: column;
+				align-items: start;
+			}
+			.service-btn {
+				@include center-flex;
+			}
+		}
+	}
+}
+
+.feature-box-four {
+	position: relative;
+	overflow: hidden;
+
+	&.current,
+	&:hover {
+		.image-box {
+			.thumb img {
+				transform: scale(1.1) rotate(-1deg);
+			}
+
+			.service-icon {
+				color: $white-color;
+
+				&::before {
+					width: 100%;
+				}
+
+				img {
+					@include filter-white-color;
+				}
+
+				svg {
+					fill: $white-color;
+				}
+			}
+		}
+
+		.content {
+			&::before {
+				width: 100%;
+			}
+
+			.service-btn {
+				padding-left: 195px;
+
+				@include nestHub {
+					padding-left: 152px;
+				}
+
+				&::before {
+					width: 190px;
+
+					@include nestHub {
+						width: 144px;
+					}
+				}
+			}
+		}
+	}
+
+	.image-box {
+		position: relative;
+		z-index: 1;
+
+		img {
+			@include transition;
+		}
+
+		.thumb {
+			img {
+				width: 100%;
+			}
+		}
+
+		.service-icon {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			@include center-flex;
+			width: 90px;
+			height: 90px;
+			background-color: $bg-color14;
+			backdrop-filter: blur(30px);
+			font-size: 46px;
+			color: $dark-color;
+
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				left: 0;
+				top: 0;
+				width: 0;
+				height: 100%;
+				background: $theme-color;
+				@include transition;
+			}
+
+			svg {
+				fill: $dark-color;
+				width: 46px;
+				height: 46px;
+			}
+		}
+	}
+
+	.content {
+		margin-left: 40px;
+		margin-top: -30px;
+		padding: 43px 30px 43px 35px;
+		background: $white-color;
+		position: relative;
+		z-index: 1;
+
+		@include lg {
+			margin-left: 0;
+		}
+
+		@include nestHub {
+			padding: 43px 20px 43px 20px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			top: 0;
+			width: 0;
+			height: 100%;
+			background: $theme-color3;
+			@include transition;
+		}
+
+		.title {
+			font-size: 24px;
+			color: $dark-color;
+			font-weight: 600;
+		}
+
+		.service-btn {
+			font-size: 16px;
+			color: $dark-color;
+			font-weight: 500;
+			position: relative;
+			z-index: 1;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 10px;
+				width: 0;
+				height: 1px;
+				background: $dark-color;
+				z-index: -1;
+				@include transition;
+			}
+		}
+	}
+}
+
+
+// dark page css
+.dark-mode{
+	.feature-section{
+		background: $dark-color !important;
+	}
+}

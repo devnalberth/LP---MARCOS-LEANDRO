@@ -1,0 +1,55 @@
+/*==== Case Studies Section Three =====================*/
+.case-studies-section {
+    &.style-3 {
+        .case-single-item {
+
+            &::before {
+                display: none;
+            }
+
+            .case-info {
+                position: static;
+                padding: 22px 0 30px;
+                border-bottom: 1px solid $border-color10;
+
+                .case-badge {
+                    margin-bottom: 0;
+
+                    span {
+                        color: $dark-color;
+                        background-color: $border-color;
+                        border-color: $border-color6;
+                        cursor: pointer;
+                        @include transition;
+
+                        &:hover {
+                            color: $white-color;
+                            background-color: $theme-color;
+                            border-color: $theme-color;
+                        }
+                    }
+                }
+
+                .title {
+                    margin-bottom: 15px;
+
+                    a {
+                        color: $dark-color;
+                        background: linear-gradient($dark-color 0%, $dark-color 98%);
+                        background-size: 0 2px;
+                        background-repeat: no-repeat;
+                        background-position: left 100%;
+                        @include transition;
+
+                        &:hover {
+                            color: $dark-color;
+                            background-size: 100% 2px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}

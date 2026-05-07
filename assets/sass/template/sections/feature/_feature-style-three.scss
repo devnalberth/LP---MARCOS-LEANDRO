@@ -1,0 +1,87 @@
+/*==== Feature Section Three =====================*/
+.feature-section {
+    &.style-3 {
+
+        .video-thumb {
+            position: relative;
+
+            .popup-video {
+                display: inline-block;
+                @include absolute-center;
+
+                .icon {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    color: $dark-color;
+                    background-color: $bg-color6;
+                    backdrop-filter: blur(10px);
+                    border: 1px solid $white-color;
+                    margin-right: 20px;
+                    transition: all 0.3s ease;
+                    outline: 20px solid $bg-color12;
+
+                }
+
+
+            }
+        }
+
+        .feature-item-box {
+            padding: 40px 40px 40px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            background-color: $bg-color10;
+
+            @include lg{
+                padding: 40px 20px 40px;
+            }
+
+            &:hover .icon i {
+                @include animation(mirror_effect, 0.8s, ease-in-out);
+            }
+
+            @include laptop-m {
+                padding: 50px 30px 40px;
+            }
+
+            @include nestHub {
+                padding: 40px 24px 40px;
+            }
+
+            .icon {
+                font-size: 50px;
+                color: $theme-color2;
+                @include transition;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font-size: 24px;
+                color: $white-color;
+                font-weight: 500;
+                @include transition;
+                margin-bottom: 6px;
+            }
+
+            .text {
+                font-size: 16px;
+                color: $gray-color2;
+                font-weight: 400;
+                @include transition;
+            }
+
+            .feature-btn {
+                color: $white-color;
+            }
+
+        }
+
+
+    }
+}

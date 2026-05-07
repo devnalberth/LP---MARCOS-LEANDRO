@@ -1,0 +1,222 @@
+/*==== Pricing Section One =====================*/
+.pricing-content-wrap {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    @include md {
+        display: block;
+
+        .title-area {
+            margin-bottom: 20px;
+        }
+    }
+
+    &>.text {
+        display: flex;
+        gap: 14px;
+
+        p {
+            font-size: 18px;
+            color: $dark-color;
+            margin: -5px 0 0;
+        }
+    }
+}
+
+.pricing-card {
+    background-color: $white-color;
+    padding: 50px 40px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    &.current,
+    &:hover {
+        .pricing-plan {
+            .path {
+                background-color: $dark-color;
+            }
+
+            .plan {
+                color: $theme-color2;
+            }
+
+            .price {
+                color: $white-color;
+            }
+
+            .billing-cycle {
+                color: $gray-color2;
+            }
+        }
+
+        .theme-btn {
+            &.bg-white {
+                color: $white-color;
+                background-color: $dark-color !important;
+            }
+        }
+    }
+
+    .pricing-plan {
+        .path {
+            background-color: $light-color2;
+            border-radius: 0 0 50% 50%;
+            width: 230px;
+            height: 222px;
+            position: absolute;
+            content: "";
+            z-index: -1;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-top: 18px solid $theme-color2;
+            @include transition;
+
+            &::before {
+                position: absolute;
+                right: -15px;
+                top: -18px;
+                content: "";
+                height: 15px;
+                width: 15px;
+                background: url('data:image/svg+xml,<svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11"><path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="%23c2df93"></path></svg>');
+                transform: rotate(0);
+            }
+
+            &::after {
+                position: absolute;
+                left: -15px;
+                top: -18px;
+                content: "";
+                height: 15px;
+                width: 15px;
+                background: url('data:image/svg+xml,<svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11"><path d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z" fill="%23c2df93"></path></svg>');
+                transform: rotate(90deg);
+            }
+        }
+
+        .plan {
+            color: $dark-color;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .price {
+            font-size: 50px;
+            line-height: 1;
+            color: $dark-color;
+            font-weight: 600;
+            margin: 16px 0 12px;
+        }
+
+        .billing-cycle {
+            margin: 0;
+            font-size: 16px;
+            color: $dark-color;
+        }
+    }
+
+
+    .features {
+        margin: 72px 0 46px 40px;
+        color: $dark-color;
+
+        @include nestHub {
+            margin: 72px 0 46px 0;
+        }
+
+        @include respond-between($xs + 1, $sm) {
+            margin: 72px 0 46px 0;
+        }
+
+        @include mobile-m {
+            margin: 72px 0 46px 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 17px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .checkmark {
+                color: $theme-color;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+
+            &.disabled {
+                color: $gray-color;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .theme-btn {
+        padding: 13px 40px;
+    }
+
+    .recommended-badge {
+        position: absolute;
+        top: 77px;
+        right: -17px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: $dark-color;
+        font-weight: 500;
+        transform: rotate(90deg);
+        gap: 8px;
+
+        @include nestHub {
+            right: -43px;
+        }
+
+        @include respond-between($xs + 1, $sm) {
+            right: -34px;
+        }
+
+        @include xs {
+            right: 13px;
+        }
+
+        @include tablet-s {
+            right: 7px;
+        }
+
+        @include mobile-xl {
+            right: -21px;
+        }
+
+        @include mobile-l {
+            right: -25px;
+        }
+
+        @include mobile-m {
+            right: -31px;
+        }
+
+        @include vxs {
+            right: -35px;
+        }
+
+        @include mobile-s {
+            right: -40px;
+        }
+
+        i {
+            color: $theme-color;
+        }
+    }
+
+}

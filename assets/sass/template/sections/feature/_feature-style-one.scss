@@ -1,0 +1,46 @@
+/*==== Feature Section One =====================*/
+.feature-single-box {
+    background-color: $white-color;
+    border-radius: 10px;
+    @include transition;
+    padding: 50px 50px;
+    text-align: center;
+
+    @include lg {
+        padding: 50px 30px 50px;
+    }
+
+    @include nestHub {
+        padding: 50px 15px 50px;
+    }
+
+    .icon {
+        font-size: 70px;
+        color: $dark-color;
+        margin-bottom: 34px;
+        @include transition;
+    }
+
+    .title {
+        font-size: 20px;
+        color: $dark-color;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        background-color: $dark-color;
+
+        .icon {
+            @include filter-theme-color2;
+
+            i {
+                @include animation(mirror_effect, 0.5s, ease-in-out);
+            }
+        }
+
+        .title {
+            color: $white-color;
+        }
+    }
+}

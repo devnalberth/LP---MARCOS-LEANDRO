@@ -1,0 +1,43 @@
+/*==== Join Section Inner=====================*/
+.join-section {
+    @include xxl {
+        .join-thumb {
+            div {
+
+                img {
+                    width: 683px;
+                    height: 657px;
+                    object-fit: cover;
+
+                    @include ml {
+                        max-width: 633px;
+                    }
+
+                    @include xl {
+                        max-width: 643px;
+                    }
+
+                    @include laptop-l {
+                        max-width: 612px;
+                    }
+
+                    @include lg {
+                        max-width: 572px;
+                    }
+
+                    @include laptop-m {
+                        max-width: 505px;
+                    }
+                }
+            }
+        }
+    }
+
+    .join-content-wrapper {
+        @include mobile-xl {
+            .sec-text br {
+                display: none;
+            }
+        }
+    }
+}

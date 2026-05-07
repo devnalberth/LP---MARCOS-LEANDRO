@@ -1,0 +1,61 @@
+/*==== Feature Section five =====================*/
+.feature-section {
+	&.style-5 {
+		overflow: hidden;
+		border-radius: 20px;
+		border-bottom-right-radius: 0;
+		@include lg {
+			border-radius: 0;
+		}
+		.feature-title-area {
+			.service-btn {
+				@include center-flex;
+			}
+			@include xs {
+				flex-direction: column;
+				align-items: start;
+			}
+		}
+	}
+}
+
+
+.feature-box-four {
+	&.dark {
+		.inner {
+			.content {
+				background: $dark-color3;
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					z-index: -1;
+					left: 0;
+					top: 0;
+					width: 0;
+					height: 100%;
+					background: inherit;
+					transition: all 0.4s ease 0s;
+				}
+				.title {
+					color: $white-color;
+					a {
+						color: $white-color;
+					}
+				}
+				.text {
+					color: $gray-color2;
+				}
+				.service-btn {
+					color: $white-color;
+					position: relative;
+					&::before {
+						background: $border-color13;
+					}
+				}
+			}
+		}
+	}
+}
+
+

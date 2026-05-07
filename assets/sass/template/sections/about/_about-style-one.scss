@@ -1,0 +1,188 @@
+/*==== About Section One =====================*/
+.about-middle-wrap {
+    .circle-box {
+        margin: 46px 0 40px;
+    }
+
+    .about-info {
+        .since {
+            margin-bottom: 11px;
+        }
+
+        p span {
+            text-decoration: underline;
+        }
+    }
+}
+
+.circle-box {
+    position: relative;
+    width: 142px;
+    height: 142px;
+    border-radius: 50%;
+    @include center-flex;
+    background: $white-color;
+
+    .logo-box {
+        position: absolute;
+    }
+
+    .text-inner {
+        svg {
+            width: 120px;
+            max-width: 100%;
+            height: auto;
+            overflow: visible;
+            word-spacing: 20px;
+            transform: rotate(0) scaleX(1) scaleY(1);
+        }
+
+        path {
+            fill: transparent;
+            stroke: transparent;
+            stroke-width: 1px;
+            @include transition-properties(0.3s stroke, 0.3s fill);
+        }
+
+        text {
+            fill: $dark-color;
+            direction: ltr;
+            @include transition-properties(0.3s stroke, 0.3s stroke-width, 0.3s fill);
+            font-size: 26px;
+            font-weight: 600;
+            font-family: $title-font;
+        }
+    }
+}
+
+.about-right-wrap {
+    @include mobile-xl {
+        flex: 1;
+    }
+
+    .experience-card {
+        @include center-flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 42px;
+        @include sm{
+            margin-bottom: 30px;
+        }
+
+        .years {
+            font-size: 80px;
+            line-height: 1;
+            font-weight: 700;
+            color: $white-color;
+            @include transparent-border($dark-color, 2px);
+
+            &::before {
+                position: absolute;
+                content: "+";
+                top: -4px;
+                right: -26px;
+                font-size: 18px;
+                line-height: 24px;
+                color: $white-color;
+                font-weight: 500;
+                text-shadow: none;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                border-radius: 12px;
+                background-color: $theme-color;
+            }
+        }
+
+        .text {
+            font-size: 24px;
+            line-height: 30px;
+            color: $dark-color;
+
+            span {
+                position: relative;
+
+                &::before {
+                    span.fw-semibold::before {
+                        position: absolute;
+                        content: "";
+                        right: -70%;
+                        top: 50%;
+                        width: 58px;
+                        height: 1px;
+                        background-color: #e3572b;
+                    }
+                }
+            }
+        }
+    }
+
+    .profile-card {
+        background: $white-color;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            @include absolute-content($width: 100%, $height: 100%, $background: none);
+            left: 0;
+            bottom: 0;
+            background-image: linear-gradient(0deg, rgb(9, 73, 73) 0%, rgb(9, 73, 73) 10%, rgba(9, 73, 73, 0) 58%, rgba(9, 73, 73, 0) 100%);
+        }
+
+        @include mobile-xl {
+            img {
+                width: 100%;
+            }
+        }
+
+        .profile-details {
+            position: absolute;
+            width: 100%;
+            bottom: 13px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .name {
+                font-size: 18px;
+                line-height: 24px;
+                color: $light-color2;
+                font-weight: 600;
+                margin-bottom: 3px;
+            }
+
+            .title {
+                opacity: 0.600;
+                font-size: 14px;
+                line-height: 24px;
+                color: $light-color2;
+            }
+        }
+    }
+}
+
+
+@include laptop-m {
+    .about-middle-wrap {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+@include md {
+    .about-middle-wrap {
+        .circle-box {
+            margin: 0 0 40px;
+        }
+    }
+    
+    .about-content-wrap {
+        .about-img img {
+            width: 100%;
+        }
+    }
+}

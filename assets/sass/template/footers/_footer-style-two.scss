@@ -1,0 +1,118 @@
+/*==== Fotter Style Two =====================*/
+.footer-section {
+    &.style-2 {
+
+
+
+        @include md {
+            &.br_bl-30.br_br-30 {
+                border-radius: 0 !important;
+            }
+        }
+
+        .footer-widget {
+            .big-title {
+                font-size: 50px;
+                line-height: 1.2;
+                color: $white-color;
+                margin-bottom: 38px;
+
+                @include ml {
+                    font-size: 40px;
+                }
+
+                @include sm{
+                    font-size: 32px;
+                }
+            }
+
+
+            &.social {
+                .hello-title {
+                    font-size: 24px;
+                    color: $white-color;
+                    font-weight: 500;
+                    margin-bottom: 21px;
+                }
+
+                p {
+                    +p {
+                        margin-top: 17px;
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        color: $white-color;
+
+                        &.number {
+                            font-size: 20px;
+                            line-height: 26px;
+                            font-weight: 500;
+                        }
+
+                        &:hover {
+                            color: $theme-color2;
+                        }
+                    }
+                }
+
+                hr {
+                    border: none;
+                    border-top: 1px solid $white-color;
+                    margin: 25px 0;
+                }
+            }
+
+            .social-links {
+                @include center-flex;
+                justify-content: flex-start;
+
+                a {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    color: $white-color;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    margin-right: 0;
+                    background-color: $bg-color12;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 1;
+
+                    +a {
+                        margin-left: 10px;
+                    }
+
+                    &.active,
+                    &:hover {
+                        color: $dark-color;
+
+                        &::before {
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 0;
+                        height: 100%;
+                        background-color: $theme-color2;
+                        z-index: -1;
+                        @include transition;
+                    }
+                }
+            }
+        }
+
+        .newsletter-form .form-group input[type=email] {
+            color: $white-color;
+            background-color: $bg-color10;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+/*==== Call To Action Section Two =====================*/
+.cta-section {
+    &.style-2 {
+        &.space {
+            @media (min-width: #{ $md + 1 }) {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+            }
+        }
+
+    }
+}

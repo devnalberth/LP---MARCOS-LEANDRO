@@ -1,0 +1,67 @@
+/*==== Gallery Section One =====================*/
+.gallery-section {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-single-box {
+    @include md {
+        height: 100%;
+    }
+
+    .gallery-thumb {
+        position: relative;
+
+        @include md {
+            height: 100%;
+        }
+
+        &::before {
+            @include absolute-content(100%, 100%, rgba(5, 49, 49, 0.5));
+            left: 0;
+            top: 0;
+            backdrop-filter: blur(7px);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        >img {
+            width: 100%;
+            object-fit: cover;
+
+            @include md {
+                height: 100%;
+            }
+        }
+
+        .gallery-thumb-view a {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            @include center-flex;
+            width: 80px;
+            height: 80px;
+            background-color: $white-color;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .gallery-thumb-view a {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+    }
+}

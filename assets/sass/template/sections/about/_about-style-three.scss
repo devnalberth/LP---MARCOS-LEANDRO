@@ -1,0 +1,89 @@
+/*==== About Section Three =====================*/
+.about-section {
+    &.style-3 {
+        .bg-path__shape {
+            &::before {
+                @include absolute-content(150px, 150px, #e0f1f1);
+                right: 0;
+                bottom: 0;
+            }
+
+            &::after {
+                @include absolute-content(70px, 70px, #e0f1f1);
+                right: 150px;
+                bottom: 150px;
+            }
+        }
+
+        @include xxl {
+            .about-thumb {
+                @include md {
+                    display: none;
+                }
+
+                div {
+                    height: 100%;
+
+                    img {
+                        max-width: 693px;
+                        height: 100%;
+                        object-fit: cover;
+
+                        @include ml {
+                            max-width: 643px;
+                        }
+
+                        @include xl {
+                            max-width: 593px;
+                        }
+
+                        @include laptop-l {
+                            max-width: 583px;
+                        }
+
+                        @include lg {
+                            max-width: 543px;
+                        }
+
+                        @include laptop-m {
+                            max-width: 455px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .since-box {
+            right: 77px;
+            bottom: -91px;
+        }
+
+        .features-list {
+            margin-top: 35px;
+
+            li {
+                font-size: 16px;
+                line-height: 28px;
+                color: $dark-color;
+                position: relative;
+                padding-left: 25px;
+
+                @include mobile-s {
+                    padding-left: 20px;
+                }
+
+                +li {
+                    margin-top: 7px;
+                }
+
+                &::before {
+                    @include absolute-centerY;
+                    left: 0;
+                    width: 18px;
+                    height: 18px;
+                    background: url(../images/icons/check-circle.png);
+                }
+            }
+        }
+    }
+}

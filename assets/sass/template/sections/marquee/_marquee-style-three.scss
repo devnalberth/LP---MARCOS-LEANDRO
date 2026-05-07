@@ -1,0 +1,20 @@
+/*==== Marquee Section Two =====================*/
+.marquee-section.style-3 {
+	position: relative;
+
+	.marquee-wrap {
+		background: transparent;
+		border: none;
+		padding: 80px 0;
+
+		.marquee__group {
+			.m-item {
+				color: $white-color;
+				font-size: 44px;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+		}
+
+	}
+}

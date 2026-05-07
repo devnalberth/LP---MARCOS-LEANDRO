@@ -1,0 +1,103 @@
+/*==== Gallery Section One =====================*/
+.mission-single-box {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 50px 40px;
+    border-radius: 10px;
+
+    @include respond-between($md, $laptop-m) {
+        padding: 50px 25px;
+    }
+
+    @include mobile-m {
+        padding: 45px 30px;
+    }
+
+    @include mobile-s {
+        padding: 40px 25px;
+    }
+
+
+    .mission-content {
+        .title {
+            font-size: 32px;
+            line-height: 36px;
+            color: $dark-color;
+            font-weight: 600;
+            margin: -10px 0 15px;
+        }
+
+        .text {
+            width: 55%;
+            margin-bottom: 0;
+
+            @include lg {
+                width: 58%;
+            }
+
+            @include nestHub {
+                width: 65%;
+            }
+
+            @include respond-between($tablet-m, $laptop-s) {
+                width: 100%;
+            }
+
+            @include xs {
+                width: 68%;
+            }
+
+            @include mobile-xl {
+                width: 100%;
+            }
+        }
+
+        .theme-btn {
+            padding: 12px 40px;
+            margin-top: 140px;
+
+            @include lg {
+                margin-top: 80px;
+            }
+
+            @include respond-between($md, $laptop-m) {
+                margin-top: 40px;
+            }
+
+            @include respond-between($tablet-m, $laptop-s) {
+                margin-top: 40px;
+            }
+
+            @include mobile-xl {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .mission-image {
+        z-index: 1;
+
+        @include respond-between($tablet-m, $laptop-s) {
+            display: none;
+        }
+
+        @include mobile-xl {
+            display: none;
+        }
+
+        img {
+            @include lg {
+                height: 350px;
+            }
+
+            @include respond-between($md, $laptop-m) {
+                height: 280px;
+            }
+
+            @include tablet-s {
+                height: 280px;
+            }
+        }
+    }
+}

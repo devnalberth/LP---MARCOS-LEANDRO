@@ -1,0 +1,135 @@
+/*======= Section Title Area ============*/
+// General styles for title area
+.title-area {
+    @include md {
+        --section-title-space: 60px;
+    }
+
+    @include sm {
+        --section-title-space: 55px;
+    }
+
+    margin-bottom: calc(var(--section-title-space) - 30px);
+    position: relative;
+    z-index: 2;
+
+    &.two {
+        margin-bottom: calc(var(--section-title-space) - 30px);
+    }
+
+    &.twoT {
+        margin-bottom: calc(var(--section-title-space) - 42px);
+    }
+
+    &.three {
+        margin-bottom: calc(var(--section-title-space) - 20px);
+    }
+
+    &.threeT {
+        margin-bottom: calc(var(--section-title-space) - 34px);
+
+        .sec-title {
+            margin-bottom: 13px;
+        }
+    }
+}
+
+// Main styles for subtitle
+.sub-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $theme-color;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 18px;
+    position: relative;
+
+    &.style-2 {
+        display: inline-block;
+        padding: 0 14px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        border-radius: 22px;
+        background-color: $bg-color10;
+        font-size: 16px;
+        color: $white-color !important;
+        font-weight: 500;
+    }
+
+    span {
+        @include center-flex;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $theme-color;
+    }
+}
+
+.text-center {
+    .sub-title {
+        justify-content: center;
+    }
+}
+
+// Default styles for section title and text
+.sec-title {
+    font-size: 42px;
+    line-height: 1.18;
+    margin-bottom: 15px;
+    margin-top: -0.18em;
+    font-weight: 400;
+    position: relative;
+
+    .bold {
+        font-weight: 700;
+    }
+
+    @include laptop-l {
+        font-size: 34px;
+    }
+
+    @include tablet-s {
+        font-size: 30px;
+        letter-spacing: normal;
+    }
+
+    @include mobile-xl {
+        font-size: 28px;
+    }
+
+    @include mobile-l {
+        font-size: 24px;
+    }
+
+    // @include xs {
+    //     & br {
+    //         display: none;
+    //     }
+    // }
+}
+
+.sec-text {
+    font-size: 16px;
+    line-height: 1.66;
+    color: $gray-color2;
+    margin-bottom: 0;
+
+    @include nestHub {
+        br {
+            display: none;
+        }
+    }
+}
+
+.white {
+    .sub-title {
+        color: $theme-color2;
+    }
+
+    .sec-title {
+        color: $white-color;
+    }
+}

@@ -1,0 +1,115 @@
+/*==== Contact Wrapper =====================*/
+.contact-wrapper {
+  @include center-flex;
+  gap: 50px;
+
+  @include sm {
+    gap: 22px;
+    flex-direction: column-reverse;
+  }
+
+  .contact-option,
+  .social-option {
+    display: flex;
+    align-items: center;
+
+    @include vxs {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: $dark-color;
+    }
+
+    span {
+      font-size: 20px;
+      line-height: 1.66;
+      color: $dark-color;
+      font-weight: 500;
+      margin-right: 15px;
+
+      @include vxs {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      font-size: 20px;
+      line-height: 1.66;
+      color: $dark-color;
+      font-weight: 500;
+      @include transition;
+      background: linear-gradient($dark-color 0%, $dark-color 98%);
+      background-repeat: no-repeat;
+      background-size: 100% 2px;
+      background-position: left 100%;
+
+      &:hover {
+        color: $theme-color;
+        background-size: 0 2px;
+      }
+    }
+  }
+}
+
+// dark style
+.dark-mode{
+  .contact-wrapper {
+    @include center-flex;
+    gap: 50px;
+  
+    @include sm {
+      gap: 22px;
+      flex-direction: column-reverse;
+    }
+  
+    .contact-option,
+    .social-option {
+      display: flex;
+      align-items: center;
+  
+      @include vxs {
+        flex-direction: column;
+        justify-content: center;
+      }
+  
+      i {
+        font-size: 20px;
+        margin-right: 10px;
+        color: $gray-color2;
+      }
+  
+      span {
+        font-size: 20px;
+        line-height: 1.66;
+        color: $white-color;
+        font-weight: 500;
+        margin-right: 15px;
+  
+        @include vxs {
+          margin-right: 0;
+        }
+      }
+  
+      a {
+        font-size: 20px;
+        line-height: 1.66;
+        color: $theme-color2;
+        font-weight: 500;
+        @include transition;
+        background: linear-gradient($theme-color2 0%, $theme-color2 98%);
+        background-repeat: no-repeat;
+        background-size: 100% 2px;
+        background-position: left 100%;
+  
+        &:hover {
+          color: $gray-color2;
+          background-size: 0 2px;
+        }
+      }
+    }
+  }
+}

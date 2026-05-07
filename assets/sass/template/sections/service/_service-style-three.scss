@@ -1,0 +1,142 @@
+/*======== Service Section Three =========*/
+.service-section {
+    &.style-3 {
+        .service-btn-inner {
+            gap: 30px;
+
+            .line {
+                width: 100%;
+                height: 1px;
+                background: $border-color;
+            }
+
+            .array-prev,
+            .array-next {
+                border-color: $border-color;
+                background-color: $border-color;
+                color: rgb(255 255 255 / 50%);
+                @include transition;
+
+                &:hover {
+                    color: $white-color;
+                }
+            }
+        }
+
+
+        .service-single-box {
+            background-color: $theme-color3;
+            transition: background-color 0.4s ease-in-out;
+
+            &:hover {
+                background-color: $dark-color3;
+
+                .icon {
+                    color: $theme-color2;
+                    @include filter-theme-color2;
+                }
+
+                .title {
+                    color: $white-color;
+                }
+
+                .text {
+                    color: $gray-color2;
+                }
+
+                .serial {
+                    color: $theme-color2;
+                }
+
+                .service-btn {
+                    color: $theme-color2;
+                    border-color: $theme-color2;
+                }
+
+                .border {
+                    &::before {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+
+                .path__shape {
+                    opacity: 1;
+
+                    &::after {
+                        right: 50px;
+                        bottom: 50px;
+                    }
+                }
+            }
+
+            .border {
+                &::before {
+                    @include absolute-content(0, 1px, $theme-color2);
+                    left: 50%;
+                }
+            }
+
+            .path__shape {
+                opacity: 0;
+                transition: opacity 0.4s ease-in-out;
+
+                &::before {
+                    @include absolute-content(50px, 50px, $border-color);
+                    right: 0;
+                    bottom: 0;
+                }
+
+                &::after {
+                    @include absolute-content(40px, 40px, $border-color);
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+
+        @media (min-width:991.99px){
+            .swiper-slide-active .service-single-box {
+                background-color: $dark-color3;
+    
+                .icon {
+                    color: $theme-color2;
+                    @include filter-theme-color2;
+                }
+    
+                .title {
+                    color: $white-color;
+                }
+    
+                .text {
+                    color: $gray-color2;
+                }
+    
+                .serial {
+                    color: $theme-color2;
+                }
+    
+                .service-btn {
+                    color: $theme-color2;
+                    border-color: $theme-color2;
+                }
+    
+                .border {
+                    &::before {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+    
+                .path__shape {
+                    opacity: 1;
+    
+                    &::after {
+                        right: 50px;
+                        bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

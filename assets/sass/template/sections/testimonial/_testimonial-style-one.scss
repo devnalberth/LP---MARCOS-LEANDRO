@@ -1,0 +1,206 @@
+/*==== Testimonial Section One=====================*/
+.testi-content-wrap {
+  @include md {
+    margin-bottom: 50px;
+  }
+}
+
+.testi-slider {
+  position: relative;
+
+  .array-button {
+    position: absolute;
+    z-index: 1;
+    bottom: 60px;
+    right: 60px;
+    gap: 10px;
+
+    .array-next.active {
+      color: $white-color;
+      background: $theme-color;
+      border-color: $theme-color;
+    }
+
+    @include mobile-l {
+      right: 20px;
+    }
+  }
+}
+
+.testimonial-card {
+  background-color: $dark-color3;
+  color: $white-color;
+  padding: 60px;
+  padding-left: 50px;
+  border-radius: 10px;
+  position: relative;
+
+  @include tablet-s {
+    padding: 40px;
+  }
+
+  @include vxs {
+    padding: 30px;
+  }
+
+  &:hover .content .quote-icon {
+    @include animation(wobble_vertical, 1s, ease-in-out);
+  }
+
+  .content {
+    display: flex;
+    gap: 30px;
+
+    @include respond-between($laptop-s, $laptop-m - 1) {
+      flex-direction: column;
+    }
+
+    @include xs {
+      flex-direction: column;
+    }
+
+    .quote-icon {
+      font-size: 58px;
+      color: $theme-color;
+    }
+
+    .text {
+      font-size: 18px;
+      line-height: 30px;
+      color: $white-color;
+      margin: -6px 0 0;
+    }
+
+    .rating {
+      margin: 25px 0 45px;
+
+      @include tablet-s {
+        margin: 25px 0 30px;
+      }
+
+      i {
+        color: $orange-color;
+        font-size: 20px;
+        margin-right: 2px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .user-info {
+    @include center-flex;
+    justify-content: flex-start;
+    gap: 20px;
+
+    .user-image {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .user-name {
+      font-size: 21px;
+      line-height: 34px;
+      color: $white-color;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .user-title {
+      color: $gray-color2;
+      margin: 0;
+    }
+  }
+
+}
+
+.stats-container {
+  display: flex;
+  position: relative;
+
+  @include mobile-xl {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &::before {
+    @include absolute-content($width: 100%, $height: 100%, $background: $white-color);
+    right: -99%;
+    bottom: 0;
+    z-index: -1;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  .stat-box {
+    padding: 45px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond-between($md+1, $laptop-m) {
+      padding: 35px;
+    }
+
+    @include tablet-s {
+      padding: 40px;
+    }
+
+    @include vxs {
+      padding: 30px;
+    }
+
+    @include md {
+      &:first-child {
+        border-bottom-left-radius: 10px;
+      }
+
+      &:nth-child(2) {
+        border-top-right-radius: 10px;
+      }
+    }
+
+    @include mobile-xl {
+      border-radius: 10px;
+    }
+
+    .count-box {
+      font-size: 50px;
+      line-height: 1.4;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    &.white {
+
+      .count-box,
+      .text {
+        color: $white-color;
+      }
+    }
+
+    &.dark {
+      .count-box {
+        color: $dark-color;
+      }
+
+      .text {
+        color: $gray-color;
+      }
+    }
+  }
+
+}

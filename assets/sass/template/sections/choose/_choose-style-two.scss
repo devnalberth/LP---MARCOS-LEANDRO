@@ -1,0 +1,107 @@
+/*==== Choose Section One =====================*/
+.choose-section.style-2 {
+    @include xxl {
+        .choose-thumb {
+
+            div {
+
+                img {
+                    max-width: 683px;
+
+                    @include ml {
+                        max-width: 633px;
+                    }
+
+                    @include xl {
+                        max-width: 643px;
+                    }
+
+                    @include laptop-l {
+                        max-width: 633px;
+                    }
+
+                    @include lg {
+                        max-width: 593px;
+                    }
+
+                    @include laptop-m {
+                        max-width: 505px;
+                    }
+                }
+            }
+        }
+    }
+
+    .features-list {
+        li {
+            font-size: 18px;
+            color: $gray-color2;
+            position: relative;
+            padding-left: 45px;
+            @include transition;
+
+            @include mobile-xl {
+                font-size: 16px;
+                padding-left: 35px;
+            }
+
+            &:hover {
+                padding-left: 35px;
+                color: $white-color;
+            }
+
+            +li {
+                margin-top: 22px;
+            }
+
+            &::before {
+                @include absolute-centerY;
+                content: "\f00c";
+                left: 0;
+                width: 28px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                border-radius: 14px;
+                background-color: $border-color;
+                font-size: 16px;
+                font-weight: 700;
+                font-family: $icon-font;
+                color: $theme-color2;
+            }
+        }
+    }
+
+    .since-box {
+        padding: 40px 35px;
+        right: 7px;
+        text-align: left;
+        background-color: $bg-color5;
+
+        &:hover .icon-box .icon i {
+            @include animation(wobble_vertical, 1s, ease-in-out);
+        }
+
+        .icon-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: $bg-color6;
+
+            .icon {
+                background-color: transparent;
+            }
+        }
+
+        .text {
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 600;
+                color: $dark-color;
+                margin: -5px 0 0;
+                opacity: 1;
+            }
+        }
+    }
+}

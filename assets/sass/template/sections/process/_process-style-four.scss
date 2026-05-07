@@ -1,0 +1,12 @@
+/*==== Process Section Four=====================*/
+.process-section {
+    &.style-4 {
+        .process-single-box {
+            background-color: $white-color;
+
+            .box-count {
+                background: $theme-color3;
+            }
+        }
+    }
+}

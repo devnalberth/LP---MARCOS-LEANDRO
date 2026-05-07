@@ -1,0 +1,98 @@
+/*==== About Section Five =====================*/
+.about-section {
+	&.style-5 {
+
+		.features-list {
+			li {
+				font-size: 16px;
+				line-height: 28px;
+				color: $dark-color;
+				position: relative;
+				padding-left: 25px;
+
+				@include mobile-s {
+					padding-left: 20px;
+				}
+
+				+li {
+					margin-top: 7px;
+				}
+
+				&::before {
+					@include absolute-centerY;
+					left: 0;
+					width: 18px;
+					height: 18px;
+					background: url(../images/icons/check-circle.png);
+				}
+			}
+		}
+
+		.about-right-wrapper {
+			display: flex;
+			align-items: center;
+			gap: 50px;
+			background: $light-color3;
+			padding: 20px;
+			padding-left: 50px;
+			margin-right: -246px;
+
+			@include xxl {
+				margin-right: -74px;
+			}
+
+			@include laptop-l {
+				margin-right: 0;
+			}
+
+			.left {
+				flex: 1;
+			}
+
+			.stat-box {
+				display: flex;
+				align-items: center;
+				gap: 25px;
+
+				&:hover {
+					.icon img {
+						@include animation(mirror_effect, 1s, ease-in-out);
+					}
+				}
+
+				.icon {
+					@include center-flex;
+					flex-shrink: 0;
+					width: 90px;
+					height: 90px;
+					border-radius: 50%;
+					background: $dark-color;
+					font-size: 48px;
+					color: $white-color;
+
+					img {
+						@include transition;
+					}
+
+					svg {
+						fill: $white-color;
+						width: 40px;
+						height: 40px;
+					}
+				}
+
+				.title {
+					font-size: 50px;
+					line-height: 1;
+					color: $dark-color;
+					font-weight: 500;
+					margin-bottom: 5px;
+				}
+			}
+
+			.skills .skill-item {
+				margin-bottom: 23px;
+			}
+		}
+	}
+}

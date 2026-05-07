@@ -1,0 +1,148 @@
+/*==== Process Section One=====================*/
+.process-single-box {
+    position: relative;
+    padding: 50px 42px 44px;
+    background-color: $theme-color3;
+    margin-bottom: 30px;
+
+    @include ml {
+        padding: 50px 35px 44px;
+    }
+
+    @include lg {
+        padding: 50px 25px 44px;
+    }
+
+    @include md {
+        margin-bottom: 0;
+    }
+
+    .header {
+        @include center-flex;
+        justify-content: flex-start;
+        gap: 30px;
+        margin-bottom: 100px;
+
+        @include nestHub {
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .icon {
+            font-size: 60px;
+            color: $dark-color;
+            flex-shrink: 0;
+
+            @include nestHub {
+                font-size: 40px;
+                
+                .icon-comercial {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        @include nestHub {
+            .title {
+                font-size: 22px;
+            }
+        }
+
+        @include vxs {
+            .title {
+                font-size: 20px;
+            }
+        }
+
+        @include mobile-s {
+            .title {
+                font-size: 19px;
+            }
+        }
+
+    }
+
+    &:hover .header .icon {
+        @include animation(wobble_vertical, 1s, ease-in-out);
+    }
+
+
+    .box-count {
+        @include center-flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -32px;
+        width: 64px;
+        height: 64px;
+        background: $white-color;
+        border-radius: 50%;
+        font-size: 20px;
+        font-weight: 500;
+        color: $dark-color;
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $dark-color;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+
+            @include md {
+                display: none;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 32px;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 0;
+            background: $dark-color;
+            transition: all .5s ease;
+            transition-duration: .5s;
+
+            @include md {
+                display: none;
+            }
+        }
+
+        span {
+            transform: translateY(0);
+            transition: all 0.5s ease;
+        }
+    }
+
+    &.current,
+    &:hover {
+        .box-count {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &::after {
+                height: 50px;
+            }
+
+            span {
+                transform: translateY(73px);
+
+                @include md {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}

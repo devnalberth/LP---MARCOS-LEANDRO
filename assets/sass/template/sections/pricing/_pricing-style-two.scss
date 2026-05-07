@@ -1,0 +1,206 @@
+/*==== Pricing Section Two =====================*/
+.pricing-section {
+    &.style-2 {
+        .pricing-table {
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border: hidden;
+
+                .table-header {
+                    border-top: hidden;
+
+                    @include xs {
+                        display: flex;
+                    }
+
+                    @include tablet-s {
+                        flex-direction: column;
+                    }
+
+                    .features-header {
+                        font-size: 20px;
+                        padding-left: 0;
+                        padding-top: 0;
+                        color: $white-color;
+                        font-weight: 500;
+                        vertical-align: baseline;
+
+                        @include xs {
+                            padding: 15px 20px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .pricing-header {
+                        padding-top: 0;
+                        width: 250px;
+                        text-align: center;
+
+                        @include laptop-m {
+                            width: 220px;
+                        }
+
+                        @include tablet-l {
+                            width: 190px;
+                        }
+
+                        @include sm {
+                            width: 170px;
+                        }
+
+                        @include xs {
+                            width: 100%;
+                        }
+
+                        @include xs {
+                            padding: 15px 20px;
+                        }
+
+                        .pricing-type {
+                            font-size: 20px;
+                            color: $white-color;
+                            font-weight: 500;
+                            text-align: center;
+                            display: block;
+                            margin-bottom: 10px;
+                        }
+
+                        .pricing-amount {
+                            .price {
+                                font-size: 30px;
+                                color: $white-color;
+                                font-weight: 600;
+                                position: relative;
+
+                                @include xs {
+                                    font-size: 25px;
+                                }
+
+                                &::before {
+                                    position: absolute;
+                                    content: "$";
+                                    left: -14px;
+                                    top: 0;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            .duration {
+                                font-size: 15px;
+                                color: $gray-color2;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+
+                .features-header {
+                    text-align: left;
+                }
+
+                .feature-row {
+                    @include xs {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    th,
+                    td {
+                        padding: 15px 20px;
+                        border-bottom: 1px solid $border-color;
+                        text-align: center;
+                    }
+
+                    &:last-child {
+                        td {
+                            padding: 30px 0 0;
+
+                            @include xs {
+                                padding: 15px 20px;
+                            }
+                        }
+                    }
+
+                    .feature-name {
+                        text-align: left;
+                        font-size: 18px;
+                        color: $white-color;
+                        font-weight: 400;
+                        position: relative;
+
+                        @include tablet-l {
+                            font-size: 16px;
+                        }
+
+                        &::before {
+                            @include absolute-centerY;
+                            left: 0;
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 50%;
+                            background-color: rgba(244, 248, 236, 0.2);
+                        }
+                    }
+
+                    .available,
+                    .unavailable {
+                        font-size: 16px;
+                        color: $white-color;
+                        width: 250px;
+
+                        @include laptop-m {
+                            width: 220px;
+                        }
+
+                        @include tablet-l {
+                            width: 190px;
+                        }
+
+                        @include sm {
+                            width: 170px;
+                        }
+
+                        @include xs {
+                            width: 100%;
+                        }
+
+                    }
+
+                    .available:hover i {
+                        @include animation(wobble_vertical, 1s, ease-in-out);
+                    }
+
+                    .unavailable:hover i {
+                        @include animation(wobble_bell, 1s, ease-in-out);
+                    }
+
+                    .guarantee-text {
+                        font-size: 15px;
+                        color: $gray-color2;
+                        font-weight: 400;
+                        text-align: left;
+                        padding-left: 0;
+
+                        i {
+                            font-size: 16px;
+                            color: $theme-color2;
+                            padding-right: 10px;
+                        }
+                    }
+
+                    .theme-btn {
+                        @include laptop-m {
+                            padding: 12px 20px;
+                        }
+
+                        @include sm {
+                            padding: 12px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

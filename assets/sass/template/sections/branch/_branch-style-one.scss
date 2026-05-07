@@ -1,0 +1,126 @@
+/*==== Branch Section One =====================*/
+.branch-section {
+    .sec-text {
+        @include xs {
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+.branch-single-box {
+    padding: 50px 0 45px;
+    background-color: $theme-color3;
+    border-radius: 10px;
+    text-align: center;
+    @include transition;
+
+    &:hover {
+        background-color: $dark-color;
+
+        .image-box {
+            &::before {
+                animation: spin2 15s linear infinite;
+                border-color: $theme-color2
+            }
+        }
+
+        .branch-content {
+            .location-name {
+                color: $white-color;
+            }
+
+            .location-type {
+                color: $theme-color2;
+            }
+
+            .divider {
+                background-color: $theme-color2;
+            }
+
+            .address,
+            .phone a,
+            .email a {
+                color: $gray-color2;
+            }
+
+
+        }
+    }
+
+    .image-box {
+        @include center-flex;
+        position: relative;
+        z-index: 1;
+        width: 230px;
+        height: 230px;
+        margin: 0 auto 30px;
+
+        &::before {
+            @include absolute-content(100%, 100%, none);
+            z-index: -1;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            border: 2px dashed $dark-color;
+            @include transition;
+        }
+
+        .image {
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .branch-content {
+        .location-name {
+            color: $dark-color;
+            margin-bottom: 4px;
+            @include transition;
+        }
+
+        .location-type {
+            font-size: 14px;
+            color: $dark-color;
+            margin-bottom: 19px;
+            @include transition;
+        }
+
+        .divider {
+            width: 50px;
+            height: 1px;
+            background-color: $theme-color;
+            margin: 0 auto 18px;
+            @include transition;
+        }
+
+        .address,
+        .phone a,
+        .email a {
+            font-size: 15px;
+            color: $gray-color;
+        }
+
+        .address,
+        .phone,
+        .email {
+            margin-bottom: 5px;
+        }
+
+        .phone a,
+        .email a {
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+
+        .email {
+            margin-bottom: 0;
+        }
+    }
+}

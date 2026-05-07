@@ -1,0 +1,55 @@
+/*==== Video Section Two =====================*/
+.video-section.style-2 {
+	position: relative;
+	z-index: 1;
+	background-image: none;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 120px;
+		background-color: $white-color;
+		z-index: -1;
+	}
+
+	.video-box {
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		a {
+			@include center-flex;
+			width: 120px;
+			height: 120px;
+			background-color: $dark-color;
+			font-size: 24px;
+			color: $white-color;
+		}
+	}
+
+	.thumb img {
+		@include md {
+			width: 100%;
+		}
+	}
+}
+
+
+// dark style
+.dark-mode{
+	.video-section.style-2{
+		&::before{
+			display: none;
+		}
+		.video-area{
+			.video-box{
+				a{
+					background-color: $theme-color;
+				}
+			}
+		}
+	}
+} 

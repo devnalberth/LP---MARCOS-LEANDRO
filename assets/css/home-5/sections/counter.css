@@ -1,0 +1,49 @@
+/* Counter Section */
+.counter-section .row {
+    --bs-gutter-x: 20px;
+}
+
+.counter-section .counter-box .icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.counter-section .counter-box .icon .custom-counter-icon {
+    font-size: 30px;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #d8dfe8;
+}
+
+.counter-section.style-2 .counter-box .title {
+    font-size: 40px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.counter-section .counter-box .text {
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.counter-section .counter-box .title .odometer,
+.counter-section .counter-box .title .count-number {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+@media (max-width: 1199px) {
+    .counter-section.style-2 .counter-box .title {
+        font-size: 32px;
+    }
+
+    .counter-section .counter-box .text {
+        font-size: 11px;
+    }
+}

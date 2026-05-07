@@ -1,0 +1,233 @@
+/*======== Service Section five =========*/
+.service-box-five {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 10px;
+
+	&::before {
+		@include absolute-centerX;
+		top: 10px;
+		width: 90%;
+		height: 100%;
+		border-radius: 20px;
+		background: $light-color4;
+		z-index: -1;
+		@include transition;
+	}
+
+
+
+	&:hover {
+		.inner-box {
+			transform: translateY(10px);
+
+			&::before {
+				left: 0;
+				width: 100%;
+			}
+
+			.border {
+				border-color: $border-color2 !important;
+			}
+
+			.title {
+				a {
+					color: $white-color;
+				}
+			}
+
+			.text {
+				color: $gray-color2;
+			}
+
+			.service-btn {
+				padding-left: 237px;
+				color: $theme-color2;
+
+				@include nestHub {
+					padding-left: 160px;
+				}
+
+				&::before {
+					width: 67%;
+					background: $border-color2;
+
+					@include nestHub {
+						width: 57%;
+					}
+				}
+			}
+
+			.icon img {
+				@include animation(wobble_vertical, 1s, ease-in-out);
+			}
+		}
+	}
+
+	.inner-box {
+		background: $white-color;
+		padding: 40px 40px 40px;
+		border-radius: 20px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		@include transition;
+
+		@include laptop-m {
+			padding: 50px 30px 50px;
+		}
+
+		@include nestHub {
+			padding: 50px 24px 50px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 0;
+			height: 100%;
+			background: $dark-color;
+			z-index: -1;
+			@include transition;
+		}
+
+		&.white {
+			.icon {
+				filter: brightness(0)invert(1);
+			}
+		}
+
+		.icon {
+			@include center-flex;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: $theme-color3;
+			font-size: 30px;
+			color: $dark-color;
+			@include transition;
+
+			svg {
+				fill: $dark-color;
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		.title {
+			font-size: 22px;
+			font-weight: 500;
+			margin-bottom: 5px;
+			@include transition;
+
+			&:hover {
+				a {
+					color: $theme-color2;
+				}
+			}
+		}
+
+		.text {
+			font-size: 16px;
+			line-height: 1.66;
+			margin-bottom: 21px;
+			@include transition;
+		}
+
+
+
+		.border {
+			@include transition;
+		}
+
+		.service-btn {
+			font-size: 16px;
+			color: $dark-color;
+			font-weight: 500;
+			position: relative;
+			z-index: 1;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 10px;
+				width: 0;
+				height: 1px;
+				background: $dark-color;
+				z-index: -1;
+				@include transition;
+			}
+		}
+
+		.serial {
+			position: absolute;
+			top: 40px;
+			right: 40px;
+			font-size: 18px;
+			color: $gray-color;
+			font-weight: 400;
+		}
+	}
+
+}
+
+
+
+
+
+
+// dark style
+.dark-mode{
+	.service-box-five{
+		&:before{
+			background: $bg-color20;
+		}
+		.inner-box{
+			background: $dark-color3;
+			&::before{
+				background: $dark-color3;
+			}
+			.p-top-left{
+				opacity: 0;
+				@include transition;
+			}
+			.icon{
+				background: $bg-color10;
+				img{
+					@include filter-theme-color2;
+				}
+			}
+			.title{
+				a{
+					color: $white-color;
+				}
+			}
+			.text{
+				color: $gray-color2;
+			}
+			a{
+				color: $gray-color2;
+			}
+			span{
+				color: $gray-color2;
+			}
+		}
+		&:hover{
+			.inner-box{
+				.p-top-left{
+					opacity: 1;
+					@include transition;
+				}
+				.icon{
+					background: $theme-color2;
+					img{
+						@include filter-dark-color;
+					}
+				}
+			}
+		}
+	}
+}

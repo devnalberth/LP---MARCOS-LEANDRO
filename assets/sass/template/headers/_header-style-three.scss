@@ -1,0 +1,134 @@
+/*==== Header Style Three=====================*/
+.header-style3 {
+    position: relative;
+
+    .main-wrapper {
+        padding: 0 60px;
+        background-color: $dark-color;
+
+        @include ml {
+            padding: 0 24px;
+        }
+
+        @include md {
+            background-color: $light-color;
+            padding: 0 12px;
+        }
+
+        .menu-area {
+            margin-top: 0;
+            border-radius: 0;
+            background-color: $dark-color;
+            padding: 0;
+
+            @include md {
+                background-color: $light-color;
+            }
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .nav-menu {
+            flex: 0 0 auto;
+
+            .main-menu {
+                >ul {
+                    >li {
+                        padding: 10px 0;
+
+                        &.active>a {
+                            color: $theme-color;
+                        }
+
+                        >a {
+                            color: $white-color;
+
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+
+
+
+                >ul {
+                    >li {
+                        &.menu-item-has-children {
+
+                            &>a::before {
+                                opacity: 0.4;
+                            }
+
+                            &>a:hover::before {
+                                opacity: 1;
+                            }
+                        }
+
+                        &.active>a::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                ul.sub-menu {
+
+                    li {
+
+                        a {
+                            color: $dark-color;
+                        }
+
+                        &.active a {
+                            color: $theme-color;
+                        }
+
+                        &:hover a {
+                            color: $white-color;
+                        }
+
+                        ul.sub-menu {
+                            li {
+                                a {
+                                    color: $dark-color;
+                                }
+
+                                &:hover a {
+                                    color: $white-color;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .header-right-wrapper {
+            flex: 1;
+            @include center-flex;
+            justify-content: flex-end;
+
+            @include laptop-m {
+                display: none;
+            }
+
+            .header-right {
+                gap: 20px;
+            }
+        }
+    }
+
+    .header-sticky {
+        .main-wrapper {
+            box-shadow: 0 0 20px $white-color;
+
+            .nav-menu .main-menu>ul>li {
+                padding: 0;
+            }
+        }
+    }
+
+}

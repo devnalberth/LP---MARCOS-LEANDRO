@@ -1,0 +1,69 @@
+/*==== Process Section Three=====================*/
+// .process-section {
+//     .style-3 {
+
+//     }
+// }
+
+.process-all {
+    display: flex;
+
+    @include md {
+        flex-wrap: wrap;
+    }
+
+    .process-step {
+        text-align: center;
+
+        @include md {
+            max-width: 50%;
+        }
+
+        @include xs{
+            max-width: 100%;
+        }
+
+        .serial {
+            font-size: 16px;
+            color: $dark-color;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .line {
+            @include border(top, 3px, solid, $bg-color7);
+            text-align: center;
+
+            .circle {
+                @include absolute-centerX;
+                z-index: 1;
+                top: -10px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $light-color2;
+                border: 3px solid $border-color8;
+                @include transition;
+            }
+        }
+
+        .content {
+            .title {
+                margin: 15px 0 13px;
+            }
+
+            .text {
+                width: 83%;
+                margin: auto;
+            }
+        }
+
+        &:hover {
+            .line {
+                .circle {
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}

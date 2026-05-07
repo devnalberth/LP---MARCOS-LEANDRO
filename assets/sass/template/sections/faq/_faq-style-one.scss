@@ -1,0 +1,96 @@
+/*==== Faq Section One=====================*/
+.faq-section {
+  position: relative;
+
+  .bg-path__shape {
+    &::before {
+      @include absolute-content(150px, 150px, $theme-color3);
+      right: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      @include absolute-content(70px, 70px, $theme-color3);
+      right: 150px;
+      bottom: 150px;
+    }
+  }
+
+  @include md {
+    .contact-content-wrap {
+      margin-top: 0;
+    }
+  }
+}
+
+.accordion-box {
+  position: relative;
+
+  .accordion {
+    position: relative;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(6, 50, 50, 0.10);
+
+    .acc-btn {
+      position: relative;
+      font-size: 22px;
+      color: $dark-color;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 19px 0 25px;
+      padding-right: 20px;
+      background: transparent;
+      @include transition;
+
+      .icon {
+        @include absolute-centerY;
+        right: 6px;
+
+        &::before {
+          @include absolute-center;
+          width: 2px;
+          height: 12px;
+          background-color: $dark-color;
+        }
+
+        &::after {
+          @include absolute-center;
+          width: 12px;
+          height: 2px;
+          background-color: $dark-color;
+        }
+
+      }
+    }
+
+    .acc-btn.active {
+      .icon {
+        &::before {
+          height: 0;
+        }
+      }
+    }
+
+    .acc-content {
+      position: relative;
+      display: none;
+
+      .content {
+        position: relative;
+        padding: 0 0 21px 0;
+        margin-top: -8px;
+
+        .text {
+          display: block;
+          font-size: 16px;
+          color: $gray-color;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .acc-content.active {
+      display: block;
+    }
+  }
+}

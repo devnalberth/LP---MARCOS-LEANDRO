@@ -1,0 +1,316 @@
+/*==== Project Details =====================*/
+.project-sidebar {
+    position: sticky;
+    top: 100px;
+    max-width: 408px;
+
+    @include md {
+        max-width: 100%;
+    }
+
+    .widget-box.project-details-box {
+        background-color: $theme-color3;
+        padding: 0;
+        border-radius: 10px;
+
+        .title {
+            font-size: 22px;
+            color: $white-color;
+            font-weight: 500;
+            text-align: center;
+            background-color: $dark-color;
+            padding: 25px 0;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 0;
+        }
+
+        .content {
+            padding: 10px 40px 22px;
+
+            @include nestHub {
+                padding: 10px 20px 22px;
+            }
+
+            @include vxs {
+                padding: 10px 20px 22px;
+            }
+
+            ul {
+                li {
+                    font-size: 15px;
+                    color: $gray-color;
+                    font-weight: 400;
+                    padding: 13px 0;
+                    border-bottom: 1px dashed $dark-color;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    strong {
+                        color: $dark-color;
+                    }
+
+                    a {
+                        color: $dark-color;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .widget-box.consulting-box {
+        background: url(../images/project/consult01.jpg) center/cover;
+        padding: 60px 40px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        @include nestHub {
+            padding: 60px 20px;
+        }
+
+        @include vxs {
+            padding: 60px 20px;
+        }
+
+        &::before {
+            @include absolute-content(100%, 100%, $bg-color8);
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .inner-box {
+            .title {
+                font-size: 24px;
+                color: $white-color;
+                font-weight: 500;
+                margin-bottom: 7px;
+            }
+
+            .text {
+                font-size: 16px;
+                color: $gray-color2;
+                font-weight: 400;
+                margin-bottom: 0;
+
+                @include nestHub {
+                    font-size: 15px;
+                }
+            }
+
+            .border {
+                border-color: $border-color11 !important;
+            }
+
+
+            .contact-info {
+
+                .contact-item {
+                    @include center-flex;
+                    justify-content: flex-start;
+                    gap: 20px;
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .icon {
+                        @include center-flex;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: $border-color;
+                        font-size: 20px;
+                        color: $theme-color2;
+
+                        i {
+                            width: 20px !important;
+                            height: 20px !important;
+                            @include filter-theme-color2;
+                        }
+                    }
+
+                    .content {
+                        p {
+                            font-size: 14px;
+                            color: $gray-color2;
+                            font-weight: 400;
+                            margin-bottom: 0;
+                        }
+
+                        a {
+                            font-size: 16px;
+                            color: $white-color;
+                            font-weight: 500;
+
+                            &:hover {
+                                color: $theme-color2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .theme-btn {
+                border: 1px solid $border-color11;
+                color: $white-color;
+                padding: 12px 40px;
+
+                >i {
+                    color: $theme-color2;
+                }
+            }
+        }
+    }
+
+}
+
+.project-details__content {
+    img {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 34px;
+        color: $dark-color;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        @include lg {
+            font-size: 30px;
+        }
+
+        @include sm {
+            font-size: 26px;
+        }
+    }
+
+    p {
+        width: 95%;
+
+        @include xs {
+            width: 100%;
+        }
+
+        @include vxs {
+            text-align: justify;
+        }
+    }
+
+    .featured-list {
+
+        li {
+            font-size: 16px;
+            color: $gray-color;
+            font-weight: 400;
+            padding-left: 25px;
+            position: relative;
+
+            +li {
+                margin-top: 13px;
+            }
+
+            &::before {
+                @include absolute-centerY;
+                content: "\f00c";
+                left: 0;
+                font-size: 18px;
+                color: $dark-color;
+                font-family: $icon-font;
+                font-weight: 900;
+            }
+        }
+
+        .list-style-2 {
+            li {
+                &::before {
+                    content: "\f058";
+                    color: $gray-color;
+                }
+            }
+        }
+    }
+
+    .details-image-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        .title {
+            font-size: 22px;
+            color: $dark-color;
+            font-weight: 500;
+            margin-bottom: 0;
+            background: $theme-color3;
+            padding: 25px 30px;
+        }
+    }
+}
+
+.details__pagination-box {
+    position: relative;
+    display: block;
+
+    .details__pagination {
+        position: relative;
+        @include center-flex;
+        justify-content: space-between;
+
+        li {
+
+
+
+            a {
+                font-size: 22px;
+                color: $dark-color;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                @include transition;
+
+                @include mobile-xl {
+                    font-size: 16px;
+                }
+
+                @include vxs {
+                    gap: 15px;
+                }
+
+                &:hover {
+                    color: $theme-color;
+
+                    i {
+                        color: $white-color;
+                        background-color: $dark-color;
+                    }
+                }
+
+                i {
+                    @include center-flex;
+                    flex-shrink: 0;
+                    font-size: 20px;
+                    color: $dark-color;
+                    width: 54px;
+                    height: 54px;
+                    border-radius: 50%;
+                    background-color: $theme-color3;
+                    @include transition;
+
+                    @include mobile-xl {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

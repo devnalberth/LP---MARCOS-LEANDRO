@@ -1,0 +1,126 @@
+/*==== Award Section One =====================*/
+.award-section {
+	@include md {
+		.award-image.direction-rtl {
+			direction: ltr;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.award-list {
+	padding: 70px 90px;
+	background: $white-color;
+	margin: 0 -196px 0 -114px;
+
+	@include xxl {
+		margin: 0 0 0 -114px;
+	}
+
+	@include nestHub {
+		padding: 30px 50px;
+	}
+
+	@include md {
+		margin: 0;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid $border-color6;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		@include transition;
+
+		&:hover {
+			border-color: $dark-color;
+
+			.award-icon img {
+				@include animation(mirror_effect, 0.8s, ease-in-out);
+			}
+		}
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+
+		>.left {
+			display: flex;
+			align-items: center;
+			gap: 90px;
+
+			@include nestHub {
+				gap: 30px;
+			}
+		}
+
+		.award-icon {
+			font-size: 70px;
+			color: $gray-color;
+			flex-shrink: 0;
+
+			svg {
+				width: 70px;
+				height: 70px;
+				fill: $gray-color;
+				@include transition;
+			}
+		}
+
+		.award-text {
+			h4 {
+				font-size: 24px;
+				color: $dark-color;
+				font-weight: 500;
+				margin-bottom: 3px;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// dark mode
+.dark-mode{
+	.award-list{
+		background: $dark-color3;
+		li{
+			border-bottom: 1px solid $border-color2;
+			&:last-child{
+				border-bottom: 0;
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
+			.left{
+				.award-icon{
+					img{
+
+					}
+				}
+				.award-text{
+					h4{
+						color: $white-color;
+					}
+					p{
+						color: $gray-color2;
+					}
+				}
+			}
+			.award-year{
+				color: $gray-color2;
+			}
+			&:hover{
+				border-color: $theme-color2;
+			}
+		}
+	}
+}

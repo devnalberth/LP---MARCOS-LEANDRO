@@ -1,0 +1,250 @@
+/*==== Testimonial Section Five=====================*/
+
+.testimonial-section.style-5 {
+	position: relative;
+
+	.array-button {
+		gap: 10px;
+
+		.array-next,
+		.array-prev {
+			font-size: 16px;
+			width: 44px;
+			height: 44px;
+			color: $dark-color;
+			border-color: $border-color6;
+			background: $white-color;
+		}
+
+		.array-next:hover,
+		.array-prev:hover,
+		.array-next.active {
+			color: $white-color;
+			background: $theme-color;
+			border-color: $theme-color;
+		}
+
+		@include mobile-l {
+			right: 20px;
+		}
+	}
+}
+
+.review-card-three {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 15px 0;
+	border-top: 1px solid $border-color10;
+	border-bottom: 1px solid $border-color10;
+
+	span.avarage-rating {
+		font-size: 44px;
+		line-height: 1;
+		color: $dark-color;
+		font-weight: 600;
+	}
+
+	.rating-inner {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		.stars {
+			color: $orange-color;
+
+			i {
+				font-size: 16px;
+			}
+		}
+
+		.rating-text {
+			font-size: 16px;
+			color: $dark-color;
+			font-weight: 500;
+		}
+	}
+}
+
+.testimonial-card-five {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 10px;
+
+	&::before {
+		@include absolute-centerX;
+		top: 10px;
+		width: 90%;
+		height: 100%;
+		border-radius: 20px;
+		background: $light-color4;
+		z-index: -1;
+		@include transition;
+	}
+
+	&:hover {
+		.inner-box {
+			transform: translateY(10px);
+		}
+	}
+
+	.inner-box {
+		background: $white-color;
+		padding: 45px 40px 60px;
+		border-radius: 20px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		@include transition;
+
+		@include laptop-m {
+			padding: 50px 30px 50px;
+		}
+
+		@include nestHub {
+			padding: 50px 24px 50px;
+		}
+
+		&.white {
+			.icon {
+				filter: brightness(0)invert(1);
+			}
+		}
+
+		.icon {
+			@include center-flex;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: $theme-color3;
+			font-size: 30px;
+			color: $dark-color;
+			@include transition;
+
+			svg {
+				fill: $dark-color;
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		.title {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 22px;
+			font-weight: 500;
+			margin-bottom: 9px;
+			@include transition;
+
+			i {
+				font-size: 30px;
+			}
+		}
+
+		.rating {
+			margin-bottom: 28px;
+
+			i {
+				color: $orange-color;
+			}
+
+			span {
+				font-size: 16px;
+				color: $dark-color;
+				font-weight: 500;
+			}
+		}
+
+		.text {
+			font-size: 16px;
+			line-height: 1.66;
+			margin-bottom: 0;
+			@include transition;
+		}
+
+		.border {
+			@include transition;
+		}
+
+		.user-info {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			.user-image {
+				width: 66px;
+				height: 66px;
+				border-radius: 50%;
+			}
+
+			.user-name {
+				font-size: 21px;
+				color: $dark-color;
+				font-weight: 500;
+				margin-bottom: 0;
+			}
+
+			.user-title {
+				margin-bottom: 0;
+			}
+
+		}
+	}
+
+}
+
+// dark mode
+.dark-mode{
+	.testi-content-wrap{
+		.testi-clutch{
+			.review-card-three{
+				border-top: 1px solid $border-color13;
+				border-bottom: 1px solid $border-color13;
+			}
+		}
+		.testi-btn-wrapper{
+			.array-button{
+				.array-prev{
+					color: $white-color;
+					background: $bg-color10; 
+					border: 1px solid $border-color6;
+				}
+			}
+		}
+	}
+	.testi-slider-6{
+		.testimonial-card-five{
+			&::before{
+				background: $bg-color20;
+			}
+			.inner-box{
+				background: $dark-color3;
+				.content{
+					.title{
+						color: $white-color;
+					}
+					.rating{
+						span{
+							color: $white-color;
+						}
+					}
+					.text{
+						color: $gray-color2;
+					}
+				}
+				.border{
+					background-color: $bg-color10;
+				}
+				.user-info{
+					.user-name{
+						color: $white-color;
+					}
+					.user-title{
+						color: $gray-color2;
+					}
+				}
+			}
+		}
+	}
+}

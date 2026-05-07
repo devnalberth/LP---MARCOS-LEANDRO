@@ -1,0 +1,158 @@
+/*==== Choose Section Six =====================*/
+.choose-section {
+    &.style-6 {
+        .choose-content-wrapper {
+            .title-area {
+                .sec-title {
+                    br {
+                        @include xxl {
+                            display: none;
+                        }
+                        @include md{
+                            display: inline;
+                        }
+                    }
+                }
+                .sec-text{
+                    br{
+                        @include tablet-s{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .features-list {
+                li {
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: $dark-color;
+                    position: relative;
+                    padding-left: 30px;
+
+                    @include mobile-s {
+                        padding-left: 20px;
+                    }
+
+                    + li {
+                        margin-top: 22px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all 0.4s ease 0s;
+                        left: 0;
+                        width: 18px;
+                        height: 18px;
+                        background: url(../images/icons/check-circle.png);
+                    }
+                }
+            }
+        }
+        .choose-image-wrapper {
+            position: relative;
+            display: contents;
+            .thumb-bg {
+                position: absolute;
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: -1;
+            }
+            .thumb {
+                margin-bottom: -120px;
+                text-align: center;
+            }
+        }
+        .choose-right-wrapper {
+            .right-top {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                @include mobile-s{
+                    gap: 5px;
+                }
+                .icon {
+                    @include center-flex;
+                    height: 60px;
+                    width: 60px;
+                    background: $theme-color;
+                    border-radius: 50%;
+                    i {
+                        font-size: 25px;
+                        color: $white-color;
+                    }
+                }
+                .text {
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: $dark-color;
+                    font-weight: 600;
+                    margin: 0;
+                }
+            }
+            .featured-box {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                @include vxs{
+                    flex-direction: column
+                }
+                .icon {
+                    @include center-flex;
+                    height: 80px;
+                    width: 80px;
+                    border: 1px solid $border-color12;
+                    border-radius: 10px;
+                    flex-shrink: 0;
+                    position: relative;
+                    @include transition;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        border-radius: 10px;
+                        transform: scale(0);
+                        height: 100%;
+                        background: $dark-color;
+                        transition: all 0.5s ease 0s;
+                    }
+                    img {
+                        @include transition;
+                    }
+                }
+                .content {
+                    @include vxs{
+                        text-align: center;
+                    }
+                    h4 {
+                        font-size: 22px;
+                        line-height: 30px;
+                        color: $dark-color;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+                &:hover {
+                    .icon {
+                        &::before {
+                            transform: scale(1);
+                        }
+                        img {
+                            @include filter-theme-color2;
+                            animation: mirror_effect 0.5s forwards ease-in-out 0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

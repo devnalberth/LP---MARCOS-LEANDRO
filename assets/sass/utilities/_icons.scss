@@ -1,0 +1,186 @@
+// Mixin to generate icon styles
+@mixin icon-style($width, $height, $icon-url) {
+    display: inline-block;
+    width: $width !important;
+    height: $height !important;
+    position: relative;
+
+    &::before {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        background: url($icon-url) no-repeat center/cover;
+    }
+}
+
+// Use the mixin for different icons
+.asterisk {
+    @include icon-style(13px, 14px, '../images/icons/asterisk.png');
+}
+
+.arrow-down {
+    @include icon-style(40px, 50px, '../images/icons/arrow-down-long.png');
+}
+
+.icon-quote {
+    @include icon-style(58px, 47px, '../images/icons/quote.png');
+}
+
+.icon-phone-circle {
+    @include icon-style(34px, 34px, '../images/icons/phone-circle.png');
+}
+
+.icon-phone-circle-small {
+    @include icon-style(24px, 24px, '../images/icons/phone-circle.png');
+}
+
+.icon-arrow-up-right {
+    @include icon-style(16px, 16px, '../images/icons/arrow-up-right.png');
+}
+
+.icon-switch {
+    @include icon-style(60px, 60px, '../images/icons/icon-switch.png');
+}
+
+.icon-risk {
+    @include icon-style(60px, 60px, '../images/icons/icon-risk.png');
+}
+
+.icon-checked-box {
+    @include icon-style(60px, 60px, '../images/icons/checked-box.png');
+}
+
+.icon-inverted-triangle {
+    @include icon-style(65px, 60px, '../images/icons/inverted-triangle.png');
+}
+
+.icon-refresh-arrow {
+    @include icon-style(60px, 60px, '../images/icons/refresh-arrow.png');
+}
+
+.icon-recycle-arrow {
+    @include icon-style(24px, 24px, '../images/icons/recycle-arrow.png');
+}
+
+.icon-growth-arrow {
+    @include icon-style(36px, 36px, '../images/icons/growth-arrow.png');
+}
+
+.icon-bentol {
+    @include icon-style(14px, 16px, '../images/icons/bentol.png');
+}
+
+.icon-checkmark {
+    @include icon-style(22px, 20px, '../images/icons/checkmark.png');
+}
+
+.icon-checkmark2 {
+    @include icon-style(18px, 16px, '../images/icons/checkmark.png');
+    @include filter-dark-color;
+}
+
+.icon-checkmark-small {
+    @include icon-style(16px, 14px, '../images/icons/checkmark.png');
+    @include filter-white-color;
+}
+
+.icon-check-circle {
+    @include icon-style(18px, 18px, '../images/icons/check-circle.png');
+}
+
+.icon-check-circle {
+    @include icon-style(18px, 18px, '../images/icons/check-circle.png');
+}
+
+.icon-since {
+    @include icon-style(31px, 35px, '../images/icons/icon-since.png');
+}
+
+.icon-comercial {
+    @include icon-style(57px, 60px, '../images/icons/icon-comercial.png');
+}
+
+.icon-infomsg {
+    @include icon-style(67px, 60px, '../images/icons/icon-infomsg.png');
+}
+
+.icon-finished {
+    @include icon-style(60px, 60px, '../images/icons/icon-finished.png');
+}
+
+.icon-mom-star {
+    @include icon-style(40px, 60px, '../images/icons/mom-star.png');
+}
+
+.icon-angel-left {
+    @include icon-style(22px, 40px, '../images/icons/angel-left.png');
+}
+
+.icon-angel-right {
+    @include icon-style(22px, 40px, '../images/icons/angel-right.png');
+}
+
+.icon-small-hand {
+    @include icon-style(26px, 28px, '../images/icons/icon-hand.png');
+}
+
+.icon-growth-chart {
+    @include icon-style(46px, 46px, '../images/icons/growth-chart.png');
+}
+
+.icon-growth-chart2 {
+    @include icon-style(60px, 60px, '../images/icons/growth-chart2.png');
+}
+
+.icon-three-people-global {
+    @include icon-style(60px, 60px, '../images/icons/three-people-global.png');
+}
+
+.icon-target-goal {
+    @include icon-style(46px, 46px, '../images/icons/target-goal.png');
+}
+
+.icon-frustration {
+    @include icon-style(46px, 46px, '../images/icons/icon-frustration.png');
+}
+
+.icon-e {
+    @include icon-style(53px, 60px, '../images/icons/icon-e.png');
+}
+
+.icon-three-people {
+    @include icon-style(70px, 70px, '../images/icons/icon-three-people.png');
+}
+
+.icon-target {
+    @include icon-style(70px, 70px, '../images/icons/icon-target.png');
+}
+
+.icon-target2 {
+    @include icon-style(60px, 60px, '../images/icons/icon-target.png');
+}
+
+.icon-message {
+    @include icon-style(77px, 70px, '../images/icons/icon-message.png');
+}
+
+.icon-handshake {
+    @include icon-style(56px, 50px, '../images/icons/icon-handshake.png');
+}
+
+.line-long-arrow {
+    @include icon-style(26px, 50px, '../images/icons/line-long-arrow.png');
+}
+
+.icon-check-circle2 {
+    @include icon-style(22px, 20px, '../images/icons/check-circle2.png');
+}
+
+.icon-calender {
+    @include icon-style(18px, 16px, '../images/icons/icon-calender.png');
+}

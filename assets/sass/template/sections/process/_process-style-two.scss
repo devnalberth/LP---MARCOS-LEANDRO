@@ -1,0 +1,194 @@
+/*==== Process Section Two=====================*/
+.process-section {
+    &.style-2 {
+        .row {
+            @include md {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .process-thumb {
+            position: relative;
+
+            .image-box {
+                direction: rtl;
+                position: relative;
+
+                img {
+                    max-width: inherit;
+
+                    @include md {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .video-box {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @include center-flex;
+                width: 260px;
+                height: 260px;
+                background-color: $bg-color5;
+                backdrop-filter: blur(10px);
+
+                @include xs {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                .circle-box {
+                    width: 170px;
+                    height: 170px;
+                    border-radius: 50%;
+                    background-color: $dark-color;
+
+                    .popup-video {
+                        position: absolute;
+                        z-index: 1;
+                        @include center-flex;
+                        width: 66px;
+                        height: 66px;
+                        border-radius: 50%;
+                        background-color: $theme-color2;
+                        font-size: 16px;
+                        color: $dark-color;
+                        font-family: $icon-font;
+                    }
+
+                    .text-inner {
+                        svg {
+                            width: 114px;
+                            word-spacing: 10px;
+                        }
+
+                        text {
+                            fill: $white-color;
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .process-list {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-radius: 10px;
+            border: 1px solid $border-color6;
+
+            @include mobile-xl {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            &::before {
+                @include absolute-content(100%, 1px, $border-color6);
+                top: 50%;
+
+                @include mobile-xl {
+                    display: none;
+                }
+            }
+
+            &::after {
+                @include absolute-content(1px, 100%, $border-color6);
+                left: 50%;
+
+                @include mobile-xl {
+                    display: none;
+                }
+            }
+
+            .process-item {
+                padding: 30px;
+
+                @include nestHub {
+                    padding: 15px;
+                }
+
+                @include xs {
+                    padding: 25px;
+                }
+
+                @include tablet-s {
+                    padding: 15px;
+                }
+
+                @include mobile-xl {
+                    padding: 30px;
+                    border-bottom: 1px solid $border-color6;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+
+                .number {
+                    font-size: 18px;
+                    color: $dark-color;
+                    font-weight: 500;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    border-radius: 50%;
+                    text-align: center;
+                    background-color: $theme-color3;
+                    @include transition;
+                    margin-bottom: 20px;
+                }
+
+                .title {
+                    font-size: 22px;
+                    color: $dark-color;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+
+                .description {
+                    font-size: 16px;
+                    color: $gray-color;
+                    margin-bottom: 0;
+                }
+
+                &:hover .number {
+                    background-color: $theme-color;
+                    color: $white-color;
+                }
+            }
+        }
+
+        &.bg-dark {
+            .process-list {
+                border: 1px solid rgba(255, 255, 255, 0.1);
+
+                &::before,
+                &::after {
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                .process-item {
+                    .number {
+                        color: $white-color;
+                        background-color: $dark-color3;
+                    }
+
+                    .title {
+                        color: $white-color;
+                    }
+
+                    .description {
+                        color: $gray-color2;
+                    }
+
+                    &:hover .number {
+                        background-color: $theme-color;
+                    }
+                }
+            }
+        }
+
+    }
+}

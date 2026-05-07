@@ -1,0 +1,110 @@
+/*==== Default Skills Style =====================*/
+.skills {
+    position: relative;
+    margin-top: -11px;
+
+    .skill-item {
+        position: relative;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-header {
+            position: relative;
+            margin-bottom: 0;
+
+            .skill-title {
+                font-size: 16px;
+                color: $dark-color;
+                font-weight: 400;
+                margin-bottom: 11px;
+            }
+        }
+
+        .skill-bar {
+            .bar-inner {
+                position: relative;
+                width: 100%;
+                height: 3px;
+                background-color: rgba(17, 79, 79, 0.2);
+
+                .bar {
+                    width: 0;
+                    height: 3px;
+                    -webkit-transition: all 3000ms ease;
+                    -o-transition: all 3000ms ease;
+                    transition: all 3000ms ease;
+                    background-color: $dark-color3;
+                }
+
+                .skill-percentage {
+                    font-size: 16px;
+                    color: $dark-color;
+                    font-weight: 400;
+                    position: absolute;
+                    right: 0;
+                    bottom: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+// dark style
+.skills.dark {
+    position: relative;
+    margin-top: -11px;
+
+    .skill-item {
+        position: relative;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-header {
+            position: relative;
+            margin-bottom: 0;
+
+            .skill-title {
+                font-size: 16px;
+                color: $dark-color;
+                font-weight: 400;
+                margin-bottom: 11px;
+            }
+        }
+
+        .skill-bar {
+            .bar-inner {
+                position: relative;
+                width: 100%;
+                height: 3px;
+                background-color: $bg-color4;
+
+                .bar {
+                    width: 0;
+                    height: 3px;
+                    -webkit-transition: all 3000ms ease;
+                    -o-transition: all 3000ms ease;
+                    transition: all 3000ms ease;
+                    background-color: $theme-color2;
+                }
+
+                .skill-percentage {
+                    font-size: 16px;
+                    color: $white-color;
+                    font-weight: 400;
+                    position: absolute;
+                    right: 0;
+                    bottom: 12px;
+                }
+            }
+        }
+    }
+}
+
+

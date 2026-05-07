@@ -1,0 +1,27 @@
+/*==== Counter Section Two =====================*/
+.counter-section.style-2 {
+    .counter-box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .icon {
+            @include center-flex;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: $bg-color10;
+            font-size: 36px;
+            color: $theme-color2;
+        }
+
+        .title {
+            font-size: 60px;
+			line-height: 1;
+            color: $white-color;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

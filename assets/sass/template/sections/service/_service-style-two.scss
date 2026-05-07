@@ -1,0 +1,75 @@
+/*======== Service Section Two =========*/
+.service-section {
+    &.style-2 {
+        .service-single-box {
+            background-color: $theme-color3;
+            transition: background-color 0.4s ease-in-out;
+
+            &:hover {
+                background-color: $dark-color;
+
+                .icon {
+                    color: $theme-color2;
+                    @include filter-theme-color2;
+                }
+
+                .title {
+                    color: $white-color;
+                }
+
+                .text {
+                    color: $gray-color2;
+                }
+
+                .serial {
+                    color: $theme-color2;
+                }
+
+                .service-btn {
+                    color: $theme-color2;
+                    border-color: $theme-color2;
+                }
+
+                .border {
+                    &::before {
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+
+                .path__shape {
+                    opacity: 1;
+
+                    &::after {
+                        right: 50px;
+                        bottom: 50px;
+                    }
+                }
+            }
+
+            .border {
+                &::before {
+                    @include absolute-content(0, 1px, $theme-color2);
+                    left: 50%;
+                }
+            }
+
+            .path__shape {
+                opacity: 0;
+                transition: opacity 0.4s ease-in-out;
+
+                &::before {
+                    @include absolute-content(50px, 50px, $border-color);
+                    right: 0;
+                    bottom: 0;
+                }
+
+                &::after {
+                    @include absolute-content(40px, 40px, $border-color);
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,166 @@
+/*==== Case Studies Section Two =====================*/
+.case-studies-section {
+    &.style-2 {
+        overflow: hidden;
+
+        .case-btn-inner {
+            gap: 30px;
+
+            .line {
+                width: 100%;
+                height: 1px;
+                background: $border-color;
+            }
+
+            .array-prev,
+            .array-next {
+                border-color: $border-color;
+                background-color: $border-color;
+                color: $white-color;
+                @include transition;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        @media (min-width: #{ $xxl + 1 }) {
+            .case-slider.swiper {
+                overflow: visible;
+
+                // .swiper-slide.swiper-slide-prev {
+                //     opacity: 0;
+                //     transition: 0.5s;
+                // }
+
+                .case-btn-inner {
+                    display: none;
+                }
+            }
+        }
+
+        .case-single-item {
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                .image-box {
+                    .overlay-btn {
+                        right: 0;
+                    }
+
+                    img {
+                        transform: scale(1.1) rotate(-2deg);
+                    }
+                }
+
+                .info-content .icon-box i {
+                    @include animation(wobble_vertical, 1s, ease-in-out);
+                }
+            }
+
+            &::before {
+                display: none;
+            }
+
+            .image-box {
+                position: relative;
+                background-color: $dark-color;
+                overflow: hidden;
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    @include transition;
+                }
+
+                .overlay-btn {
+                    position: absolute;
+                    bottom: 62px;
+                    right: -62px;
+                    @include transition;
+
+                    @include mobile-m {
+                        bottom: 30px;
+                    }
+
+                    .case-btn {
+                        background: $theme-color;
+                        border-top-left-radius: 10px;
+                        width: 60px;
+                        height: 60px;
+                        @include center-flex;
+                        cursor: pointer;
+                        font-size: 25px;
+                        color: $white-color;
+                    }
+                }
+            }
+
+            .info-content {
+                max-width: 540px;
+                padding: 30px 42px;
+                background-color: $dark-color3;
+                border-radius: 10px;
+                border-top-right-radius: 0;
+                margin-left: auto;
+                margin-top: -62px;
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                @include mobile-xl {
+                    padding: 30px;
+                    border-top-left-radius: 0;
+                }
+
+                @include mobile-m {
+                    padding: 20px;
+                    margin-top: -30px;
+                }
+
+                .border {
+                    @include border-style(2px, 68px, $border-color);
+                    margin: 0 30px 0 40px;
+
+                    @include mobile-xl {
+                        margin: 0 20px;
+                    }
+
+                    @include vxs {
+                        margin: 0 12px;
+                    }
+                }
+
+                .info {
+                    .category {
+                        font-size: 14px;
+                        color: $white-color;
+                        position: relative;
+                        padding-left: 46px;
+                        margin-bottom: 8px;
+
+                        &::before {
+                            @include absolute-content(36px, 1px, $theme-color2);
+                            left: 0;
+                            top: 50%;
+                        }
+                    }
+
+                    .title {
+                        font-size: 22px;
+                        color: $white-color;
+                        font-weight: 500;
+                        margin-bottom: 0;
+
+                        @include mobile-s {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

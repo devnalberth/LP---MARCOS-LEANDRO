@@ -1,0 +1,195 @@
+/*==== About Section Two =====================*/
+.about-section.style-2 {
+    .experience-wrapper {
+        @include center-flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px 0;
+        max-width: 350px;
+        border-radius: 175px;
+        filter: drop-shadow(0px 20px 20px $border-color4);
+        background-color: $white-color;
+
+        .experience-years {
+            @include center-flex;
+            width: 194px;
+            height: 194px;
+            border-radius: 50%;
+            background-color: $theme-color3;
+
+
+            .inner {
+                @include center-flex;
+                width: 148px;
+                height: 148px;
+                border-radius: 50%;
+                background-color: $theme-color3;
+                border: 1px solid $dark-color;
+
+                span {
+                    font-size: 80px;
+                    line-height: 1;
+                    color: $dark-color;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .text {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            p {
+                font-size: 22px;
+                line-height: 30px;
+                color: $dark-color;
+                font-weight: 500;
+                margin-bottom: 0
+            }
+        }
+
+        .popup-video {
+            @include center-flex;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: $white-color;
+            border: 1px solid $theme-color;
+            @include transition;
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: $theme-color;
+                border-color: $white-color;
+
+                .inner-popup {
+                    background-color: $white-color;
+
+                    .icon {
+                        color: $theme-color
+                    }
+                }
+            }
+
+            .inner-popup {
+                @include center-flex;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: $theme-color;
+                transition: background-color 0.3s ease-in-out;
+
+                .icon {
+                    color: $white-color;
+                }
+            }
+        }
+
+    }
+
+    .about-content-wrap {
+
+        .features-list {
+            li {
+                font-size: 16px;
+                line-height: 28px;
+                color: $dark-color;
+                position: relative;
+                padding-left: 25px;
+
+                +li {
+                    margin-top: 7px;
+                }
+
+                &::before {
+                    @include absolute-centerY;
+                    left: 0;
+                    width: 18px;
+                    height: 18px;
+                    background: url(../images/icons/check-circle.png);
+                }
+            }
+        }
+    }
+
+    .about-right-wrap {
+        @include md {
+            display: flex;
+            gap: 24px;
+        }
+
+        @include xs {
+            flex-direction: column;
+        }
+
+        .image-box {
+            margin-bottom: 24px;
+
+            @include md {
+                flex: 1;
+                margin-bottom: 0;
+            }
+        }
+
+        .achievement-box {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            padding: 42px 50px 50px;
+
+            &:hover {
+                .content .icon i {
+                    @include animation(mirrorEffect, 0.5s, ease-in-out);
+                }
+            }
+
+            @include nestHub {
+                padding: 32px 20px 40px;
+            }
+
+            @include md {
+                flex: 1;
+            }
+
+            .awards {
+                position: relative;
+                line-height: 1;
+                display: inline-block;
+
+                .count-number {
+                    font-size: 60px;
+                    color: $dark-color;
+                    font-weight: 500;
+                }
+
+                .plus {
+                    font-size: 30px;
+                    position: absolute;
+                    top: 0;
+                    right: -20px;
+                    color: $dark-color;
+                }
+            }
+
+            .content {
+                @include center-flex;
+                justify-content: space-between;
+
+                p {
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $dark-color;
+                    margin-bottom: 0;
+                }
+
+                .icon {
+                    font-size: 40px;
+                    color: $dark-color;
+                }
+
+            }
+        }
+    }
+
+}

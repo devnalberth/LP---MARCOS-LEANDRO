@@ -1,0 +1,197 @@
+/*==== Choose Section Sseven =====================*/
+.choose-section {
+    &.style-7 {
+        .choose-title-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include laptop-s {
+                flex-direction: column;
+                align-items: start;
+                gap: 30px;
+            }
+            .choose-counter {
+                padding: 30px 40px;
+                background: $theme-color3;
+                border-radius: 10px;
+                max-width: 535px;
+                width: 100%;
+                @include mobile-xl {
+                    padding: 20px 20px;
+                }
+                .choose-counter-box {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    .count-box {
+                        font-size: 80px;
+                        line-height: 1;
+                        color: $dark-color;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .plus {
+                        font-size: 45px;
+                        margin-top: -30px;
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: 28px;
+                        color: $dark-color;
+                        font-weight: 400;
+                        margin: 0;
+                        @include mobile-xl {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .choose-left img {
+            width: 100%;
+            height: auto;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            border-radius: 16px;
+            &.active {
+                display: block;
+                opacity: 1;
+            }
+        }
+
+        .choose-right {
+            .title-box {
+                display: flex;
+                gap: 10px;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+                margin-top: 55px;
+                @include nestHub{
+                    &:first-child{
+                        margin-top: 0;
+                    }
+                }
+                .icon {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid $border-color7;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: background-color 0.5s ease-in-out;
+                    flex-shrink: 0;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        width: 1px;
+                        top: 49px;
+                        height: 95px;
+                        background-color: $border-color7;
+                        transform: translateX(-50%);
+                        @include mobile-l {
+                            height: 122px;
+                        }
+                    }
+                    &.border-none {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+                &.active {
+                    font-weight: bold;
+                }
+                &:hover,
+                &.active {
+                    .icon {
+                        background-color: $theme-color;
+                        color: white;
+                    }
+                }
+                .title {
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $dark-color;
+                    font-weight: 600;
+                    margin: 0;
+                }
+                .description {
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $gray-color;
+                    font-weight: 400;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
+}
+
+
+.dark-mode{
+    .choose-section{
+        .choose-title-area {
+            .choose-counter {
+                .choose-counter-box {
+                    p {
+                        color: $gray-color2;
+                    }
+                }
+            }
+        } 
+        .choose-right {
+            .title-box {
+                .icon {
+                    border: 1px solid $border-color13;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        width: 1px;
+                        top: 49px;
+                        height: 95px;
+                        background-color: $border-color13;
+                        transform: translateX(-50%);
+                        @include mobile-l {
+                            height: 122px;
+                        }
+                    }
+                    &.border-none {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+                &.active {
+                    font-weight: bold;
+                }
+                &:hover,
+                &.active {
+                    .icon {
+                        background-color: $theme-color;
+                        color: $white-color;
+                    }
+                }
+                .title {
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $white-color;
+                    font-weight: 600;
+                    margin: 0;
+                }
+                .description {
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $gray-color2;
+                    font-weight: 400;
+                    margin: 10px 0 0;
+                }
+            }
+        }
+    }
+}

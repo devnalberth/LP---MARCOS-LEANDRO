@@ -1,0 +1,202 @@
+/* Global padding classes */
+.px-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pr-0 {
+  padding-right: 0 !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pb-195 {
+  padding-bottom: 195px !important;
+}
+
+@include lg{
+  .lg-pb-165 {
+    padding-bottom: 165px !important;
+  }
+}
+
+@include lg{
+  .md-pb-155 {
+    padding-bottom: 155px !important;
+  }
+}
+
+
+@include md {
+  .md-px-12 {
+    padding-right: 12px !important;
+    padding-left: 12px !important;
+  }
+}
+
+@mixin global-paddings {
+  @for $i from 1 through $space-count {
+    .px-#{5 * $i} {
+      padding-right: 5px * $i !important;
+      padding-left: 5px * $i !important;
+    }
+
+    .py-#{5 * $i} {
+      padding-top: 5px * $i !important;
+      padding-bottom: 5px * $i !important;
+    }
+
+    .pt-#{5 * $i} {
+      padding-top: 5px * $i !important;
+    }
+
+    .pb-#{5 * $i} {
+      padding-bottom: 5px * $i !important;
+    }
+
+    .pl-#{5 * $i} {
+      padding-left: 5px * $i !important;
+    }
+
+    .pr-#{5 * $i} {
+      padding-right: 5px * $i !important;
+    }
+  }
+}
+
+/* Include global padding classes */
+@include global-paddings;
+
+
+@mixin generate-paddings($prefix) {
+  @for $i from 1 through $space-count {
+    .#{$prefix}-px-#{5 * $i} {
+      padding-right: 5px * $i !important;
+      padding-left: 5px * $i !important;
+    }
+
+    .#{$prefix}-py-#{5 * $i} {
+      padding-top: 5px * $i !important;
+      padding-bottom: 5px * $i !important;
+    }
+
+    .#{$prefix}-pt-#{5 * $i} {
+      padding-top: 5px * $i !important;
+    }
+
+    .#{$prefix}-pb-#{5 * $i} {
+      padding-bottom: 5px * $i !important;
+    }
+
+    .#{$prefix}-pl-#{5 * $i} {
+      padding-left: 5px * $i !important;
+    }
+
+    .#{$prefix}-pr-#{5 * $i} {
+      padding-right: 5px * $i !important;
+    }
+  }
+}
+
+@mixin generate-zero-paddings($prefix) {
+  .#{$prefix}-px-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .#{$prefix}-py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .#{$prefix}-pt-0 {
+    padding-top: 0 !important;
+  }
+
+  .#{$prefix}-pb-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .#{$prefix}-pl-0 {
+    padding-left: 0 !important;
+  }
+
+  .#{$prefix}-pr-0 {
+    padding-right: 0 !important;
+  }
+}
+
+/* Include breakpoint-specific padding classes */
+@include hd {
+  @include generate-paddings('hd');
+  @include generate-zero-paddings('hd');
+}
+
+@include xxl {
+  @include generate-paddings('xxl');
+  @include generate-zero-paddings('xxl');
+}
+
+@include ml {
+  @include generate-paddings('ml');
+  @include generate-zero-paddings('ml');
+}
+
+@include xl {
+  @include generate-paddings('xl');
+  @include generate-zero-paddings('xl');
+}
+
+@include lg {
+  @include generate-paddings('lg');
+  @include generate-zero-paddings('lg');
+}
+
+@include md {
+  @include generate-paddings('md');
+  @include generate-zero-paddings('md');
+}
+
+@include sm {
+  @include generate-paddings('sm');
+  @include generate-zero-paddings('sm');
+}
+
+@include xs {
+  @include generate-paddings('xs');
+  @include generate-zero-paddings('xs');
+}
+
+@include vxs {
+  @include generate-paddings('vxs');
+  @include generate-zero-paddings('vxs');
+}
+
+@include laptop-m {
+  @include generate-paddings('ltm');
+  @include generate-zero-paddings('ltm');
+}
+
+@include nestHub {
+  @include generate-paddings('nhb');
+  @include generate-zero-paddings('nhb');
+}

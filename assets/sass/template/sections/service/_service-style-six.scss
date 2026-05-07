@@ -1,0 +1,209 @@
+/*==== Service Section Six =====================*/
+.service-section {
+    &.style-6 {
+        .service-title-area {
+            @include xs {
+                flex-direction: column;
+                align-items: start;
+            }
+            .service-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .service-wrapper {
+            display: flex;
+            flex-direction: column;
+            .service-single-item {
+                display: flex;
+                align-items: center;
+                border-top: 1px solid $border-color6;
+                padding: 38px 40px;
+                position: relative;
+                overflow: hidden;
+                @include laptop-m {
+                    flex-direction: column;
+                    align-items: start;
+                }
+                @include tablet-l {
+                    padding: 38px 0px;
+                }
+                &:last-child {
+                    border-bottom: 1px solid $border-color6;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: $theme-color3;
+                    transform: scaleY(0);
+                    transform-origin: var(--hover-origin);
+                    border-radius: 20px;
+                    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+                    z-index: -1;
+                }
+                &.hover-active::before {
+                    transform: scaleY(1);
+                }
+                &.exit-top::before {
+                    transform-origin: top;
+                    transform: scaleY(0);
+                }
+                &.exit-bottom::before {
+                    transform-origin: bottom;
+                    transform: scaleY(0);
+                }
+
+                .item-left {
+                    flex-shrink: 0;
+                    .image {
+                        @include absolute-centerY;
+                        left: -275px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        opacity: 0;
+                        visibility: hidden;
+                        @include laptop-m {
+                            position: relative;
+                            overflow: auto;
+                            transform: translateY(0);
+                            border-radius: 0;
+                            left: 0;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        img {
+                            opacity: 0;
+                            transform: translateX(-5%);
+                            clip-path: inset(0 100% 0 0);
+                            transition:
+                                clip-path 0.8s cubic-bezier(0.645, 0.045, 0.355, 1),
+                                transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1),
+                                opacity 0.8s ease;
+                            @include laptop-m {
+                                opacity: 1;
+                                transform: inherit;
+                                clip-path: inherit;
+                                transition: inherit;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                    .item-wrap {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        transition: all 0.4s ease 0s;
+                        @include vxs {
+                            gap: 10px;
+                        }
+                        .icon {
+                            @include center-flex;
+                            height: 70px;
+                            width: 70px;
+                            border-radius: 50%;
+                            background: $theme-color3;
+                            position: relative;
+                            z-index: 1;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                z-index: -1;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                border-radius: 50%;
+                                transform: scale(0);
+                                height: 100%;
+                                background: $theme-color;
+                                transition: all 0.5s ease 0s;
+                            }
+                        }
+                        .text {
+                            margin: 0;
+                            font-size: 28px;
+                            line-height: 1;
+                            color: $dark-color;
+                            font-weight: 600;
+                            @include vxs {
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+                .item-right {
+                    .item-right-inner {
+                        display: flex;
+                        align-items: center;
+                        gap: 60px;
+                        justify-content: flex-end;
+                        @include laptop-m {
+                            flex-direction: column;
+                            align-items: start;
+                            gap: 20px;
+                        }
+                        p {
+                            margin: 0;
+                            max-width: 50%;
+                            @include laptop-m {
+                                max-width: 100%;
+                                margin-top: 20px;
+                            }
+                        }
+                        .icon {
+                            @include center-flex;
+                            height: 30px;
+                            width: 30px;
+                            background: transparent;
+                            border-radius: 50%;
+                            border: 1px solid $border-color7;
+                            transition: all 0.5s ease 0s;
+                            flex-shrink: 0;
+                        }
+                    }
+                }
+                &:hover {
+                    border: none;
+                    .item-left {
+                        .image {
+                            img {
+                                opacity: 1;
+                                transform: translateX(0);
+                                clip-path: inset(0 0 0 0);
+                            }
+                            opacity: 1;
+                            visibility: visible;
+                            left: 0px;
+                        }
+
+                        .item-wrap {
+                            transform: translateX(270px);
+                            @include lg {
+                                transform: translateX(250px);
+                            }
+                            .icon {
+                                &::before {
+                                    transform: scale(1);
+                                }
+                                img {
+                                    @include filter-white-color;
+                                }
+                            }
+                        }
+                    }
+                    .item-right {
+                        .icon {
+                            color: $theme-color;
+                            border-color: $theme-color;
+                        }
+                    }
+                    @include laptop-m {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+

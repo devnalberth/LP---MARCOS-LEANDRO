@@ -1,0 +1,148 @@
+/*==== Newsletter Section One =====================*/
+.newsletter-section {
+    position: relative;
+    @include bg-gradient($theme-color3, $dark-color);
+
+    &.bg-white {
+        @include bg-gradient($white-color, $dark-color);
+    }
+
+    &.bg-dark4 {
+        @include bg-gradient($dark-color4, $dark-color);
+    }
+}
+
+.bg-image2 {
+    background-image: linear-gradient($theme-color2 50%, $dark-color 50%);
+}
+
+.bg-image3 {
+    background-image: linear-gradient(transparent 50%, $dark-color 50%);
+}
+
+.newsletter {
+    @include center-flex;
+    justify-content: space-between;
+    justify-content: space-between;
+    padding: 35px 190px 35px 60px;
+    border-radius: 10px;
+    background-color: $theme-color;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include laptop-m {
+        padding: 35px 60px 35px 60px;
+    }
+
+    @include tablet-l {
+        padding: 35px;
+    }
+
+    @include xs {
+        flex-direction: column;
+    }
+
+    @include mobile-l {
+        padding: 35px 25px;
+    }
+
+    .text h3 {
+        font-size: 28px;
+        line-height: 1.66;
+        color: $white-color;
+        font-weight: 600;
+        margin: 0;
+
+        @include tablet-l {
+            font-size: 24px;
+        }
+
+        @include mobile-xl {
+            font-size: 22px;
+        }
+
+        @include mobile-m {
+            font-size: 20px;
+        }
+
+        @include mobile-s {
+            font-size: 19px;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        align-items: center;
+        @include transition;
+
+        @include xs {
+            margin-top: 12px;
+        }
+
+        &:hover {
+            .email-icon i {
+                @include animation(mirror_effect, 0.5s, ease-in-out);
+            }
+        }
+
+        .email-icon {
+            background-color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-right: 25px;
+            @include center-flex;
+
+            @include sm {
+                width: 70px;
+                height: 70px;
+            }
+
+            @include xs {
+                width: 60px;
+                height: 60px;
+                margin-right: 15px;
+            }
+
+            i {
+                color: $theme-color;
+                font-size: 28px;
+
+                @include xs {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .email-details {
+            p {
+                opacity: 0.800;
+                color: $white-color;
+                margin-bottom: 5px;
+
+                @include xs {
+                    display: none;
+                }
+            }
+
+            a {
+                font-size: 24px;
+                line-height: 1.66;
+                color: $white-color;
+                font-weight: 500;
+
+                @include mobile-xl {
+                    font-size: 20px;
+                }
+
+                @include mobile-m {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+// dark style
+

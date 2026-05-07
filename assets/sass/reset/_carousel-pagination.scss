@@ -1,0 +1,179 @@
+// Swiper Pagination Default
+.swiper-dot {
+    position: relative;
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        transition: 0.6s;
+        background-color: $bg-color1;
+        opacity: 1;
+        border-radius: 50%;
+
+        &:not(:last-child) {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+
+        &.swiper-pagination-bullet-active {
+            position: relative;
+            background-color: $dark-color;
+
+            &::before {
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 1px solid $dark-color;
+                content: "";
+            }
+        }
+    }
+
+    &.theme-color {
+        .swiper-pagination-bullet {
+            background-color: $theme-color;
+
+            &.swiper-pagination-bullet-active {
+                background-color: $theme-color;
+
+                &::before {
+                    border-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.array-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .s-prev,
+    .s-next,
+    .array-prev,
+    .array-next {
+        @include center-flex;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        border: 1px solid $white-color;
+        background-color: transparent;
+        transition: background-color 0.3s, transform 0.3s;
+        font-family: $icon-font;
+        font-weight: 900;
+        color: $white-color;
+
+        @include sm {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+        }
+
+        @include mobile-xl {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+        }
+
+        &:hover {
+            background-color: $theme-color;
+            border-color: $theme-color;
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    @include center-flex;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    background-color: $white-color;
+    @include transition;
+    font-family: $icon-font;
+    font-weight: 900;
+    color: $dark-color;
+
+    @include sm {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    @include mobile-xl {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    &:hover {
+        background-color: $theme-color;
+
+        &::after {
+            color: $white-color;
+        }
+    }
+
+    &::after {
+        font-size: 16px;
+        color: $dark-color;
+        @include transition;
+    }
+}
+
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 50px);
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 50px);
+}
+
+/* Basic reset for the buttons */
+.owl-nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Positioning and styling the buttons */
+.owl-nav {
+    display: flex;
+
+    .owl-prev,
+    .owl-next {
+        span {
+            @include center-flex;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            border: 1px solid $white-color;
+            background-color: transparent;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: $icon-font;
+            font-weight: 900;
+            color: $white-color;
+
+            &:hover {
+                background-color: $theme-color;
+                border-color: $theme-color;
+            }
+        }
+    }
+}

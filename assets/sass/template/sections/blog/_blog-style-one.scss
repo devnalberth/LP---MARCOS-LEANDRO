@@ -1,0 +1,270 @@
+/*==== Blog Section One =====================*/
+.blog-single-box {
+    background-color: $white-color;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+
+    &:hover {
+        .blog-image {
+            img {
+                transform: scale(1.1);
+                filter: brightness(80%);
+            }
+
+            .category-tag {
+                background-color: $theme-color;
+            }
+        }
+
+        .blog-content .border::before {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    .blog-image {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            transition:
+                transform 0.4s ease,
+                filter 0.4s ease;
+            object-fit: cover;
+        }
+
+        .category-tag {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+    }
+
+    .blog-content {
+        padding: 25px 15px 15px;
+
+        @include nestHub {
+            padding: 25px 0 15px;
+        }
+
+        @include mobile-m {
+            padding: 25px 0 15px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 36px;
+                height: 36px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+
+            .name {
+                font-size: 16px;
+                line-height: 1.66;
+                color: $dark-color;
+                font-weight: 500;
+
+                span {
+                    color: $gray-color;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .border::before {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 0;
+            width: 0;
+            height: 1px;
+            background: $theme-color;
+            @include transition;
+        }
+
+        .title {
+            @include nestHub {
+                font-size: 22px;
+            }
+
+            a {
+                background: linear-gradient($dark-color 0%, $dark-color 98%);
+                background-size: 0 2px;
+                background-repeat: no-repeat;
+                background-position: left 100%;
+                @include transition;
+
+                &:hover {
+                    color: $dark-color;
+                    background-size: 100% 2px;
+                }
+            }
+        }
+
+        .text {
+            color: $gray-color;
+        }
+
+        .continue-reading {
+            font-size: 16px;
+            color: $dark-color;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+
+            &:hover {
+                color: $theme-color;
+                gap: 5px;
+            }
+
+            &::before {
+                content: "\f178";
+                font-family: $icon-font;
+                font-size: 20px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+// dark style
+.dark-mode {
+    .blog-single-box {
+        background-color: $dark-color3;
+
+        &:hover {
+            .blog-image {
+                img {
+                    transform: scale(1.1);
+                    filter: brightness(80%);
+                }
+
+                .category-tag {
+                    background-color: $theme-color;
+                }
+            }
+
+            .blog-content .border::before {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        .blog-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                transition:
+                    transform 0.4s ease,
+                    filter 0.4s ease;
+                object-fit: cover;
+            }
+
+            .category-tag {
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+
+        .blog-content {
+            padding: 25px 15px 15px;
+
+            @include nestHub {
+                padding: 25px 0 15px;
+            }
+
+            @include mobile-m {
+                padding: 25px 0 15px;
+            }
+
+            .author {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 36px;
+                    height: 36px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    flex-shrink: 0;
+                }
+
+                .name {
+                    color: $gray-color2;
+
+                    span {
+                        color: $gray-color2;
+                    }
+                }
+            }
+
+            .border::before {
+                position: absolute;
+                content: "";
+                left: 50%;
+                top: 0;
+                width: 0;
+                height: 1px;
+                background: $theme-color2;
+                @include transition;
+            }
+
+            .title {
+                @include nestHub {
+                    font-size: 22px;
+                }
+
+                a {
+                    background: linear-gradient($white-color 0%, $white-color 98%);
+                    color: $white-color;
+                    background-size: 0 2px;
+                    background-repeat: no-repeat;
+                    background-position: left 100%;
+                    @include transition;
+
+                    &:hover {
+                        color: $white-color;
+                        background-size: 100% 2px;
+                    }
+                }
+            }
+
+            .text {
+                color: $gray-color2;
+            }
+
+            .continue-reading {
+                color: $gray-color2;
+
+                &:hover {
+                    color: $theme-color2;
+                }
+
+                &::before {
+                    content: "\f178";
+                    font-family: $icon-font;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

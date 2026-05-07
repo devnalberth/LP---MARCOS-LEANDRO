@@ -1,0 +1,194 @@
+/*==== Hero Section Five =====================*/
+.hero-section.style-5 {
+	background-color: $dark-color;
+
+	.hero-content {
+		padding: 150px 0 143px;
+
+		@include md {
+			padding: 100px 0 0;
+		}
+
+		.sub-title {
+			font-size: 18px;
+			color: $dark-color;
+			font-weight: 500;
+
+			@include mobile-xl {
+				font-size: 16px;
+			}
+
+			@include vxs {
+				flex-direction: column;
+				align-items: baseline;
+			}
+		}
+
+		.title {
+			font-size: 80px;
+			line-height: 1.18;
+			color: $dark-color;
+			font-weight: 700;
+			font-family: $title-font;
+			letter-spacing: normal;
+			margin-bottom: 0;
+
+			@include ml {
+				font-size: 48px;
+			}
+
+			@include nestHub {
+				font-size: 38px;
+			}
+
+			@include xs {
+				font-size: 45px;
+			}
+
+			@include tablet-s {
+				font-size: 42px;
+			}
+
+			@include mobile-xl {
+				font-size: 34px;
+			}
+
+			@include mobile-l {
+				font-size: 32px;
+			}
+
+			@include mobile-s {
+				font-size: 30px;
+			}
+
+			.hero-title_shape {
+				display: inline-block;
+				position: relative;
+				top: -10px;
+			}
+		}
+
+		.border {
+			&::before {
+				@include absolute-content(60px, 2px, $theme-color);
+				animation: moveBorder 10s linear infinite;
+			}
+		}
+
+		@include nestHub {
+			.hero-btn {
+				flex-direction: column;
+				align-items: start !important;
+			}
+		}
+
+		@include mobile-xl {
+			.hero-btn {
+				flex-direction: column;
+				align-items: start !important;
+			}
+		}
+
+		.contact-info {
+			@include center-flex;
+			justify-content: flex-start;
+			gap: 10px;
+
+			&:hover {
+				.number {
+					color: $theme-color;
+				}
+			}
+
+			.icon {
+				@include center-flex;
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				background-color: $theme-color;
+				font-size: 24px;
+				color: $white-color;
+
+				i {
+					@include filter-white-color;
+				}
+			}
+
+			.number {
+				font-size: 16px;
+				line-height: 26px;
+				color: $dark-color;
+				font-weight: 600;
+				@include transition;
+			}
+		}
+	}
+
+	.hero-social-proof {
+		img {
+			border-color: $theme-color3;
+		}
+
+		.happy-customers {
+			.text {
+				color: $dark-color;
+			}
+
+			.rating-viewers {
+
+				.rating {
+					color: $dark-color;
+				}
+
+				.count {
+					color: $gray-color2;
+				}
+			}
+		}
+	}
+
+	.hero-right {
+		position: relative;
+
+		.info-box {
+			position: absolute;
+			bottom: 0;
+			left: -43%;
+			padding: 50px 0 50px 60px;
+			max-width: 472px;
+			width: 100%;
+
+			@include nestHub {
+				padding: 50px 0 50px 30px;
+			}
+
+			@include md {
+				left: 0;
+			}
+
+			.title {
+				font-size: 24px;
+				line-height: 34px;
+				color: $white-color;
+				font-weight: 500;
+				margin-bottom: 5px;
+			}
+		}
+
+		.circle-path_shape {
+			position: absolute;
+			content: "";
+			left: -135px;
+			bottom: 86px;
+			width: 280px;
+			height: 280px;
+			border-radius: 50%;
+			background-color: $theme-color;
+			z-index: -1;
+			clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+		}
+	}
+
+}
+
+

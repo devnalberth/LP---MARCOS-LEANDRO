@@ -1,0 +1,53 @@
+/*==== Team Section Two=====================*/
+.team-section {
+  &.style-2 {
+    .team-title-area {
+
+      .member-stats-box {
+        .count {
+          color: $dark-color;
+        }
+
+        .borderY {
+          @include border-style(2px, 48px, rgba(6, 50, 50, 0.10))
+        }
+
+        .text {
+          color: $dark-color;
+        }
+      }
+    }
+
+    .team-single-box .profile-info {
+      .name {
+        color: $dark-color;
+      }
+
+      .position {
+        color: $gray-color
+      }
+    }
+
+    .team-slide-wrapper {
+      .array-button {
+
+        .array-prev,
+        .array-next {
+          i {
+            @include filter-dark-color;
+
+            @include xl {
+              @include filter-white-color;
+            }
+          }
+
+          &:hover {
+            i {
+              @include filter-theme-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

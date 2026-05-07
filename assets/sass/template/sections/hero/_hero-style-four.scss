@@ -1,0 +1,375 @@
+/*==== Hero Section Four =====================*/
+.hero-section.style-4 {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 30px;
+
+    @include md {
+        border-radius: 0;
+    }
+
+    .hero-content {
+        padding: 150px 0 153px;
+
+        @include lg {
+            padding: 80px 0;
+        }
+
+        @include vxs {
+            padding: 60px 0;
+        }
+
+        .sub-title {
+            font-size: 18px;
+            color: $dark-color;
+            font-weight: 500;
+
+            @include mobile-xl {
+                font-size: 16px;
+            }
+
+            @include vxs {
+                flex-direction: column;
+                align-items: baseline;
+            }
+        }
+
+        .title {
+            font-size: 56px;
+            line-height: 1.18;
+            color: $dark-color;
+            font-weight: 700;
+            letter-spacing: normal;
+            margin-bottom: 0;
+
+            @include ml {
+                font-size: 48px;
+            }
+
+            @include nestHub {
+                font-size: 38px;
+            }
+
+            @include xs {
+                font-size: 45px;
+
+                br {
+                    display: block;
+                }
+            }
+
+            @include tablet-s {
+                font-size: 42px;
+            }
+
+            @include mobile-xl {
+                font-size: 34px;
+            }
+
+            @include mobile-l {
+                font-size: 32px;
+            }
+
+            @include mobile-s {
+                font-size: 30px;
+            }
+
+        }
+
+        .border {
+            &::before {
+                @include absolute-content(60px, 2px, $theme-color);
+                animation: moveBorder 10s linear infinite;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 26px;
+            color: $dark-color;
+            margin: -3px 0 41px;
+
+            @include nestHub {
+                br {
+                    display: none;
+                }
+            }
+
+            @include xs {
+                br {
+                    display: none;
+                }
+            }
+
+        }
+
+        .feature-list {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 69px;
+
+            @include vxs {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 40px;
+            }
+
+            li {
+                color: $dark-color;
+                position: relative;
+                padding-left: 30px;
+
+                &::before {
+                    @include absolute-centerY;
+                    left: 0;
+                    content: "\f00c";
+                    font-weight: 300;
+                    font-size: 23px;
+                    font-family: $icon-font;
+                    color: $theme-color;
+                }
+            }
+        }
+
+
+
+        .contact-info {
+            @include center-flex;
+            justify-content: flex-start;
+            gap: 10px;
+
+            &:hover {
+                .number {
+                    color: $theme-color;
+                }
+            }
+
+            .icon {
+                @include center-flex;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background-color: $theme-color;
+                font-size: 24px;
+                color: $white-color;
+
+                i {
+                    @include filter-white-color;
+                }
+            }
+
+            .number {
+                font-size: 16px;
+                line-height: 26px;
+                color: $dark-color;
+                font-weight: 600;
+                @include transition;
+            }
+        }
+    }
+
+    .hero-right {
+        padding-left: 50px;
+
+        @include lg {
+            padding-left: 0;
+        }
+
+        @include md {
+            display: none;
+        }
+
+        .image-box {
+            position: absolute;
+            bottom: 0;
+
+            img {
+                max-width: inherit;
+            }
+
+        }
+
+        .thumb-info {
+            position: absolute;
+            background-color: $bg-color5;
+            backdrop-filter: blur(10px);
+            bottom: 18%;
+            right: 32.5%;
+            border-radius: 10px;
+
+            @include xxl {
+                right: 24%;
+            }
+
+            @include lg {
+                display: none
+            }
+        }
+
+        .agency-info {
+            @include center-flex;
+            flex-direction: column;
+            width: 140px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid $white-color;
+            background-color: $bg-color5;
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top: 12%;
+            right: 7%;
+            z-index: 2;
+
+
+            @include xxl {
+                display: none
+            }
+
+            &:hover .icon i {
+                @include animation(mirrorEffect, 0.5s, ease-in-out);
+            }
+
+            .icon {
+                @include center-flex;
+                width: 48px;
+                height: 48px;
+                font-size: 25px;
+                color: $theme-color2;
+                background-color: $dark-color;
+                border-radius: 50%;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 20px;
+                color: $dark-color;
+                font-weight: 500;
+                margin-bottom: 0;
+                text-align: center;
+            }
+        }
+
+        .dot-shape {
+            position: absolute;
+            top: 119px;
+            right: 20px;
+
+            @include md {
+                right: 333px;
+            }
+
+            @include tablet-l {
+                right: 195px;
+            }
+
+            @include xs {
+                display: none;
+            }
+        }
+
+    }
+
+    .swiper-slide {
+        @include ml {
+            overflow: hidden;
+        }
+    }
+
+    @include xxl {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &:hover {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .hero-content {
+        >* {
+            transition-timing-function: ease;
+            transition-duration: 1s;
+            transition-property: all;
+            opacity: 0;
+
+            &:nth-child(1) {
+                transition-delay: 1000ms;
+                transform: translateY(-50px);
+            }
+
+            &:nth-child(2) {
+                transition-delay: 700ms;
+                transform: translateY(50px);
+            }
+
+            &:nth-child(3) {
+                transition-delay: 1000ms;
+                transform: translateY(50px);
+            }
+
+            &:nth-child(4) {
+                transition-delay: 1300ms;
+                transform: translateY(50px);
+            }
+
+            &:nth-child(5) {
+                transition-delay: 1500ms;
+                transform: translateY(50px);
+            }
+        }
+    }
+
+    .hero-right {
+        >* {
+            transition-timing-function: ease;
+            transition-duration: 1s;
+            transition-property: all;
+            opacity: 0;
+
+            &:nth-child(1) {
+                transition-delay: 1000ms;
+                transform: translateY(-50px);
+            }
+
+            &:nth-child(2) {
+                transition-delay: 700ms;
+                transform: translateY(50px);
+            }
+
+            &:nth-child(3) {
+                transition-delay: 1000ms;
+                transform: translateY(50px);
+            }
+        }
+    }
+
+    /* Active Slide Animation */
+    .swiper-slide-active {
+        .hero-content {
+            >* {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-right {
+            >* {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+
+}

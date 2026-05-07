@@ -1,0 +1,45 @@
+/*==== Faq Contact Inner=====================*/
+.faq-contact {
+    @include md {
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .contact-thumb {
+        .image-box {
+            position: relative;
+            max-width: 590px;
+
+            .image {
+                @include absolute-centerX;
+                bottom: 0;
+                height: 100%;
+
+                img {
+                    max-width: inherit;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .faq-content-wrapper {
+        padding-top: 105px;
+
+        @include md {
+            padding-top: 0;
+        }
+
+        .sec-text br {
+            display: block;
+        }
+
+        @include mobile-xl {
+            .sec-text br {
+                display: none;
+            }
+        }
+    }
+}

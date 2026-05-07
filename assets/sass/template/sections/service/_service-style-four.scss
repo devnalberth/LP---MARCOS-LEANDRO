@@ -1,0 +1,151 @@
+/*======== Service Section Four =========*/
+.service-section {
+    &.style-4 {
+        .service-tabs {
+
+            .service-tab {
+                border-bottom: 2px solid $border-color;
+                cursor: pointer;
+                position: relative;
+
+                &.active,
+                &:hover {
+                    &::before {
+                        width: 90%;
+
+                        @include md {
+                            width: 100%;
+                        }
+                    }
+                }
+
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $theme-color2;
+                    @include transition;
+                }
+
+                h5 {
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $white-color;
+                    font-weight: 500;
+                    margin-bottom: 19px;
+                    @include transition;
+
+                }
+            }
+
+        }
+
+        .service-tab-wrapper {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .service-image-wrapper {
+            .image-box {
+                display: inline-block;
+                position: relative;
+            }
+        }
+
+        .service-content-wrap {
+            margin-right: 63px;
+
+            @include md {
+                margin-right: 0;
+            }
+
+            .features-list {
+                li {
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: $white-color;
+                    position: relative;
+                    padding-left: 25px;
+
+                    +li {
+                        margin-top: 7px;
+                    }
+
+                    &::before {
+                        @include absolute-centerY;
+                        left: 0;
+                        width: 18px;
+                        height: 18px;
+                        background: url(../images/icons/check-circle.png);
+                        @include filter-theme-color2;
+                    }
+                }
+            }
+        }
+
+        .service-tab-wrapper {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-tab-wrapper.active {
+            display: block;
+            opacity: 1;
+        }
+
+    }
+}
+
+.service-bottom {
+
+    .social-proof {
+        @include center-flex;
+        gap: 20px;
+
+        @include xs {
+            gap: 15px;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            margin-bottom: 0
+        }
+
+        .icon {
+            @include center-flex;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: $dark-color;
+            font-size: 34px;
+            color: $theme-color2;
+            flex-shrink: 0;
+        }
+
+        .text {
+            font-size: 18px;
+            color: $dark-color;
+            margin-bottom: 0;
+
+            @include tablet-s {
+                width: 80%;
+                text-align: center;
+            }
+
+            @include mobile-xl {
+                width: 100%;
+            }
+
+            @include tablet-s {
+                text-align: left;
+            }
+        }
+    }
+}

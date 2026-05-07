@@ -1,0 +1,49 @@
+// Define a mixin to handle both column and row gaps
+@mixin global-main-gutter {
+  @for $i from 1 through $space-count {
+    .gx-#{5 * $i} {
+      --bs-gutter-x: #{5px * $i};
+    }
+
+    .gy-#{5 * $i} {
+      --bs-gutter-y: #{5px * $i};
+    }
+  }
+}
+
+@include global-main-gutter;
+
+@mixin generate-gutter($prefix) {
+  @for $i from 1 through $space-count {
+    .#{$prefix}-gx-#{5 * $i} {
+      --bs-gutter-x: #{5px * $i};
+    }
+
+    .#{$prefix}-gy-#{5 * $i} {
+      --bs-gutter-y: #{5px * $i};
+    }
+  }
+}
+
+// Default gutter generation
+@include generate-gutter('');
+
+@include ml {
+  @include generate-gutter('ml');
+}
+
+@include xl {
+  @include generate-gutter('xl');
+}
+
+@include lg {
+  @include generate-gutter('lg');
+}
+
+@include md {
+  @include generate-gutter('md');
+}
+
+@include sm {
+  @include generate-gutter('sm');
+}

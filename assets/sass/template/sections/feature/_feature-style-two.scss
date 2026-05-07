@@ -1,0 +1,69 @@
+/*==== Feature Section Two =====================*/
+.feature-section {
+    &.style-2 {
+
+        .feature-single-box {
+            padding: 50px 20px 50px;
+
+            &:hover {
+                .text {
+                    color: $gray-color2;
+                }
+
+                .icon {
+                    color: $theme-color2;
+                }
+            }
+
+            @include lg {
+                padding: 50px 15px 50px;
+            }
+
+            @include nestHub {
+                padding: 50px 15px 50px;
+            }
+
+            .icon {
+                margin-bottom: 28px;
+                font-size: 60px;
+                color: $dark-color;
+
+                .icon-three-people {
+                    width: 60px !important;
+                    height: 60px !important;
+                }
+            }
+
+            .title {
+                margin-bottom: 10px;
+            }
+
+            .text {
+                margin-bottom: 0;
+
+                @include md {
+                    width: 68%;
+                    margin: 0 auto;
+                }
+
+                @include sm {
+                    width: 90%;
+                }
+
+                @include xs {
+                    width: 55%;
+                }
+
+                @include mobile-xl {
+                    width: 70%;
+                }
+
+                @include vxs {
+                    width: 90%;
+                }
+            }
+        }
+
+
+    }
+}

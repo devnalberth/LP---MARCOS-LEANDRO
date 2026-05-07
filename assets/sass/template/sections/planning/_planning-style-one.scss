@@ -1,0 +1,132 @@
+/*==== Planning Section One =====================*/
+.planning-section {
+    @include md {
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.planning-image-box {
+    position: relative;
+    direction: rtl;
+    margin-right: 85px;
+
+    @include xxl {
+        margin-right: 0;
+    }
+
+    @include md {
+        display: inline-block;
+    }
+
+    .image {
+        max-width: inherit;
+        border-radius: 10px;
+
+        @include xxl {
+            max-width: 100%;
+        }
+    }
+
+    .since-box {
+        right: 0;
+        bottom: 0;
+        border-radius: 10px 0;
+
+        @include nestHub {
+            display: none;
+        }
+
+        @include md {
+            display: block;
+        }
+
+        @include mobile-xl {
+            display: none;
+        }
+    }
+}
+
+.planning-content-wrapper {
+
+    .sec-text {
+        @include md {
+            width: 67%;
+        }
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    @include mobile-xl {
+        .planning-btn {
+            flex-direction: column;
+            align-items: start !important;
+        }
+    }
+
+    .contact-info {
+        @include center-flex;
+        justify-content: flex-start;
+        gap: 10px;
+
+        .icon {
+            @include center-flex;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: $theme-color;
+            font-size: 24px;
+            color: $white-color;
+
+            i {
+                @include filter-white-color;
+            }
+        }
+
+        .number {
+            font-size: 16px;
+            line-height: 26px;
+            color: $dark-color;
+            font-weight: 600;
+        }
+    }
+
+    .feature-grid {
+        @include ml {
+            gap: 0;
+        }
+
+        @include mobile-xl {
+            gap: 20px;
+        }
+
+
+
+        .feature-item {
+            gap: 10px;
+
+            @include lg {
+                padding-right: 20px;
+            }
+
+            @include nestHub {
+                padding-right: 0;
+            }
+
+            @include xs {
+                padding-right: 0;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 20px;
+                color: $dark-color;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+}

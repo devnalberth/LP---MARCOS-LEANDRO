@@ -1,0 +1,109 @@
+/*==== Faq Section Two=====================*/
+.faq-section {
+  &.style-2 {
+    .title-area {
+      .sec-text br {
+        display: block;
+      }
+
+      @include mobile-xl {
+        .sec-text br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.accordion-box.style-2 {
+  position: relative;
+
+  .accordion {
+    margin-bottom: 20px;
+    border-bottom: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .acc-btn {
+      font-size: 18px;
+      color: $dark-color;
+      border: 1px solid rgba(6, 50, 50, 0.1);
+      padding: 22px 75px 22px 30px;
+      border-radius: 5px;
+
+      @include xs {
+        padding-left: 20px;
+      }
+
+      &.active {
+        color: $white-color;
+        background-color: $dark-color;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        .icon {
+          color: $theme-color2;
+          border-color: rgba(255, 255, 255, 0.14);
+
+          i {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      .icon {
+        @include center-flex;
+        width: 70px;
+        height: 100%;
+        text-align: center;
+        border-left: 1px solid rgba(6, 50, 50, 0.10);
+        font-size: 24px;
+        color: $dark-color;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+
+        i {
+          @include transition;
+        }
+
+      }
+    }
+
+
+    .acc-content {
+      position: relative;
+      display: none;
+
+      .content {
+        padding: 30px;
+        margin-top: 0;
+        border-radius: 5px;
+        filter: drop-shadow(0px 20px 25px rgba(190, 199, 199, 0.2));
+        background-color: $white-color;
+        border: 1px solid rgba(6, 50, 50, 0.1);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+        @include xs {
+          padding: 20px;
+        }
+
+        .text {
+          display: block;
+          font-size: 16px;
+          color: $gray-color;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .acc-content.active {
+      display: block;
+    }
+  }
+}

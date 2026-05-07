@@ -1,0 +1,88 @@
+/*==== Brands Section =====================*/
+.brands-section {
+  position: relative;
+  z-index: 2;
+
+  .sponsors-outer {
+    border-top: 1px solid $border-color5;
+    border-bottom: 1px solid $border-color5;
+
+    .trusted-partners {
+      font-size: 18px;
+      color: $dark-color;
+    }
+  }
+}
+
+.brands-slider {
+  position: relative;
+  padding: 58px 0;
+
+  @include xs {
+    padding: 35px 0;
+  }
+
+  .brand-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+
+    .image {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      img {
+        display: inline-block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        transition: all 0.4s ease 0s;
+        &:first-child {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 1;
+          margin: auto;
+          transform: translateX(50%) scaleX(2);
+          opacity: 0;
+          filter: blur(10px);
+        }
+      }
+      &:hover {
+        img {
+          opacity: 0;
+          &:first-child {
+            transform: translateX(0) scaleX(1);
+            opacity: 1;
+            filter: blur(0) grayscale(0) brightness(100%);
+            transition: all 0.4s ease 0s;
+          }
+          &:nth-child(2) {
+            transform: translateX(-50%) scaleX(2);
+            opacity: 0;
+            filter: blur(10px);
+          }
+        }
+      }
+    }
+  }
+
+  .brand--item {
+    text-align: center;
+  }
+}
+
+.dark-mode {
+  .brands-section {
+    position: relative;
+    z-index: 2;
+    .sponsors-outer {
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/*==== Project Section Four =====================*/
+
+.style-4 {
+    .project-filter-buttons {
+
+        .menu-filtering {
+            border: 1px solid $border-color13;
+
+            li {
+                color: $white-color;
+                border: 1px solid $border-color13;
+
+                &.active,
+                &:hover {
+                    border-color: $theme-color2;
+                    background-color: $theme-color2;
+                    color: $dark-color;
+                }
+            }
+        }
+
+    }
+}

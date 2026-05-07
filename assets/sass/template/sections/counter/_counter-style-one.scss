@@ -1,0 +1,77 @@
+/*==== Counter Section One =====================*/
+.counter-section {
+    .achievement-stats {
+        display: flex;
+        justify-content: space-around;
+        background-color: $theme-color2;
+        border: 1px solid $dark-color;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @include tablet-s {
+            flex-direction: column;
+        }
+
+        .stat-item {
+            padding: 30px;
+            flex: 1;
+            text-align: center;
+
+            @include nestHub {
+                padding: 20px;
+            }
+
+            @include xs {
+                padding: 15px;
+            }
+
+            @include tablet-s {
+                padding: 30px;
+            }
+
+            &:nth-child(2) {
+                border: 1px solid $dark-color;
+                border-top: none;
+                border-bottom: none;
+
+                @include tablet-s {
+                    border-top: inherit;
+                    border-bottom: inherit;
+                    border-left: none;
+                    border-right: none;
+                }
+            }
+
+            .count-box {
+                @include center-flex;
+                font-size: 60px;
+                line-height: 1;
+                color: $dark-color;
+                font-weight: 600;
+
+                @include nestHub {
+                    font-size: 50px;
+                }
+
+                @include xs {
+                    font-size: 45px;
+                }
+
+                @include tablet-s {
+                    font-size: 60px;
+                }
+
+                @include mobile-xl {
+                    font-size: 40px;
+                }
+            }
+
+            .text {
+                font-size: 18px;
+                color: $dark-color;
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

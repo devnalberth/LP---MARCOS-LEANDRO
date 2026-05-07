@@ -1,0 +1,13 @@
+@mixin selection-styles {
+    background: $theme-color;
+    color: $white-color;
+    text-shadow: none;
+}
+
+::selection {
+    @include selection-styles;
+}
+
+::-moz-selection {
+    @include selection-styles;
+}

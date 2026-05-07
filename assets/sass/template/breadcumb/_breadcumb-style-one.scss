@@ -1,0 +1,147 @@
+/*===== Breadcumb Section =====*/
+.breadcrumb-section {
+    position: relative;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 300px 0 150px;
+    min-height: 250px;
+
+    @include md {
+        padding: 150px 0;
+    }
+
+    @include xs {
+        padding: 100px 0;
+    }
+
+    .bg {
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: $bg-color3;
+        }
+    }
+
+    .title-outer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include xs {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .title {
+            position: relative;
+            font-size: 56px;
+            color: $white-color;
+            font-weight: 600;
+            margin-bottom: 20px;
+
+            @include sm {
+                font-size: 46px;
+            }
+
+            @include xs {
+                font-size: 35px;
+            }
+        }
+
+        .text {
+            position: relative;
+            display: flex;
+            gap: 15px;
+
+            @include sm {
+                display: none;
+            }
+
+            .icon {
+                @include mobile-m {
+                    display: none
+                }
+
+                i {
+                    @include filter-theme-color2;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: $gray-color2;
+                font-weight: 400;
+                margin: -5px 0 0;
+                max-width: 520px;
+
+                @include mobile-xl {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-breadcrumb {
+    position: relative;
+    margin-top: 5px;
+
+    li {
+        position: relative;
+        display: inline-block;
+        margin-right: 7px;
+        padding-right: 46px;
+        font-size: 16px;
+        color: $white-color;
+        font-weight: 500;
+        text-transform: capitalize;
+
+        &:last-child {
+            color: $white-color;
+            padding-right: 0;
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &:after {
+            @include absolute-centerY;
+            right: 0;
+            width: 36px;
+            height: 10px;
+            background: url(../images/icons/breadcrumb-arrow.png);
+        }
+
+        a {
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: capitalize;
+            -webkit-transition: all 300ms ease;
+            transition: all 300ms ease;
+
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+
+        &:hover {
+            &:first-child {
+                &::before {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

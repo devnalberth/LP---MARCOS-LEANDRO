@@ -1,0 +1,68 @@
+// Global Main gap class
+.gap-0 {
+    gap: 0 !important;
+}
+
+@mixin global-main-gap {
+    @for $i from 1 through $space-count {
+        .gap-#{5 * $i} {
+            gap: 5px * $i !important;
+        }
+    }
+}
+
+// Apply global gap
+@include global-main-gap;
+
+// Mixin to generate gap classes
+@mixin generate-gaps($prefix) {
+    @for $i from 1 through $space-count {
+        .#{$prefix}-gap-#{5 * $i} {
+            gap: 5px * $i !important;
+        }
+    }
+}
+
+// Apply global gap classes
+@include generate-gaps('');
+
+// Include breakpoints or device-specific gap mixins
+@include hd {
+    @include generate-gaps('hd');
+}
+
+@include xxl {
+    @include generate-gaps('xxl');
+}
+
+@include xl {
+    @include generate-gaps('xl');
+}
+
+@include lg {
+    @include generate-gaps('lg');
+}
+
+@include md {
+    @include generate-gaps('md');
+}
+
+@include sm {
+    @include generate-gaps('sm');
+}
+
+@include xs {
+    @include generate-gaps('xs');
+}
+
+@include vxs {
+    @include generate-gaps('vxs');
+}
+
+@include laptop-l {
+    @include generate-gaps('ltp-l');
+}
+
+@include laptop-m {
+    @include generate-gaps('ltp-m');
+}

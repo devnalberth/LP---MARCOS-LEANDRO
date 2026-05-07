@@ -1,0 +1,170 @@
+.project-section {
+    &.style-6 {
+        .project-title-area {
+            @include center-flex;
+            justify-content: space-between;
+            @include tablet-s {
+                flex-direction: column;
+                align-items: start;
+                margin-bottom: 30px;
+            }
+            .project-btn-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .array-button {
+                    .array-prev,
+                    .array-next {
+                        height: 60px;
+                        width: 60px;
+                        border: 1px solid $border-color12;
+                        color: $dark-color;
+                        &:hover {
+                            background: $dark-color;
+                            color: $white-color;
+                        }
+                    }
+                    .array-next {
+                        &.active {
+                            background: $dark-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+        .project-wrapper {
+            display: flex;
+            border-radius: 20px;
+            overflow: hidden;
+            @include xl {
+                border-radius: 0;
+            }
+            .project-thum {
+                @include tablet-l {
+                    display: none;
+                }
+                img {
+                    max-width: inherit;
+                    @include xxl {
+                        max-width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            .project-content {
+                background: $dark-color3;
+                padding: 110px 50px 110px 75px;
+                @include ml {
+                    padding: 80px 50px 80px 45px;
+                }
+                @include mobile-xl {
+                    padding: 50px 10px 50px 15px;
+                }
+                .project-box-title {
+                    .sub-title {
+                        font-size: 12px;
+                        line-height: 1;
+                        color: $white-color;
+                        display: inline-block;
+                        font-weight: 500;
+                        padding: 10px 20px;
+                        margin: 0;
+                        border-radius: 20px;
+                        border: 1px solid $border-color9;
+                    }
+                    .title {
+                        font-size: 40px;
+                        line-height: 48px;
+                        color: $white-color;
+                        font-weight: 600;
+                        margin: 20px 0 25px;
+                    }
+                }
+                p {
+                    color: $gray-color2;
+                    margin-bottom: 30px;
+                    max-width: 90%;
+                }
+                .project-list {
+                    li {
+                        color: $gray-color2;
+                        font-weight: 400;
+                        margin-top: 12px;
+                        i {
+                            color: $theme-color2;
+                        }
+                        span {
+                            font-size: 15px;
+                            line-height: 1;
+                            color: $white-color;
+                            font-weight: 400;
+                            margin: 0 10px;
+                        }
+                    }
+                }
+                .project-btn {
+                    .theme-btn {
+                        padding: 12px 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.project-content {
+    > * {
+        transition-timing-function: ease;
+        transition-duration: 1s;
+        transition-property: all;
+        opacity: 0;
+
+        &:nth-child(1) {
+            transition-delay: 1000ms;
+            transform: translateY(-50px);
+        }
+
+        &:nth-child(2) {
+            transition-delay: 700ms;
+            transform: translateY(50px);
+        }
+
+        &:nth-child(3) {
+            transition-delay: 1000ms;
+            transform: translateY(50px);
+        }
+    }
+}
+
+.project-thum {
+    > * {
+        transition-timing-function: ease;
+        transition-duration: 1s;
+        transition-property: all;
+        opacity: 0;
+
+        &:nth-child(1) {
+            transition-delay: 1000ms;
+            transform: translateY(-50px);
+        }
+    }
+}
+
+/* Active Slide Animation */
+.swiper-slide-active {
+    .project-content {
+        > * {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .project-thum {
+        > * {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

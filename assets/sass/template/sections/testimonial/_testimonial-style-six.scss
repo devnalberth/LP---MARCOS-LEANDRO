@@ -1,0 +1,135 @@
+/*==== Testimonial Section Six=====================*/
+
+.testimonial-section.style-6 {
+    position: relative;
+
+    .array-button {
+        gap: 10px;
+
+        .array-next,
+        .array-prev {
+            font-size: 16px;
+            width: 44px;
+            height: 44px;
+            color: $white-color;
+            border-color: $border-color6;
+            background: $dark-color3;
+        }
+
+        .array-next:hover,
+        .array-prev:hover,
+        .array-next.active {
+            color: $white-color;
+            background: $theme-color;
+            border-color: $theme-color;
+        }
+
+        @include mobile-l {
+            right: 20px;
+        }
+    }
+    .review-card-three {
+        border-top: 1px solid $border-color13;
+        border-bottom: 1px solid $border-color13;
+    }
+}
+
+.testimonial-card-five {
+    &.style-6 {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 10px;
+
+        &::before {
+            @include absolute-centerX;
+            top: 10px;
+            width: 90%;
+            height: 100%;
+            border-radius: 20px;
+            background: $bg-color20;
+            z-index: -1;
+            @include transition;
+        }
+
+        &:hover {
+            .inner-box {
+                transform: translateY(10px);
+            }
+        }
+
+        .inner-box {
+            background: $dark-color3;
+            padding: 45px 40px 60px;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            @include transition;
+
+            @include laptop-m {
+                padding: 50px 30px 50px;
+            }
+
+            @include nestHub {
+                padding: 50px 24px 50px;
+            }
+
+            &.white {
+                .icon {
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+
+            .title {
+                color: $white-color;
+                i{
+                    color: $theme-color2;
+                }
+            }
+
+            .rating {
+                i {
+                    color: $orange-color;
+                }
+
+                span {
+                    color: $white-color;
+                }
+            }
+
+            .text {
+                font-size: 16px;
+                line-height: 1.66;
+                margin-bottom: 0;
+                color: $gray-color2;
+                @include transition;
+            }
+
+            .border {
+                @include transition;
+            }
+
+            .user-info {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .user-image {
+                    width: 66px;
+                    height: 66px;
+                    border-radius: 50%;
+                }
+
+                .user-name {
+                    color: $white-color;
+                }
+
+                .user-title {
+                    margin-bottom: 0;
+                    color: $gray-color2;
+                }
+            }
+        }
+    }
+}

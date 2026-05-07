@@ -1,0 +1,112 @@
+/*==== Pricing Section Inner =====================*/
+.pricing-section {
+    &.inner-page {
+        .pricing-card {
+
+            &.current,
+            &:hover {
+                .pricing-plan {
+                    .path {
+                        background-color: $dark-color;
+                    }
+
+                    .plan {
+                        color: $theme-color2;
+                    }
+
+                    .price {
+                        color: $white-color;
+                    }
+
+                    .billing-cycle {
+                        color: $gray-color2;
+                    }
+                }
+            }
+
+            .pricing-plan {
+                .path {
+                    background-color: $white-color;
+                    border: 1px solid rgba(6, 50, 50, 0.1);
+                    border-top: none;
+
+                    &::before,
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+
+            .features {
+                margin: 72px 0 46px 40px;
+                color: $dark-color;
+
+                @include nestHub {
+                    margin: 72px 0 46px 0;
+                }
+
+                @include respond-between($xs + 1, $sm) {
+                    margin: 72px 0 46px 0;
+                }
+
+                @include mobile-m {
+                    margin: 72px 0 46px 0;
+                }
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    margin-bottom: 17px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .checkmark {
+                        color: $theme-color;
+                        font-size: 16px;
+                        margin-right: 10px;
+                    }
+
+                    &.disabled {
+                        color: $gray-color;
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+
+            .recommended-badge {
+                position: absolute;
+                background: $theme-color3;
+                top: 66px;
+                right: -34px;
+                padding: 5px 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+
+                @include ml {
+                    right: -41px;
+                }
+
+                @include nestHub {
+                    background: transparent;
+                    padding: 0;
+                }
+
+                @include sm {
+                    right: -50px;
+                }
+
+                @include mobile-s {
+                    background: transparent;
+                    padding: 0;
+                }
+            }
+
+        }
+    }
+}

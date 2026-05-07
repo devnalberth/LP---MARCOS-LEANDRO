@@ -1,0 +1,179 @@
+/*==== Testimonial Section Three=====================*/
+.testimonial-section {
+  &.style-3 {
+    .testi-title-area {
+      @include center-flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      @include xs {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .testi-btn {
+      text-align: center;
+    }
+  }
+}
+
+#loader {
+  margin: 20px 0;
+  display: none;
+  text-align: center;
+
+  i {
+    font-size: 24px;
+  }
+}
+
+.theme-btn.i-none {
+  >i {
+    display: none;
+  }
+}
+
+.review-card {
+  display: flex;
+  gap: 10px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  background-color: $theme-color2;
+  border: 1px solid $dark-color;
+
+  &.style-2 {
+    padding: 0;
+    border: none;
+  }
+
+  .review-content {
+    .text {
+      font-size: 15px;
+      color: $dark-color;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+  }
+
+  .rating-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .stars {
+      color: $theme-color;
+
+      i {
+        font-size: 16px;
+      }
+    }
+
+    .rating-text {
+      font-size: 16px;
+      color: $dark-color;
+      font-weight: 500;
+    }
+  }
+}
+
+
+
+.testimonial-card.style-3 {
+  background-color: $theme-color2;
+  border-radius: 10px;
+  border: 1px solid $dark-color;
+  padding: 0;
+
+  .content-inner {
+    padding: 35px;
+
+    @include nestHub {
+      padding: 20px;
+    }
+
+    @include respond-between($sm, $tablet-l - 1) {
+      padding: 25px;
+    }
+
+    @include mobile-m {
+      padding: 20px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 22px;
+
+      .user-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        background-color: $white-color;
+        border: 1px solid $dark-color;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+
+      .user-details {
+        .user-name {
+          font-size: 22px;
+          color: $dark-color;
+          font-weight: 500;
+          margin-bottom: 4px;
+        }
+
+        .user-title {
+          font-size: 16px;
+          color: $gray-color;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .user-review {
+      font-size: 18px;
+      color: $dark-color;
+      margin-bottom: -8px;
+
+      @include mobile-m {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .rating-inner {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $dark-color;
+    padding: 25px 35px;
+
+    @include nestHub {
+      padding: 15px 20px;
+    }
+
+    @include respond-between($sm, $tablet-l - 1) {
+      padding: 25px 25px;
+    }
+
+    @include mobile-m {
+      padding: 20px;
+    }
+
+    .stars {
+      color: $dark-color;
+      margin-right: 10px;
+
+      i {
+        font-size: 16px;
+      }
+    }
+
+    .rating-text {
+      font-size: 16px;
+      color: $dark-color;
+      font-weight: 500;
+    }
+  }
+}

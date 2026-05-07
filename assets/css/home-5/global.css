@@ -1,0 +1,9 @@
+/* Home 5 - Arquivo global de estilos da pagina */
+@import url("./sections/header.css");
+@import url("./sections/hero.css");
+@import url("./sections/counter.css");
+@import url("./sections/process.css");
+@import url("./sections/about.css");
+@import url("./sections/consultoria.css");
+@import url("./sections/metodos.css");
+@import url("./sections/contato.css");

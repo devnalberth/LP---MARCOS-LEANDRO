@@ -1,0 +1,92 @@
+/*==== Testimonial Section Four=====================*/
+.style-4 {
+  .testimonial-card {
+    padding: 0;
+    overflow: hidden;
+    filter: drop-shadow(0px 20px 25px rgba(214, 232, 232, 0.4));
+    background-color: $bg-color6;
+    border: 1px solid $border-color7;
+
+    .inner-box {
+      display: flex;
+
+      @include xs {
+        flex-direction: column;
+      }
+
+      .image-box {
+        flex-shrink: 0;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        flex-direction: column;
+        padding: 50px 45px 50px;
+
+        @include lg {
+          padding: 50px 30px 50px;
+        }
+
+        .rating {
+          margin: 0;
+        }
+
+        .quote-icon {
+          font-size: 40px;
+          transform: rotate(180deg);
+          color: $dark-color;
+        }
+
+        .text {
+          color: $dark-color;
+        }
+
+        .user-info {
+          display: inline-block;
+
+          .user-name {
+            color: $dark-color;
+          }
+
+          .user-title {
+            color: $gray-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.testi-slider-5 {
+  position: relative;
+
+  .array-button {
+    position: absolute;
+    z-index: 1;
+    bottom: 44px;
+    right: 44px;
+    gap: 10px;
+
+    .array-next,
+    .array-prev {
+      color: $dark-color;
+      border-color: $border-color7;
+    }
+
+    .array-next:hover,
+    .array-prev:hover,
+    .array-next.active {
+      color: $white-color;
+      background: $theme-color;
+      border-color: $theme-color;
+    }
+
+    @include mobile-l {
+      right: 20px;
+    }
+  }
+}

@@ -1,0 +1,202 @@
+.space,
+.space-top {
+  padding-top: $space;
+}
+
+.space,
+.space-bottom {
+  padding-bottom: $space;
+}
+
+.space-minimize,
+.space-minimize-top {
+  padding-top: calc($space - 26px);
+}
+
+.space-minimize,
+.space-minimize-bottom {
+  padding-bottom: $space;
+}
+
+.space-extra,
+.space-extra-top {
+  padding-top: $space-extra;
+}
+
+.space-extra,
+.space-extra-bottom {
+  padding-bottom: $space-extra;
+}
+
+.space-extra2,
+.space-extra2-top {
+  padding-top: $space-extra2;
+}
+
+.space-extra2,
+.space-extra2-bottom {
+  padding-bottom: $space-extra2;
+}
+
+@include lg {
+
+  .space,
+  .space-top {
+    padding-top: calc($space - 30px);
+  }
+
+  .space,
+  .space-bottom {
+    padding-bottom: calc($space - 30px);
+  }
+
+}
+
+@include md {
+
+  .space,
+  .space-top {
+    padding-top: $space-mobile;
+  }
+
+  .space,
+  .space-bottom {
+    padding-bottom: $space-mobile;
+  }
+
+  .space-minimize,
+  .space-minimize-top {
+    padding-top: calc($space-mobile - 22px);
+  }
+
+  .space-minimize,
+  .space-minimize-bottom {
+    padding-bottom: $space-mobile;
+  }
+
+  .space-extra,
+  .space-extra-top {
+    padding-top: $space-mobile-extra;
+  }
+
+  .space-extra,
+  .space-extra-bottom {
+    padding-bottom: $space-mobile-extra;
+  }
+
+  .space-top-md-none {
+    padding-top: 0;
+  }
+
+  .space-extra2,
+  .space-extra2-top {
+    padding-top: 70px;
+  }
+
+  .space-extra2,
+  .space-extra2-bottom {
+    padding-bottom: 70px;
+  }
+
+  .pb-105 {
+    padding-bottom: 65px;
+  }
+
+  .pt-105 {
+    padding-top: 65px;
+  }
+}
+
+@include vxs {
+
+  .space,
+  .space-top {
+    padding-top: $space-small-mobile;
+  }
+
+  .space,
+  .space-bottom {
+    padding-bottom: $space-small-mobile;
+  }
+
+  .space-minimize,
+  .space-minimize-top {
+    padding-top: calc($space-small-mobile - 22px);
+  }
+
+  .space-minimize,
+  .space-minimize-bottom {
+    padding-bottom: $space-small-mobile;
+  }
+
+  .space-extra,
+  .space-extra-top {
+    padding-top: $space-mobile-extra;
+  }
+
+  .space-extra,
+  .space-extra-bottom {
+    padding-bottom: $space-mobile-extra;
+  }
+
+  .space-top-md-none {
+    padding-top: 0;
+  }
+
+  .space-extra2,
+  .space-extra2-top {
+    padding-top: 70px;
+  }
+
+  .space-extra2,
+  .space-extra2-bottom {
+    padding-bottom: 70px;
+  }
+
+}
+
+@mixin generate-space-minimizes($space, $space-count) {
+  @for $i from 1 through $space-count {
+
+    // Space Top Minimize
+    .space-tm-#{5 * $i} {
+      padding-top: calc(#{$space} - #{5 * $i}px) !important;
+    }
+
+    // Space Bottom Minimize
+    .space-bm-#{5 * $i} {
+      padding-bottom: calc(#{$space} - #{5 * $i}px) !important;
+    }
+
+    // Space Top Plus
+    .space-tp-#{5 * $i} {
+      padding-top: calc(#{$space} + #{5 * $i}px) !important;
+    }
+
+    // Space Bottom Plus
+    .space-bp-#{5 * $i} {
+      padding-bottom: calc(#{$space} + #{5 * $i}px) !important;
+    }
+  }
+}
+
+// Define the base space, mobile space, and small mobile space variables
+$space-count: 60;
+// Section Space  For large Device
+$space: var(--section-space);
+// Section Space On small Device
+$space-mobile: var(--section-space-mobile);
+$space-small-mobile: var(--section-space-small-mobile);
+
+// Generate default spacing classes
+@include generate-space-minimizes($space, $space-count);
+
+// Apply for medium screens (md)
+@include md {
+  @include generate-space-minimizes($space-mobile, $space-count);
+}
+
+// Apply for extra small screens (vxs)
+@include vxs {
+  @include generate-space-minimizes($space-small-mobile, $space-count);
+}

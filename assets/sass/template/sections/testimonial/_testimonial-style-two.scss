@@ -1,0 +1,139 @@
+/*==== Testimonial Section Two=====================*/
+.testimonial-section {
+  &.style-2 {
+    overflow: hidden;
+
+    @include xxl {
+      .testi-thumb {
+        @include md {
+          display: none;
+        }
+
+        div {
+          height: 100%;
+
+          img {
+            max-width: 600px;
+            height: 100%;
+            object-fit: cover;
+
+            @include ml {
+              max-width: 565px;
+            }
+
+            @include xl {
+              max-width: 520px;
+            }
+
+            @include lg {
+              max-width: 480px;
+            }
+
+            @include nestHub {
+              max-width: 415px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.testimonial-card.style-2 {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+
+  &:hover .content .quote-icon {
+    animation: none;
+
+    i {
+      @include animation(wobble_vertical, 1s, ease-in-out);
+    }
+  }
+
+  .content {
+    padding: 40px 0 35px;
+    border-bottom: 1px solid rgba(6, 50, 50, 0.10);
+    border-top: 1px solid rgba(6, 50, 50, 0.10);
+    margin-bottom: 30px;
+
+    @include mobile-m {
+      padding: 30px 0 30px;
+    }
+
+    .quote-icon {
+      @include center-flex;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $theme-color3;
+      font-size: 29px;
+      color: $dark-color;
+      flex-shrink: 0;
+    }
+
+    .text {
+      font-size: 18px;
+      line-height: 30px;
+      color: $gray-color;
+
+      @include mobile-xl {
+        font-size: 16px;
+      }
+    }
+
+    .rating {
+      margin: 25px 0 0;
+    }
+  }
+
+  .user-info {
+    .user-name {
+      color: $dark-color;
+    }
+
+    .user-title {
+      color: $gray-color;
+    }
+  }
+
+}
+
+.testi-slider-2 {
+  position: relative;
+
+  .array-button {
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+    right: 0;
+    gap: 10px;
+
+    @include mobile-m {
+      bottom: 135px;
+    }
+
+    .array-prev,
+    .array-next {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(6, 50, 50, 0.1);
+      background-color: $white-color;
+      color: $dark-color;
+
+      &:hover {
+        color: $white-color;
+        background-color: $theme-color;
+        border-color: $theme-color;
+      }
+    }
+
+    .array-next.active {
+      color: $white-color;
+      background-color: $theme-color;
+      border-color: $theme-color;
+    }
+  }
+}

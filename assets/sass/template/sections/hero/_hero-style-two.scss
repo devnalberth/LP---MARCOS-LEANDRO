@@ -1,0 +1,341 @@
+/*==== Hero Section Two =====================*/
+.hero-section.style-2 {
+    background-color: $dark-color;
+
+    @include md {
+        padding: 80px 0 0;
+    }
+
+    .outer-box {
+        padding: 0 48px;
+        position: relative;
+
+        @include ml {
+            padding: 0 12px;
+        }
+
+        @include mobile-m {
+            padding: 0;
+        }
+    }
+
+    .hero-content {
+        padding: 115px 100px;
+        border-radius: 10px;
+        background-color: $theme-color3;
+        overflow: hidden;
+
+        @include xxl {
+            padding: 95px 80px;
+        }
+
+        @include ml {
+            padding: 80px 40px;
+        }
+
+        @include tablet-s {
+            padding: 80px 30px;
+        }
+
+        @include mobile-m {
+            padding: 50px 15px;
+        }
+
+        .popup-video {
+            margin-bottom: 23px;
+
+            .icon {
+                color: $theme-color;
+                border: 2px solid $theme-color;
+            }
+
+            p {
+                color: $dark-color;
+            }
+        }
+
+        .title {
+            font-size: 56px;
+            line-height: 1.18;
+            color: $dark-color;
+            font-weight: 700;
+            letter-spacing: normal;
+            margin-bottom: 0;
+
+            @include ml {
+                font-size: 48px;
+            }
+
+            @include nestHub {
+                font-size: 38px;
+            }
+
+            @include mobile-xl {
+                font-size: 36px;
+            }
+
+            @include mobile-l {
+                font-size: 32px;
+            }
+
+            .orange-dot {
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                border-radius: 50%;
+                background-color: $theme-color;
+                position: relative;
+
+                @include mobile-l {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+
+                i {
+                    @include absolute-center;
+                }
+            }
+        }
+
+        .border {
+            &::before {
+                @include absolute-content(200px, 1px, $theme-color)
+            }
+        }
+
+        .text {
+            font-size: 20px;
+            line-height: 1.5;
+            color: $dark-color;
+            margin: -3px 0 36px;
+
+            @include nestHub {
+                font-size: 16px;
+            }
+
+            @include xs {
+                br {
+                    display: none;
+                }
+            }
+
+            @include mobile-l {
+                font-size: 16px;
+            }
+
+        }
+
+        .since {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+            padding: 3px 20px;
+            padding-left: 40px;
+            text-align: center;
+            border-radius: 18px;
+            background-color: $white-color;
+            border: 1px solid rgba(3, 31, 23, 0.1);
+
+            @include mobile-l {
+                right: 30px;
+                bottom: 30px;
+            }
+
+            @include mobile-m {
+                right: 15px;
+                bottom: 10px;
+            }
+
+            &::before {
+                @include absolute-centerY;
+                left: 20px;
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+                background-color: rgba(6, 50, 50, 0.2);
+            }
+
+            span {
+                font-size: 14px;
+                color: $dark-color;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .circle-box {
+        @include absolute-center;
+        z-index: 5;
+        width: 184px;
+        height: 184px;
+        background-color: $theme-color2;
+        margin-top: 0;
+
+        @include md {
+            top: 46%;
+        }
+
+        @include tablet-l {
+            top: 50%
+        }
+
+        .logo-box img {
+            @include filter-dark-color;
+        }
+
+        .text-inner svg {
+            width: 110px;
+        }
+    }
+
+    .hero-img {
+        height: 100%;
+
+        @include sm {
+            display: inherit;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+
+            @include xxl {
+                filter: brightness(1);
+            }
+
+            @include md {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .hero-info-wrap {
+        background-color: $dark-color;
+        color: $white-color;
+
+        h4 {
+            font-size: 24px;
+            line-height: 1;
+            color: $white-color;
+            font-weight: 500;
+            margin-bottom: 27px;
+        }
+
+        .consulation-form {
+            position: relative;
+
+            input {
+                padding: 10px 30px;
+                border: none;
+                width: 100%;
+                height: 60px;
+                border-radius: 5px 0 0 5px;
+                background-color: $border-color;
+            }
+
+            button {
+                border-radius: 0 5px 5px 0;
+                padding: 0 25px;
+                background-color: $border-color;
+                color: $theme-color2;
+                border: none;
+                position: relative;
+
+                &::before {
+                    @include absolute-centerY;
+                    left: 0;
+                    width: 1px;
+                    height: 24px;
+                    background-color: rgba(255, 255, 255, 0.2);
+
+                }
+
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        @include nestHub {
+            .hero-social-proof {
+                gap: 5px;
+                flex-direction: column;
+            }
+        }
+
+        @include sm {
+            .hero-social-proof.pl-25 {
+                padding-left: 0 !important;
+            }
+        }
+
+        @include mobile-s {
+            .hero-social-proof {
+                gap: 5px;
+            }
+        }
+
+        .success-rate-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            @include mobile-m {
+                gap: 15px;
+            }
+
+            .rate-circle {
+                @include center-flex;
+                flex-shrink: 0;
+                width: 107px;
+                height: 107px;
+                background-color: $border-color;
+                border-radius: 50%;
+                font-size: 30px;
+                color: $theme-color2;
+                font-weight: 600;
+            }
+
+            .text {
+                font-size: 16px;
+                color: $gray-color2;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+@include sm {
+    .hero-info-wrapper {
+        .rate-circle {
+            width: 60px;
+            height: 60px;
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+
+@include sm {
+    .hero-section.style-2 {
+        .content-area {
+            padding: 30px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+}

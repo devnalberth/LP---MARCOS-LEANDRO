@@ -1,0 +1,240 @@
+// Global Main margin classes
+.mx-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+@mixin global-main-margins {
+  @for $i from 1 through $space-count {
+
+    // Margin Left and Right
+    .mx-#{5 * $i} {
+      margin-right: 5px * $i !important;
+      margin-left: 5px * $i !important;
+    }
+
+    .mx--#{5 * $i} {
+      margin-right: -5px * $i !important;
+      margin-left: -5px * $i !important;
+    }
+
+    // Margin Top and Bottom
+    .my-#{5 * $i} {
+      margin-top: 5px * $i !important;
+      margin-bottom: 5px * $i !important;
+    }
+
+    .my--#{5 * $i} {
+      margin-top: -5px * $i !important;
+      margin-bottom: -5px * $i !important;
+    }
+
+    // Margin Top
+    .mt-#{5 * $i} {
+      margin-top: 5px * $i !important;
+    }
+
+    .mt--#{5 * $i} {
+      margin-top: -5px * $i !important;
+    }
+
+    // Margin Bottom
+    .mb-#{5 * $i} {
+      margin-bottom: 5px * $i !important;
+    }
+
+    .mb--#{5 * $i} {
+      margin-bottom: -5px * $i !important;
+    }
+
+    // Margin Left
+    .ml-#{5 * $i} {
+      margin-left: 5px * $i !important;
+    }
+
+    .ml--#{5 * $i} {
+      margin-left: -5px * $i !important;
+    }
+
+    // Margin Right
+    .mr-#{5 * $i} {
+      margin-right: 5px * $i !important;
+    }
+
+    .mr--#{5 * $i} {
+      margin-right: -5px * $i !important;
+    }
+  }
+}
+
+// Define mixins for generating margins with optional signs
+@mixin generate-margins($prefix, $sign: 1) {
+  @for $i from 1 through $space-count {
+    .#{$prefix}-mx#{if($sign == -1, '--', '-')}#{5 * $i} {
+      margin-right: $sign * 5px * $i !important;
+      margin-left: $sign * 5px * $i !important;
+    }
+
+    .#{$prefix}-my#{if($sign == -1, '--', '-')}#{5 * $i} {
+      margin-top: $sign * 5px * $i !important;
+      margin-bottom: $sign * 5px * $i !important;
+    }
+
+    .#{$prefix}-mt#{if($sign == -1, '--', '-')}#{5 * $i} {
+      margin-top: $sign * 5px * $i !important;
+    }
+
+    .#{$prefix}-mb#{if($sign == -1, '--', '-')}#{5 * $i} {
+      margin-bottom: $sign * 5px * $i !important;
+    }
+
+    .#{$prefix}-ml#{if($sign == -1, '--', '-')}#{5 * $i} {
+      margin-left: $sign * 5px * $i !important;
+    }
+
+    .#{$prefix}-mr#{if($sign == -1, '--', '-')}#{5 * $i} {
+      margin-right: $sign * 5px * $i !important;
+    }
+  }
+}
+
+// Define mixins for zero margins
+@mixin generate-zero-margins($prefix) {
+  .#{$prefix}-mx-0 {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .#{$prefix}-my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .#{$prefix}-mt-0 {
+    margin-top: 0 !important;
+  }
+
+  .#{$prefix}-mb-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .#{$prefix}-ml-0 {
+    margin-left: 0 !important;
+  }
+
+  .#{$prefix}-mr-0 {
+    margin-right: 0 !important;
+  }
+
+  .#{$prefix}-m-0 {
+    margin: 0 !important;
+  }
+}
+
+// Generate global margin classes
+@mixin global-margins {
+  @include global-main-margins;
+  @include generate-margins('', 1);
+  @include generate-margins('', -1);
+}
+
+// Apply global margins
+@include global-margins;
+
+// Include breakpoints or device-specific mixins
+@include hd {
+  @include generate-margins('hd');
+  @include generate-zero-margins('hd');
+  @include generate-margins('hd', -1);
+}
+
+@include xxl {
+  @include generate-margins('xxl');
+  @include generate-zero-margins('xxl');
+  @include generate-margins('xxl', -1);
+}
+
+@include ml {
+  @include generate-margins('ml');
+  @include generate-zero-margins('ml');
+  @include generate-margins('ml', -1);
+}
+
+@include xl {
+  @include generate-margins('xl');
+  @include generate-zero-margins('xl');
+  @include generate-margins('xl', -1);
+}
+
+@include lg {
+  @include generate-margins('lg');
+  @include generate-zero-margins('lg');
+  @include generate-margins('lg', -1);
+}
+
+@include md {
+  @include generate-margins('md');
+  @include generate-zero-margins('md');
+  @include generate-margins('md', -1);
+}
+
+@include sm {
+  @include generate-margins('sm');
+  @include generate-zero-margins('sm');
+  @include generate-margins('sm', -1);
+}
+
+@include xs {
+  @include generate-margins('xs');
+  @include generate-zero-margins('xs');
+  @include generate-margins('xs', -1);
+}
+
+@include vxs {
+  @include generate-margins('vxs');
+  @include generate-zero-margins('vxs');
+  @include generate-margins('vxs', -1);
+}
+
+@include laptop-l {
+  @include generate-margins('ltl');
+  @include generate-zero-margins('ltl');
+  @include generate-margins('ltl', -1);
+}
+
+@include laptop-m {
+  @include generate-margins('ltm');
+  @include generate-zero-margins('ltm');
+  @include generate-margins('ltm', -1);
+}
+
+@include nestHub {
+  @include generate-margins('nhb');
+  @include generate-zero-margins('nhb');
+  @include generate-margins('nhb', -1);
+}

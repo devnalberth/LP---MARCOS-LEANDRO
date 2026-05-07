@@ -1,0 +1,18 @@
+/*==== Marquee Section Two =====================*/
+.marquee-section.style-2 {
+    .marquee-wrap {
+        background: $theme-color2;
+        border: none;
+
+        .marquee__group {
+            .m-item {
+                color: $dark-color;
+
+                .icon {
+                    @include filter-dark-color;
+                }
+            }
+        }
+
+    }
+}

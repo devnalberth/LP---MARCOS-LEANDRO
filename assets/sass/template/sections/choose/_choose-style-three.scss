@@ -1,0 +1,100 @@
+/*==== Choose Section Three =====================*/
+.choose-section.style-3 {
+    .features-list {
+        li {
+            font-size: 18px;
+            color: $dark-color;
+            position: relative;
+            padding-left: 35px;
+            @include transition;
+
+            @include mobile-xl {
+                font-size: 16px;
+                padding-left: 35px;
+            }
+
+            &:hover {
+                padding-left: 25px;
+                color: $theme-color;
+            }
+
+            +li {
+                margin-top: 22px;
+            }
+
+            &::before {
+                @include absolute-centerY;
+                content: "\f00c";
+                left: 0;
+                line-height: 28px;
+                font-size: 16px;
+                font-weight: 700;
+                font-family: $icon-font;
+                color: $theme-color;
+            }
+        }
+    }
+
+    .choose-right-wrapper {
+        position: relative;
+
+        .audience-growth {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $theme-color2;
+            width: 195px;
+            height: 188px;
+            padding: 40px 25px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include xs {
+                width: 175px;
+                height: 171px;
+            }
+
+            @include mobile-xl {
+                display: none;
+            }
+
+            .percentage {
+                @include center-flex;
+                font-size: 44px;
+                line-height: 1;
+                color: $dark-color;
+                font-weight: 600;
+            }
+
+            .label {
+                font-size: 14px;
+                color: $dark-color;
+                font-weight: 500;
+                margin-top: 5px;
+            }
+        }
+
+        .chart-container {
+            max-width: 648px;
+            width: 100%;
+            height: 564px;
+            padding: 30px;
+            background-color: $theme-color3;
+        
+            @include lg {height: 500px; }
+            @include nestHub { height: 488px; }
+            @include md {  height: 564px; }
+            @include xs { height: 500px; }
+            @include mobile-xl { height: 400px; padding: 15px; }
+            @include vxs { height: 350px; }
+        
+            canvas {
+                width: 100% !important;
+                height: 100% !important;
+                display: block;
+            }
+        }        
+    }
+}

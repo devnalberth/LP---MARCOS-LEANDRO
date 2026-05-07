@@ -1,0 +1,254 @@
+/*==== Header Style Seven=====================*/
+.header-style7 {
+    position: absolute;
+
+    .header-top {
+        margin: 0;
+        padding: 0 50px;
+        background-color: transparent;
+        background: $dark-color;
+
+        @include ml {
+            padding: 0 24px;
+        }
+
+        @include md {
+            display: none;
+        }
+
+        .inner-container {
+            @include center-flex;
+            justify-content: space-between;
+            background: transparent;
+            width: 100%;
+        }
+
+        .top-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .outer-box {
+            min-width: 315px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .list-style-1 {
+            position: relative;
+            @include center-flex;
+            justify-content: start;
+            padding: 17px 0;
+
+            li {
+                font-size: 14px;
+                color: $gray-color2;
+                padding-left: 0;
+
+                & + li {
+                    margin-left: 35px;
+                }
+
+                a {
+                    color: $gray-color2;
+
+                    &:hover {
+                        color: $white-color;
+                    }
+                }
+
+                .icon {
+                    color: $theme-color2;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .social-icon-one {
+        @include center-flex;
+        justify-content: end;
+        flex-wrap: wrap;
+
+        li {
+            a {
+                color: $gray-color2;
+                font-size: 14px;
+
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+
+            & + li + li a {
+                margin-left: 20px;
+            }
+        }
+
+        .menu-follow_title {
+            color: $gray-color2;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-right: 15px;
+        }
+    }
+
+    .main-wrapper {
+        background-color: transparent;
+        border-bottom: 1px solid $border-color;
+        padding: 0 40px;
+        margin: 0px 30px 0;
+
+        @include lg{
+            margin: 0;
+        }
+        @include nestHub {
+            padding: 0 24px;
+            margin: 0;
+        }
+
+        @include md {
+            background-color: $light-color;
+            padding: 0 12px;
+            margin: 0;
+        }
+
+        .menu-area {
+            margin-top: 0;
+            border-radius: 0;
+            background-color: transparent;
+            padding: 0;
+            box-shadow: none;
+
+            @include md {
+                background-color: $light-color;
+            }
+        }
+
+        .logo {
+            flex: inherit;
+            min-width: 250px;
+
+            @include xl {
+                min-width: 240px;
+            }
+        }
+
+        .nav-menu {
+            flex: 0 0 auto;
+            margin-left: -25px;
+
+            .main-menu {
+                > ul {
+                    > li {
+                        padding: 10px 0;
+
+                        &.active > a {
+                            color: $theme-color;
+                        }
+
+                        > a {
+                            color: $white-color;
+
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+
+                > ul {
+                    > li {
+                        &.menu-item-has-children {
+                            & > a::before {
+                                opacity: 0.4;
+                            }
+
+                            & > a:hover::before {
+                                opacity: 1;
+                            }
+                        }
+
+                        &.active > a::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                ul.sub-menu {
+                    li {
+                        a {
+                            color: $dark-color;
+                        }
+
+                        &.active a {
+                            color: $theme-color;
+                        }
+
+                        &:hover a {
+                            color: $white-color;
+                        }
+
+                        ul.sub-menu {
+                            li {
+                                a {
+                                    color: $dark-color;
+                                }
+
+                                &:hover a {
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-right-wrapper {
+            flex: 1;
+            @include center-flex;
+            justify-content: flex-end;
+
+            @include laptop-m {
+                display: none;
+            }
+
+            .header-right {
+                gap: 20px;
+
+                @include xxl {
+                    .header-btn {
+                        display: none;
+                    }
+                }
+
+                .search-btn {
+                    background-color: $border-color13;
+                    border: inherit;
+                    color: $white-color;
+                    height: 44px;
+                    width: 44px;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+
+                .theme-btn {
+                    padding: 13px 40px;
+                }
+            }
+        }
+    }
+
+    .header-sticky {
+        .main-wrapper {
+            box-shadow: 0 0 20px $white-color;
+
+            .nav-menu .main-menu > ul > li {
+                padding: 0;
+            }
+        }
+    }
+}

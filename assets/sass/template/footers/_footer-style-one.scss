@@ -1,0 +1,117 @@
+/*==== Fotter Style One =====================*/
+.footer-section {
+    overflow: hidden;
+
+    .footer-brand {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include sm {
+            margin-bottom: 47px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -100%;
+            right: 0;
+            width: 1px;
+            height: 100rem;
+            background-color: $border-color;
+
+            @include laptop-m {
+                right: 40px;
+            }
+
+            @include laptop-s {
+                display: none;
+            }
+        }
+
+        .text {
+            color: $gray-color2;
+        }
+    }
+
+    .footer-social {
+        line-height: 1;
+
+        .social-link {
+            font-size: 16px;
+            line-height: 1.66;
+            color: $white-color;
+            font-weight: 500;
+            margin-right: 14px;
+
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid $border-color;
+        padding: 23px 0;
+        background-color: $dark-color;
+        position: relative;
+        overflow: hidden;
+
+        @include sm {
+            text-align: center;
+        }
+
+        p {
+            color: $gray-color2;
+            font-size: 15px;
+            line-height: 1.66;
+            margin: 0;
+
+            @include sm {
+                color: $white-color;
+            }
+
+            a {
+                color: $theme-color2;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        .footer-policy {
+            a {
+                color: $gray-color2;
+                font-size: 15px;
+                line-height: 1.66;
+                margin-right: 15px;
+                position: relative;
+
+                @include sm {
+                    color: $white-color;
+                }
+
+                &:hover {
+                    color: $theme-color;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                +a::before {
+                    position: absolute;
+                    content: '';
+                    left: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 2px;
+                    height: 15px;
+                    background: $gray-color2;
+                }
+            }
+        }
+    }
+}
