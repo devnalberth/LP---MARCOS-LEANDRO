@@ -1,1 +1,58 @@
-/* About Section */
+/* About Section — home-5 (style-4 + blocos de copy estendida) */
+
+.page-wrapper.home-five .about-section.style-4 .home-five-about-copy .title-area.two .sec-text + .sec-text {
+  margin-top: 1rem;
+}
+
+.page-wrapper.home-five .about-section.style-4 .about-copy-blocks {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .page-wrapper.home-five .about-section.style-4 .about-copy-blocks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.25rem;
+  }
+
+  .page-wrapper.home-five .about-section.style-4 .about-copy-block:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.page-wrapper.home-five .about-section.style-4 .about-copy-block {
+  padding: 1rem 1.125rem;
+  background: var(--light-color5);
+  border-radius: 12px;
+  border-left: 3px solid var(--theme-color);
+  min-width: 0;
+}
+
+.page-wrapper.home-five .about-section.style-4 .about-copy-block__title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 0.5rem;
+  color: var(--title-color);
+}
+
+.page-wrapper.home-five .about-section.style-4 .about-copy-block__text {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.page-wrapper.home-five .about-section.style-4 .about-impact-quote {
+  margin: 0;
+  padding: 0 0 0 1.125rem;
+  border-left: 3px solid var(--theme-color);
+}
+
+.page-wrapper.home-five .about-section.style-4 .about-impact-quote p {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--dark-color);
+}
