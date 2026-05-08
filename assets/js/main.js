@@ -1444,6 +1444,35 @@ CSS TABLE OF CONTENTS
             });
         }
 
+        // Empresas (home-5): carrossel de projetos / marcas
+        if ($('.empresas-slider').length) {
+            new Swiper(".empresas-slider", {
+                speed: 700,
+                spaceBetween: 0,
+                slidesPerGroup: 1,
+                grabCursor: true,
+                watchOverflow: true,
+                navigation: {
+                    prevEl: ".empresas-prev",
+                    nextEl: ".empresas-next",
+                },
+                breakpoints: {
+                    1400: {
+                        slidesPerView: 4,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
+
         // Service Slider
         if ($('.service-slider').length) {
             new Swiper(".service-slider", {
@@ -1704,10 +1733,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectBoxes = document.querySelectorAll('.col-lg-3[data-thumb]');
     const thumbs = document.querySelectorAll('.thumb[data-thumb]');
     const container = document.querySelector('.row.gx-0.position-relative');
+    const firstThumb = document.querySelector('.thumb[data-thumb="1"]');
+
+    if (!projectBoxes.length || !thumbs.length || !container || !firstThumb) {
+        return;
+    }
 
     // Initialize first thumb as active
     thumbs.forEach(thumb => thumb.classList.remove('active'));
-    document.querySelector('.thumb[data-thumb="1"]').classList.add('active');
+    firstThumb.classList.add('active');
 
     // Hover handler
     function handleHover(thumbNumber) {
@@ -1729,7 +1763,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Reset to first thumb when leaving container
     container.addEventListener('mouseleave', function() {
         thumbs.forEach(thumb => thumb.classList.remove('active'));
-        document.querySelector('.thumb[data-thumb="1"]').classList.add('active');
+        firstThumb.classList.add('active');
     });
 });
 

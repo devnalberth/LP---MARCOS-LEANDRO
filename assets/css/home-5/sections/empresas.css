@@ -1,0 +1,94 @@
+/* Carrossel Empresas — project-section style-5 (home-five) */
+
+.page-wrapper.home-five .empresas-carousel {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.page-wrapper.home-five .empresas-slider {
+  overflow: hidden;
+}
+
+.page-wrapper.home-five .empresas-slider .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.page-wrapper.home-five .empresas-slider .swiper-slide .project-box-five {
+  width: 100%;
+  flex: 1;
+}
+
+/* Imagem de fundo por card */
+.page-wrapper.home-five .project-box-five--empresa .project-box-five__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.page-wrapper.home-five .project-box-five--empresa .project-box-five__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.page-wrapper.home-five .project-box-five--empresa .project-box-five__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11, 17, 30, 0.92) 0%,
+    rgba(11, 17, 30, 0.35) 45%,
+    rgba(11, 17, 30, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+.page-wrapper.home-five .project-box-five--empresa .serial {
+  z-index: 2;
+}
+
+.page-wrapper.home-five .project-box-five--empresa .project-info {
+  z-index: 2;
+}
+
+.page-wrapper.home-five .empresas-nav {
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.page-wrapper.home-five .empresas-nav button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.page-wrapper.home-five .empresas-nav button:hover:not(:disabled) {
+  background: var(--theme-color);
+  border-color: var(--theme-color);
+  color: var(--white-color);
+}
+
+.page-wrapper.home-five .empresas-nav button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.page-wrapper.home-five .empresas-nav .empresas-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  align-self: center;
+  margin: 0 8px;
+}

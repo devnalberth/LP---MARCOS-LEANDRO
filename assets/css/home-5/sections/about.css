@@ -1,58 +1,119 @@
-/* About Section — home-5 (style-4 + blocos de copy estendida) */
+/* About Section — home-5 */
 
+/* ── Parágrafos duplos no About style-4 ── */
 .page-wrapper.home-five .about-section.style-4 .home-five-about-copy .title-area.two .sec-text + .sec-text {
   margin-top: 1rem;
 }
 
-.page-wrapper.home-five .about-section.style-4 .about-copy-blocks {
+/* ── Blocos de copy compartilhados (style-5 neste projeto) ── */
+.page-wrapper.home-five .about-copy-blocks {
   display: grid;
-  gap: 1rem;
-  margin-top: 1.75rem;
+  gap: 0.875rem;
 }
 
-@media (min-width: 768px) {
-  .page-wrapper.home-five .about-section.style-4 .about-copy-blocks {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 1.25rem;
-  }
-
-  .page-wrapper.home-five .about-section.style-4 .about-copy-block:last-child {
-    grid-column: 1 / -1;
-  }
+.page-wrapper.home-five .about-section.style-5 .home-five-about5-text .about-copy-blocks {
+  margin-top: 1.25rem;
 }
 
-.page-wrapper.home-five .about-section.style-4 .about-copy-block {
+.page-wrapper.home-five .about-copy-block {
   padding: 1rem 1.125rem;
   background: var(--light-color5);
-  border-radius: 12px;
+  border-radius: 10px;
   border-left: 3px solid var(--theme-color);
   min-width: 0;
 }
 
-.page-wrapper.home-five .about-section.style-4 .about-copy-block__title {
-  font-size: 1rem;
+/* Sobre fundo bg-theme3 (style-5): card um pouco mais claro */
+.page-wrapper.home-five .about-section.style-5 .about-copy-block {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.page-wrapper.home-five .about-copy-block__title {
+  font-size: 0.9375rem;
   font-weight: 700;
   line-height: 1.35;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.4rem;
   color: var(--title-color);
 }
 
-.page-wrapper.home-five .about-section.style-4 .about-copy-block__text {
-  font-size: 0.9375rem;
+.page-wrapper.home-five .about-copy-block__text {
+  font-size: 0.9rem;
   line-height: 1.65;
   margin: 0;
 }
 
-.page-wrapper.home-five .about-section.style-4 .about-impact-quote {
+/* ── Citação de impacto (About style-4) ── */
+.page-wrapper.home-five .about-impact-quote {
   margin: 0;
   padding: 0 0 0 1.125rem;
   border-left: 3px solid var(--theme-color);
 }
 
-.page-wrapper.home-five .about-section.style-4 .about-impact-quote p {
+.page-wrapper.home-five .about-impact-quote p {
   margin: 0;
   font-size: 1.0625rem;
   font-style: italic;
   line-height: 1.55;
   color: var(--dark-color);
+}
+
+/* About style-5 — stat na coluna de texto (mesma aparência que no .about-right-wrapper) */
+.page-wrapper.home-five .about-section.style-5 .home-five-about5-text .stat-box {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 1.75rem;
+}
+
+.page-wrapper.home-five .about-section.style-5 .home-five-about5-text .stat-box .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--dark-color);
+}
+
+.page-wrapper.home-five .about-section.style-5 .home-five-about5-text .stat-box .icon img {
+  transition: transform 0.3s ease;
+}
+
+.page-wrapper.home-five .about-section.style-5 .home-five-about5-text .stat-box .title {
+  font-size: 50px;
+  line-height: 1;
+  color: var(--dark-color);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 575.98px) {
+  .page-wrapper.home-five .about-section.style-5 .home-five-about5-text .stat-box .title {
+    font-size: 36px;
+  }
+}
+
+.page-wrapper.home-five .about-section.style-5 .home-five-about5-text .home-five-about5-features {
+  margin-top: 1.75rem;
+}
+
+/* Coluna direita — apenas imagem dentro do box mint do tema */
+.page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only {
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+}
+
+.page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only .image {
+  flex: 0 1 auto;
+  width: 100%;
+  max-width: min(100%, 440px);
+  margin-left: auto;
+}
+
+.page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only .image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
