@@ -18,13 +18,17 @@
   display: none !important;
 }
 
-/* Counter escuro com ícones em azul claro */
+/* Counter escuro com ícones brancos */
 .page-wrapper.home-five .counter-section.style-2 {
   background: #0B111E !important;
 }
 
 .page-wrapper.home-five .counter-section.style-2 .counter-box .icon img {
-  filter: brightness(0) saturate(100%) invert(67%) sepia(99%) saturate(2148%) hue-rotate(175deg) brightness(104%) contrast(102%);
+  filter: brightness(0) invert(1);
+}
+
+.page-wrapper.home-five .counter-section.style-2 .counter-box .icon .custom-counter-icon {
+  color: #FFFFFF;
 }
 
 /* Nossas frentes: remove shape verde e usa azul claro nos detalhes */
@@ -38,8 +42,9 @@
   background: rgba(63, 172, 255, 0.18) !important;
 }
 
-.page-wrapper.home-five .service-section.style-5 .service-box-five .icon img {
-  filter: brightness(0) saturate(100%) invert(10%) sepia(17%) saturate(1289%) hue-rotate(185deg) brightness(98%) contrast(101%);
+.page-wrapper.home-five .service-section.style-5 .service-box-five .icon img,
+.page-wrapper.home-five .service-section.style-5 .service-box-five:hover .icon img {
+  filter: brightness(0) saturate(100%) invert(6%) sepia(19%) saturate(1483%) hue-rotate(185deg) brightness(96%) contrast(101%) !important;
 }
 
 .page-wrapper.home-five .service-section.style-5 .service-box-five .serial {
@@ -85,6 +90,54 @@
   color: #FFFFFF !important;
 }
 
+/* CTA da seção Empresas: retângulo arredondado e botão centralizado */
+.page-wrapper.home-five .project-section.style-5 .project-cta > .container {
+  border-radius: 18px !important;
+  overflow: hidden;
+}
+
+.page-wrapper.home-five .project-section.style-5 .project-cta .project-btn {
+  text-align: center !important;
+}
+
+.page-wrapper.home-five .project-section.style-5 .project-cta .project-btn .theme-btn {
+  margin-inline: auto;
+}
+
+/* Fundo da seção Empresas sem imagem, apenas azul escuro */
+.page-wrapper.home-five .project-section.style-5 {
+  background: #0B111E !important;
+}
+
+.page-wrapper.home-five .project-section.style-5 > .bg.image {
+  display: none !important;
+}
+
+/* Label/carrossel em branco para contraste */
+.page-wrapper.home-five .project-section.style-5 .sub-title,
+.page-wrapper.home-five .project-section.style-5 .sub-title span,
+.page-wrapper.home-five .project-section.style-5 .sec-title,
+.page-wrapper.home-five .project-section.style-5 .sec-text,
+.page-wrapper.home-five .project-section.style-5 .empresas-nav .empresas-label {
+  color: #FFFFFF !important;
+}
+
+.page-wrapper.home-five .project-section.style-5 .sec-title .text-theme2 {
+  color: #3FACFF !important;
+}
+
+/* Especialização e Impacto social: fundo limpo, sem textura/assets decorativos */
+.page-wrapper.home-five .about-section.style-5,
+.page-wrapper.home-five .choose-section.style-5 {
+  background: #FFFFFF !important;
+}
+
+.page-wrapper.home-five .about-section.style-5 > .p-bottom-left,
+.page-wrapper.home-five .choose-section.style-5 > .p-top-right,
+.page-wrapper.home-five .choose-section.style-5 > .p-bottom-right {
+  display: none !important;
+}
+
 /* Testimonial: eliminar barra verde residual */
 .page-wrapper.home-five .testimonial-card-five::before,
 .page-wrapper.home-five .testimonial-card-five::after {
@@ -105,6 +158,33 @@
 .page-wrapper.home-five .footer-section,
 .page-wrapper.home-five .footer-section .footer-bottom {
   background: #0B111E !important;
+}
+
+/* Rodapé: textos e links em branco (evita cinza esverdeado do tema) */
+.page-wrapper.home-five .footer-section .footer-brand .text,
+.page-wrapper.home-five .footer-section .footer-widget .text,
+.page-wrapper.home-five .footer-section .footer-widget .notify,
+.page-wrapper.home-five .footer-section .footer-bottom p,
+.page-wrapper.home-five .footer-section .footer-bottom .footer-policy a {
+  color: #ffffff !important;
+}
+
+.page-wrapper.home-five .footer-section .footer-widget ul li a,
+.page-wrapper.home-five .footer-section .footer-social .social-link {
+  color: #ffffff !important;
+}
+
+.page-wrapper.home-five .footer-section .footer-widget ul li a:hover,
+.page-wrapper.home-five .footer-section .footer-social .social-link:hover {
+  color: #3FACFF !important;
+}
+
+.page-wrapper.home-five .footer-section .footer-bottom .footer-policy a:hover {
+  color: #3FACFF !important;
+}
+
+.page-wrapper.home-five .footer-section .footer-bottom .footer-policy a + a::before {
+  background: rgba(255, 255, 255, 0.35) !important;
 }
 
 /* Marcas em tons neutros para não introduzir cores extras */

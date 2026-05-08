@@ -1,7 +1,14 @@
 /* Carrossel Empresas — project-section style-5 (home-five) */
 
+/* Acima do ::before da .project-section.style-5 (evita bloquear cliques) */
+.page-wrapper.home-five .project-section.style-5 > .container-fluid.space {
+  position: relative;
+  z-index: 2;
+}
+
 .page-wrapper.home-five .empresas-carousel {
   position: relative;
+  z-index: 1;
   margin-top: 1rem;
 }
 
@@ -57,17 +64,21 @@
 }
 
 .page-wrapper.home-five .empresas-nav {
+  position: relative;
+  z-index: 4;
   gap: 12px;
   margin-top: 2rem;
+  pointer-events: auto;
 }
 
-.page-wrapper.home-five .empresas-nav button {
+.page-wrapper.home-five .empresas-nav button.empresas-prev,
+.page-wrapper.home-five .empresas-nav button.empresas-next {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.08);
-  color: var(--white-color);
+  color: #ffffff !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -75,13 +86,27 @@
   transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-.page-wrapper.home-five .empresas-nav button:hover:not(:disabled) {
-  background: var(--theme-color);
-  border-color: var(--theme-color);
-  color: var(--white-color);
+.page-wrapper.home-five .empresas-nav button.empresas-prev i,
+.page-wrapper.home-five .empresas-nav button.empresas-next i {
+  color: #ffffff !important;
+  font-size: 18px;
+  line-height: 1;
 }
 
-.page-wrapper.home-five .empresas-nav button:disabled {
+.page-wrapper.home-five .empresas-nav button.empresas-prev:hover:not(:disabled),
+.page-wrapper.home-five .empresas-nav button.empresas-next:hover:not(:disabled) {
+  background: var(--theme-color);
+  border-color: var(--theme-color);
+  color: #ffffff !important;
+}
+
+.page-wrapper.home-five .empresas-nav button.empresas-prev:hover:not(:disabled) i,
+.page-wrapper.home-five .empresas-nav button.empresas-next:hover:not(:disabled) i {
+  color: #ffffff !important;
+}
+
+.page-wrapper.home-five .empresas-nav button:disabled,
+.page-wrapper.home-five .empresas-nav button.swiper-button-disabled {
   opacity: 0.35;
   cursor: not-allowed;
 }

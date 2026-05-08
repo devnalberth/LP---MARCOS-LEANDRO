@@ -98,22 +98,43 @@
   margin-top: 1.75rem;
 }
 
-/* Coluna direita — apenas imagem dentro do box mint do tema */
+/* Coluna direita — espelha a escala visual da imagem da seção Impacto social */
 .page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only {
-  justify-content: flex-end;
-  align-items: center;
+  width: min(918px, calc(50vw - 48px));
+  min-width: min(918px, calc(50vw - 48px));
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 0;
+  background: transparent !important;
+  padding: 0;
+  margin-right: 0;
 }
 
 .page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only .image {
-  flex: 0 1 auto;
+  flex: 0 0 100%;
   width: 100%;
-  max-width: min(100%, 440px);
-  margin-left: auto;
+  aspect-ratio: 918 / 762;
+  max-height: none;
+  margin-left: 0;
+  overflow: hidden;
 }
 
 .page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only .image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
   display: block;
+}
+
+@media (max-width: 991.98px) {
+  .page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .page-wrapper.home-five .about-section.style-5 .about-right-wrapper.home-five-about5-image-only .image {
+    aspect-ratio: 16 / 10;
+  }
 }

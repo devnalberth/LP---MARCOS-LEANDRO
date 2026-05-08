@@ -1445,16 +1445,19 @@ CSS TABLE OF CONTENTS
         }
 
         // Empresas (home-5): carrossel de projetos / marcas
-        if ($('.empresas-slider').length) {
-            new Swiper(".empresas-slider", {
+        var empresasSliderEl = document.querySelector(".page-wrapper.home-five .empresas-slider");
+        var empresasPrevEl = document.querySelector(".page-wrapper.home-five .empresas-prev");
+        var empresasNextEl = document.querySelector(".page-wrapper.home-five .empresas-next");
+        if (empresasSliderEl && empresasPrevEl && empresasNextEl) {
+            new Swiper(empresasSliderEl, {
                 speed: 700,
                 spaceBetween: 0,
                 slidesPerGroup: 1,
                 grabCursor: true,
-                watchOverflow: true,
+                watchOverflow: false,
                 navigation: {
-                    prevEl: ".empresas-prev",
-                    nextEl: ".empresas-next",
+                    prevEl: empresasPrevEl,
+                    nextEl: empresasNextEl,
                 },
                 breakpoints: {
                     1400: {

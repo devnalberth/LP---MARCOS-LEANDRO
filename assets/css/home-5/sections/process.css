@@ -1,1 +1,7 @@
 /* Process Section (copiada de index.html — estilos base em assets/css/style.css) */
+
+.page-wrapper.home-five .process-section .process-single-box .header .icon,
+.page-wrapper.home-five .process-section .process-single-box .header .icon i,
+.page-wrapper.home-five .process-section .process-single-box .header .icon i::before {
+  color: #0B111E !important;
+}

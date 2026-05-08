@@ -16,6 +16,14 @@
     color: #0B111E !important;
 }
 
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .icon,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box.white .icon,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .icon i,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .icon i::before {
+    color: #0B111E !important;
+    filter: none !important;
+}
+
 .page-wrapper.home-five .service-section.overflow-hidden .service-single-box .border {
     border-color: rgba(11, 17, 30, 0.15) !important;
 }
