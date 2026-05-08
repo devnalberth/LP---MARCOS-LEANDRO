@@ -1,1 +1,43 @@
-/* Header Section */
+/* Header — home-5: fluxo normal (sem fixar), fundo branco, sem sticky duplicado */
+
+.page-wrapper.home-five .nav-header.header-style6 {
+  position: relative !important;
+  top: auto;
+  left: auto;
+  right: auto;
+  z-index: 50;
+}
+
+.page-wrapper.home-five .sticky-header {
+  display: none !important;
+}
+
+.page-wrapper.home-five .header-style6 .main-wrapper {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(11, 17, 30, 0.08);
+}
+
+.page-wrapper.home-five .header-style6 .menu-area {
+  background-color: transparent !important;
+}
+
+.page-wrapper.home-five .header-logo img {
+  width: auto;
+  height: 40px;
+  max-width: min(220px, 55vw);
+  object-fit: contain;
+}
+
+.page-wrapper.home-five .mobile-logo img {
+  width: auto;
+  height: 40px;
+  max-width: 220px;
+  object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+  .page-wrapper.home-five .header-style6 .main-wrapper,
+  .page-wrapper.home-five .header-style6 .menu-area {
+    background-color: #ffffff !important;
+  }
+}

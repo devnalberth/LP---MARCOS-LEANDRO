@@ -201,6 +201,9 @@ CSS TABLE OF CONTENTS
 	=         Sticky Fix         =
     =============================================*/
     $(window).scroll(function () {
+        if ($('.page-wrapper.home-five').length) {
+            return;
+        }
         var topPos = $(this).scrollTop();
         if (topPos > 100) {
             $('.sticky-header').addClass('fixed-header animated slideInDown');
