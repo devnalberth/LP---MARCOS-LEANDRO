@@ -2,3 +2,30 @@
 .page-wrapper.home-five .service-section.overflow-hidden {
     background-color: #0B111E;
 }
+
+/* Cards da seção Métodos e soluções: branco + texto azul escuro */
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box {
+    background: #FFFFFF !important;
+    color: #0B111E;
+}
+
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .title,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .text,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .serial,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .link-text {
+    color: #0B111E !important;
+}
+
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .border {
+    border-color: rgba(11, 17, 30, 0.15) !important;
+}
+
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .theme-btn.service-btn {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(11, 17, 30, 0.25) !important;
+}
+
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .theme-btn.service-btn i {
+    color: #0B111E !important;
+    filter: none !important;
+}

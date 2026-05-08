@@ -1,0 +1,113 @@
+/* Paleta fixa da home-5: #0B111E, #3FACFF e #FFFFFF */
+
+.page-wrapper.home-five {
+  --theme-color: #3FACFF;
+  --theme-color2: #3FACFF;
+  --orange-color: #3FACFF;
+  --orange-color2: #3FACFF;
+}
+
+/* Remove tonalidades verdes/laranjas de fundos fotográficos decorativos */
+.page-wrapper.home-five .counter-section.style-2 .bg.image,
+.page-wrapper.home-five .marquee-section.style-3 .bg.image,
+.page-wrapper.home-five .service-section.overflow-hidden > .p-top-left,
+.page-wrapper.home-five .contact-section .p-top-left,
+.page-wrapper.home-five .testimonial-section.style-5 .p-top-left,
+.page-wrapper.home-five .testimonial-section.style-5 .p-bottom-left,
+.page-wrapper.home-five .testimonial-section.style-5 .shape-mockup {
+  display: none !important;
+}
+
+/* Counter escuro com ícones em azul claro */
+.page-wrapper.home-five .counter-section.style-2 {
+  background: #0B111E !important;
+}
+
+.page-wrapper.home-five .counter-section.style-2 .counter-box .icon img {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(99%) saturate(2148%) hue-rotate(175deg) brightness(104%) contrast(102%);
+}
+
+/* Nossas frentes: remove shape verde e usa azul claro nos detalhes */
+.page-wrapper.home-five .service-section.style-5 .service-box-five .p-top-left,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .p-top-right,
+.page-wrapper.home-five .service-section.overflow-hidden .service-single-box .p-bottom-right {
+  display: none !important;
+}
+
+.page-wrapper.home-five .service-section.style-5 .service-box-five .inner-box::before {
+  background: rgba(63, 172, 255, 0.18) !important;
+}
+
+.page-wrapper.home-five .service-section.style-5 .service-box-five .icon img {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(17%) saturate(1289%) hue-rotate(185deg) brightness(98%) contrast(101%);
+}
+
+.page-wrapper.home-five .service-section.style-5 .service-box-five .serial {
+  color: #0B111E !important;
+}
+
+.page-wrapper.home-five .service-section.style-5 .service-box-five:hover .inner-box {
+  background: #0B111E !important;
+}
+
+.page-wrapper.home-five .service-section.style-5 .service-box-five:hover .title a,
+.page-wrapper.home-five .service-section.style-5 .service-box-five:hover .text,
+.page-wrapper.home-five .service-section.style-5 .service-box-five:hover .service-btn,
+.page-wrapper.home-five .service-section.style-5 .service-box-five:hover .serial {
+  color: #FFFFFF !important;
+}
+
+/* Métodos e soluções: destaque em azul claro no texto real */
+.page-wrapper.home-five .service-section.overflow-hidden .text-theme2 {
+  color: #3FACFF !important;
+}
+
+.page-wrapper.home-five .service-section.overflow-hidden .array-button button {
+  background: rgba(63, 172, 255, 0.15) !important;
+  border-color: rgba(63, 172, 255, 0.35) !important;
+  color: #3FACFF !important;
+}
+
+.page-wrapper.home-five .service-section.overflow-hidden .array-button button.active,
+.page-wrapper.home-five .service-section.overflow-hidden .array-button button:hover {
+  background: #3FACFF !important;
+  color: #FFFFFF !important;
+}
+
+/* CTA inferior da seção Métodos */
+.page-wrapper.home-five .service-section.overflow-hidden .service-contact {
+  background: rgba(63, 172, 255, 0.12) !important;
+  border-color: rgba(63, 172, 255, 0.22) !important;
+}
+
+.page-wrapper.home-five .service-section.overflow-hidden .service-contact .contact-btn .theme-btn {
+  background: #3FACFF !important;
+  color: #FFFFFF !important;
+}
+
+/* Testimonial: eliminar barra verde residual */
+.page-wrapper.home-five .testimonial-card-five::before,
+.page-wrapper.home-five .testimonial-card-five::after {
+  background: #3FACFF !important;
+}
+
+.page-wrapper.home-five .testimonial-card-five .rating i,
+.page-wrapper.home-five .review-card-three .stars i {
+  color: #3FACFF !important;
+}
+
+/* Marquee sem ícone estrela verde */
+.page-wrapper.home-five .marquee-section.style-3 .marquee__group .icon {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(99%) saturate(2148%) hue-rotate(175deg) brightness(104%) contrast(102%);
+}
+
+/* Rodapé e newsletter mantêm apenas azul escuro/azul claro/branco */
+.page-wrapper.home-five .footer-section,
+.page-wrapper.home-five .footer-section .footer-bottom {
+  background: #0B111E !important;
+}
+
+/* Marcas em tons neutros para não introduzir cores extras */
+.page-wrapper.home-five .brands-slider .brand-item .image img {
+  filter: grayscale(100%) contrast(95%) brightness(88%);
+}
