@@ -20,6 +20,8 @@
     <!--==============================
 	  Google Fonts
 	============================== -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!--==============================
@@ -42,6 +44,8 @@
 
 <body id="body" class="bg-white">
 
+    <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
     <div class="page-wrapper home-five">
 
         <!--==============================
@@ -58,9 +62,9 @@
                     <div class="outer-box">
                         <ul class="social-icon-one">
                             <li><span class="menu-follow_title">Siga-me :</span></li>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="#" aria-label="Facebook de Marcos Leandro"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a href="#" aria-label="Instagram de Marcos Leandro"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#" aria-label="LinkedIn de Marcos Leandro"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -73,8 +77,8 @@
                             <div class="col-auto logo">
                                 <div class="header-logo">
                                     <a href="index.html">
-                                        <img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp">
-                                        <img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp">
+                                        <img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp" width="1920" height="710">
+                                        <img alt="" src="assets/images/logo/logo-dark.webp" width="1920" height="710" aria-hidden="true">
                                     </a>
                                 </div>
                             </div>
@@ -89,7 +93,7 @@
                                     </ul>
                                 </nav>
                                 <div class="navbar-right d-inline-flex d-lg-none">
-                                    <button class="menu-toggle sidebar-btn" type="button">
+                                    <button class="menu-toggle sidebar-btn" type="button" aria-label="Abrir menu de navegação" aria-controls="mobile-navigation">
                                         <span class="line"></span>
                                         <span class="line"></span>
                                         <span class="line"></span>
@@ -102,7 +106,7 @@
                                         <span class="link-effect">
                                             <span class="effect-1">Fale Comigo</span>
                                             <span class="effect-1">Fale Comigo</span>
-                                        </span><i class="fa-regular fa-arrow-right-long"></i>
+                                        </span><i class="fa-regular fa-arrow-right-long" aria-hidden="true"></i>
                                     </a>
                                 </div>
                             </div>
@@ -114,11 +118,11 @@
         ============================== -->
         <div class="mobile-menu-wrapper">
             <div class="mobile-menu-area">
-                <button class="menu-toggle"><i class="fas fa-times"></i></button>
+                <button class="menu-toggle" type="button" aria-label="Fechar menu de navegação"><i class="fas fa-times" aria-hidden="true"></i></button>
                 <div class="mobile-logo">
-                    <a href="index.html"><img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp"></a>
+                    <a href="index.html"><img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp" width="1920" height="710"></a>
                 </div>
-                <div class="mobile-menu">
+                <div class="mobile-menu" id="mobile-navigation">
                     <ul class="navigation clearfix">
                         <!--Keep This Empty / Menu will come through Javascript-->
                     </ul>
@@ -127,28 +131,28 @@
                     <h6>Marcos Leandro | Consultor Empresarial e Especialista em Lucratividade</h6>
                 </div>
                 <div class="social-btn style3">
-                    <a href="https://www.facebook.com/">
+                    <a href="https://www.facebook.com/" aria-label="Facebook de Marcos Leandro">
                         <span class="link-effect">
-                            <span class="effect-1"><i class="fab fa-facebook"></i></span>
-                            <span class="effect-1"><i class="fab fa-facebook"></i></span>
+                            <span class="effect-1"><i class="fab fa-facebook" aria-hidden="true"></i></span>
+                            <span class="effect-1"><i class="fab fa-facebook" aria-hidden="true"></i></span>
                         </span>
                     </a>
-                    <a href="https://instagram.com/">
+                    <a href="https://instagram.com/" aria-label="Instagram de Marcos Leandro">
                         <span class="link-effect">
-                            <span class="effect-1"><i class="fab fa-instagram"></i></span>
-                            <span class="effect-1"><i class="fab fa-instagram"></i></span>
+                            <span class="effect-1"><i class="fab fa-instagram" aria-hidden="true"></i></span>
+                            <span class="effect-1"><i class="fab fa-instagram" aria-hidden="true"></i></span>
                         </span>
                     </a>
-                    <a href="https://twitter.com/">
+                    <a href="https://twitter.com/" aria-label="Twitter de Marcos Leandro">
                         <span class="link-effect">
-                            <span class="effect-1"><i class="fab fa-twitter"></i></span>
-                            <span class="effect-1"><i class="fab fa-twitter"></i></span>
+                            <span class="effect-1"><i class="fab fa-twitter" aria-hidden="true"></i></span>
+                            <span class="effect-1"><i class="fab fa-twitter" aria-hidden="true"></i></span>
                         </span>
                     </a>
-                    <a href="https://dribbble.com/">
+                    <a href="https://dribbble.com/" aria-label="Dribbble de Marcos Leandro">
                         <span class="link-effect">
-                            <span class="effect-1"><i class="fab fa-dribbble"></i></span>
-                            <span class="effect-1"><i class="fab fa-dribbble"></i></span>
+                            <span class="effect-1"><i class="fab fa-dribbble" aria-hidden="true"></i></span>
+                            <span class="effect-1"><i class="fab fa-dribbble" aria-hidden="true"></i></span>
                         </span>
                     </a>
                 </div>
@@ -166,8 +170,8 @@
                         <div class="col-auto logo">
                             <div class="header-logo">
                                 <a href="index.html">
-                                    <img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp">
-                                    <img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp">
+                                    <img alt="Marcos Leandro" src="assets/images/logo/logo-dark.webp" width="1920" height="710">
+                                    <img alt="" src="assets/images/logo/logo-dark.webp" width="1920" height="710" aria-hidden="true">
                                 </a>
                             </div>
                         </div>
@@ -178,7 +182,7 @@
                                 </ul>
                             </nav>
                             <div class="navbar-right d-inline-flex d-lg-none">
-                                <button class="menu-toggle sidebar-btn" type="button">
+                                <button class="menu-toggle sidebar-btn" type="button" aria-label="Abrir menu de navegação" aria-controls="mobile-navigation">
                                     <span class="line"></span>
                                     <span class="line"></span>
                                     <span class="line"></span>
@@ -192,37 +196,38 @@
         </header>
         <!-- End Header Area -->
 
+        <main id="main-content">
 
 
         <!--==============================
         Hero Section Style Five
         ==============================-->
         <section class="hero-section style-5" id="inicio">
-            <div class="bg image"><img src="assets/images/banner/hm5-hero_bg.jpg" alt=""></div>
-            <div class="p-bottom-left wow img-anim-left h-100" data-wow-delay="500ms" data-wow-duration="1000ms"><img class="h-100" src="assets/images/banner/hm5-hero-left_shape.png" alt=""></div>
+            <div class="bg image"><img src="assets/images/banner/hm5-hero_bg.jpg" width="1920" height="750" alt="" fetchpriority="high" decoding="async"></div>
+            <div class="p-bottom-left wow img-anim-left h-100" data-wow-delay="500ms" data-wow-duration="1000ms"><img class="h-100" src="assets/images/banner/hm5-hero-left_shape.png" width="1073" height="750" alt="" aria-hidden="true" decoding="async"></div>
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Left Side (Text Content) -->
                     <div class="col-lg-7">
                         <div class="hero-content md-mb-50">
-                            <span class="sub-title"><i class="icon-small-hand"></i> Olá, sou Marcos Leandro</span>
-                            <h1 class="title">CEO. <div class="hero-title_shape"><img class="br-30 wow img-anim-bottom" data-wow-duration="1s" src="assets/images/banner/hm5-title_shape.png" alt=""></div> <br> Empresário.</h1>
+                            <span class="sub-title"><i class="icon-small-hand" aria-hidden="true"></i> Olá, sou Marcos Leandro</span>
+                            <h1 class="title">CEO. <div class="hero-title_shape"><img class="br-30 wow img-anim-bottom" data-wow-duration="1s" src="assets/images/marcosleandro/DSC08076.webp" width="180" height="60" alt="" aria-hidden="true" decoding="async"></div> <br> Empresário.</h1>
                             <a href="#contato" class="theme-btn bg-theme mt-35">
                                 <span class="link-effect">
                                     <span class="effect-1">Agendar diagnóstico empresarial</span>
                                     <span class="effect-1">Agendar diagnóstico empresarial</span>
-                                </span><i class="fa-regular fa-arrow-right-long"></i>
+                                </span><i class="fa-regular fa-arrow-right-long" aria-hidden="true"></i>
                             </a>
                             <div class="hero-social-proof mt-65">
                                 <div class="social">
-                                    <img src="assets/images/social/social-img01.jpg" alt="Cliente 01">
-                                    <img src="assets/images/social/social-img02.jpg" alt="Cliente 02">
-                                    <img src="assets/images/social/social-img03.jpg" alt="Cliente 03">
+                                    <img src="assets/images/social/social-img01.jpg" width="67" height="67" alt="Cliente 01" decoding="async">
+                                    <img src="assets/images/social/social-img02.jpg" width="67" height="67" alt="Cliente 02" decoding="async">
+                                    <img src="assets/images/social/social-img03.jpg" width="67" height="67" alt="Cliente 03" decoding="async">
                                 </div>
                                 <div class="happy-customers">
                                     <div class="text">Clientes satisfeitos</div>
                                     <div class="rating-viewers">
-                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star" aria-hidden="true"></i>
                                         <span class="rating">4.8</span>
                                         <span class="count">(120 avaliações)</span>
                                     </div>
@@ -235,7 +240,7 @@
                     <div class="col-lg-5">
                         <div class="hero-right">
                             <div class="image-box ml-30 md-ml-0">
-                                <div class="image"><img class="mw-inherit" src="assets/images/banner/hm5-hero-thumb01.jpg" alt=""></div>
+                                <div class="image"><img class="mw-inherit" src="assets/images/marcosleandro/DSC08096.webp" width="3376" height="6000" alt="Marcos Leandro, consultor empresarial" fetchpriority="high" decoding="async"></div>
                             </div>
                             <div class="circle-path_shape"></div>
                             <div class="info-box bg-dark z-1">
@@ -297,7 +302,7 @@
             <div class="container">
                 <div class="title-area three text-center">
                     <div class="sub-title"><span><i class="asterisk"></i></span>Consultoria 360º</div>
-                    <h2 class="sec-title">Não é <span class="bold">pacote pronto</span>...</h2>
+                    <h2 class="sec-title">Não é <span class="bold">pacote pronto</span>…</h2>
                     <p class="sec-text text-gray mb-0">É uma imersão real no seu negócio, do financeiro ao marketing, da gestão comercial aos processos internos <br>para identificar onde está travando e construir um plano personalizado de crescimento.</p>
                 </div>
                 <div class="row gy-30">
@@ -484,9 +489,9 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="choose-left mr-60 md-mr-0">
-                            <img src="assets/images/choose/hm7-img01.jpg" class="active" id="img1" alt="">
-                            <img src="assets/images/choose/hm7-img01.jpg" id="img2" alt="">
-                            <img src="assets/images/choose/hm7-img01.jpg" id="img3" alt="">
+                            <img src="assets/images/marcosleandro/DSC07914.webp" class="active" id="img1" width="700" height="470" alt="" loading="lazy" decoding="async">
+                            <img src="assets/images/marcosleandro/DSC07968.webp" id="img2" width="700" height="470" alt="" loading="lazy" decoding="async">
+                            <img src="assets/images/marcosleandro/DSC07936.webp" id="img3" width="700" height="470" alt="" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -539,8 +544,8 @@
                             </div>
                             <div class="service-btn-wrapper">
                                 <div class="array-button">
-                                    <button type="button" class="s-prev" aria-label="Slide anterior"><i class="fa fa-arrow-left-long"></i></button>
-                                    <button type="button" class="s-next active" aria-label="Próximo slide"><i class="fa fa-arrow-right-long"></i></button>
+                                    <button type="button" class="s-prev" aria-label="Slide anterior dos métodos"><i class="fa fa-arrow-left-long" aria-hidden="true"></i></button>
+                                    <button type="button" class="s-next active" aria-label="Próximo slide dos métodos"><i class="fa fa-arrow-right-long" aria-hidden="true"></i></button>
                                 </div>
                                 <div class="service-btn">
                                     <a href="#contato">QUERO CONVERSAR +</a>
@@ -647,7 +652,7 @@
                     <div class="col-lg-6">
                         <div class="about-image-wrapper mr-60 lg-mr-30 md-mr-0 direction-rtl">
                             <div class="about-image overlay-anim2 img-anim-left wow fadeInLeft">
-                                <img src="assets/images/about/home4-img01.jpg" alt="Marcos Leandro em contexto de consultoria empresarial" />
+                                <img src="assets/images/marcosleandro/DSC08389.webp" width="516" height="625" alt="Marcos Leandro em contexto de consultoria empresarial" loading="lazy" decoding="async">
                             </div>
                             <div class="shape d-none d-xxl-block"><img src="assets/images/about/home4-dot-shape.png" alt=""></div>
                             <div class="about-single-card direction-ltr">
@@ -744,7 +749,7 @@
                     <div class="col-lg-6">
                         <div class="about-right-wrapper home-five-about5-image-only">
                             <div class="image overlay-anim1 nhb-d-none">
-                                <img class="wow img-anim-left" src="assets/images/about/hm5-img01.jpg" width="275" height="484" alt="Retrato profissional — about">
+                                <img class="wow img-anim-left" src="assets/images/marcosleandro/DSC08091.webp" width="275" height="484" alt="Retrato profissional — about" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -762,14 +767,14 @@
                 <div class="row">
                     <div class="col-lg-6 position-relative">
                         <div class="choose-thumb direction-rtl my--120 mr-30 nhb-mr-0">
-                            <img class="mw-inherit" src="assets/images/choose/hm5-thumb01.jpg" alt="Imagem — impacto social">
+                            <img class="mw-inherit" src="assets/images/marcosleandro/DSC07988.webp" width="918" height="762" alt="Imagem — impacto social" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="col-lg-6">
                        <div class="choose-content-wrapper ml-30 nhb-ml-0">
                             <div class="title-area two">
                                 <div class="sub-title"><span><i class="asterisk"></i></span>Impacto social</div>
-                                <h2 class="sec-title">Impacto social que vai além da consultoria</h2>
+                                <h2 class="sec-title">Impacto social que<br><span class="bold">vai além da consultoria</span></h2>
                             </div>
                             <div class="py-40"><div class="border"></div></div>
                             <ul class="features-list">
@@ -1332,9 +1337,9 @@
                     </div>
                 </div>
                 <div class="d-flex flex-wrap justify-content-center align-items-center empresas-nav" role="group" aria-label="Navegação do carrossel de empresas">
-                    <button type="button" class="empresas-prev" aria-label="Slide anterior"><i class="fa fa-arrow-left-long"></i></button>
+                    <button type="button" class="empresas-prev" aria-label="Slide anterior de empresas"><i class="fa fa-arrow-left-long" aria-hidden="true"></i></button>
                     <span class="empresas-label d-none d-sm-inline">28 marcas — use as setas ou arraste</span>
-                    <button type="button" class="empresas-next" aria-label="Próximo slide"><i class="fa fa-arrow-right-long"></i></button>
+                    <button type="button" class="empresas-next" aria-label="Próximo slide de empresas"><i class="fa fa-arrow-right-long" aria-hidden="true"></i></button>
                 </div>
             </div>
         </section>
@@ -1373,8 +1378,8 @@
                             </div>
                             <div class="testi-btn-wrapper">
                                 <div class="array-button">
-                                    <button class="array-prev"><i class="fa fa-arrow-left-long"></i></button>
-                                    <button class="array-next active"><i class="fa fa-arrow-right-long"></i></button>
+                                    <button class="array-prev" type="button" aria-label="Depoimento anterior"><i class="fa fa-arrow-left-long" aria-hidden="true"></i></button>
+                                    <button class="array-next active" type="button" aria-label="Próximo depoimento"><i class="fa fa-arrow-right-long" aria-hidden="true"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -1523,16 +1528,16 @@
                             <form id="appointment_form" class="appointment-form" action="https://formspree.io/f/mzbnjrnb" method="post">
                                 <div class="form-grid">
                                     <div class="form-group">
-                                        <span class="icon"><i class="fa-solid fa-user"></i></span>
-                                        <input type="text" id="fullName" name="name" placeholder="Seu nome" required autocomplete="name">
+                                        <span class="icon" aria-hidden="true"><i class="fa-solid fa-user"></i></span>
+                                        <input type="text" id="fullName" name="name" placeholder="Seu nome" required autocomplete="name" aria-label="Seu nome">
                                     </div>
                                     <div class="form-group">
-                                        <span class="icon"><i class="fa-regular fa-envelope"></i></span>
-                                        <input type="email" id="userEmail" name="email" placeholder="E-mail" required autocomplete="email">
+                                        <span class="icon" aria-hidden="true"><i class="fa-regular fa-envelope"></i></span>
+                                        <input type="email" id="userEmail" name="email" placeholder="E-mail" required autocomplete="email" inputmode="email" spellcheck="false" aria-label="E-mail">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select" id="service" name="service" autocomplete="off">
+                                    <select class="custom-select" id="service" name="service" autocomplete="off" aria-label="Serviço desejado">
                                         <option value="" disabled selected>Selecione o serviço</option>
                                         <option value="gestao-estrategia">Gestão e estratégia</option>
                                         <option value="financeiro-tributario">Financeiro e tributário</option>
@@ -1545,25 +1550,25 @@
                                 </div>
                                 <div class="form-grid">
                                     <div class="form-group">
-                                        <span class="icon"><i class="fa-solid fa-calendar-days"></i></span>
-                                        <input type="text" id="datepicker" name="date" class="datepicker" placeholder="mm/dd/aa" required autocomplete="off">
+                                        <span class="icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></span>
+                                        <input type="text" id="datepicker" name="date" class="datepicker" placeholder="dd/mm/aaaa" required autocomplete="off" inputmode="numeric" aria-label="Data desejada">
                                     </div>
                                     <div class="form-group">
-                                        <span class="icon"><i class="fa-solid fa-clock"></i></span>
-                                        <input type="time" id="timepicker" name="time" required autocomplete="off">
+                                        <span class="icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
+                                        <input type="time" id="timepicker" name="time" required autocomplete="off" aria-label="Horário desejado">
                                     </div>
                                 </div>
                                 <div class="form-group mb-15">
-                                    <textarea id="msg" name="message" placeholder="Escreva sua mensagem" required></textarea>
+                                    <textarea id="msg" name="message" placeholder="Escreva sua mensagem" required aria-label="Mensagem"></textarea>
                                 </div>
                                 <div class="form-group terms">
                                     <input type="checkbox" id="terms" name="aceito_termos" value="sim" required>
                                     <label for="terms">Concordo com os termos e condições.</label>
                                 </div>
-                                <button type="submit" class="theme-btn bg-dark" data-loading-text="Aguarde...">
+                                <button type="submit" class="theme-btn bg-dark" data-loading-text="Aguarde…">
                                     <span class="link-effect">
                                         <span class="btn-title">Agendar agora</span>
-                                    </span><i class="fa-regular fa-arrow-right-long"></i>
+                                    </span><i class="fa-regular fa-arrow-right-long" aria-hidden="true"></i>
                                 </button>
                             </form>
                         </div>
@@ -1573,12 +1578,12 @@
                         <div class="contact-content-wrap">
                             <div class="title-area">
                                 <div class="sub-title"><span><i class="asterisk"></i></span>Consulta gratuita</div>
-                                <h2 class="sec-title">Tem alguma dúvida? Vamos agendar uma <br> <span class="bold">consulta gratuita</span></h2>
+                                <h2 class="sec-title">Tem alguma dúvida?<br>Vamos agendar uma<br> <span class="bold">consulta gratuita</span></h2>
                             </div>
                             <div class="contact-img br-10 overlay-anim1">
-                                <img class="hover-reveal-item" src="assets/images/contact/01.jpg" alt="Contato — Marcos Leandro">
+                                <img class="hover-reveal-item" src="assets/images/marcosleandro/DSC08096.webp" width="536" height="364" alt="Contato — Marcos Leandro" loading="lazy" decoding="async">
                                 <a href="tel:+5563999999999" class="contact-info">
-                                    <div class="icon"><i class="icon-phone-circle"></i></div>
+                                    <div class="icon"><i class="icon-phone-circle" aria-hidden="true"></i></div>
                                     <div class="number">(63) 99999-9999</div>
                                 </a>
                             </div>
@@ -1589,6 +1594,8 @@
         </section>
 
 
+        </main>
+
         <!--==============================
             Footer Section
         ==============================-->
@@ -1598,14 +1605,14 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 footer-brand">
                             <div class="brand-header">
-                                <a href="index.html" class="footer-logo d-block mb-20"><img src="assets/images/logo/logo-2.png" alt=""></a>
+                                <a href="index.html" class="footer-logo d-block mb-20"><img src="assets/images/logo/logo-2.png" width="114" height="35" alt="Marcos Leandro"></a>
                                 <p class="text">Consultoria empresarial com foco em lucratividade, gestão e execução — do diagnóstico ao plano na prática.</p>
                             </div>
                             <div class="footer-social">
-                                <a href="#" class="social-link">FB.</a>
-                                <a href="#" class="social-link">TW.</a>
-                                <a href="#" class="social-link">LN.</a>
-                                <a href="#" class="social-link">IG</a>
+                                <a href="#" class="social-link" aria-label="Facebook de Marcos Leandro">FB.</a>
+                                <a href="#" class="social-link" aria-label="Twitter de Marcos Leandro">TW.</a>
+                                <a href="#" class="social-link" aria-label="LinkedIn de Marcos Leandro">LN.</a>
+                                <a href="#" class="social-link" aria-label="Instagram de Marcos Leandro">IG</a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
@@ -1643,14 +1650,14 @@
                                 <p class="text">Receba conteúdos e atualizações por e-mail</p>
                                 <form class="newsletter-form" action="https://formspree.io/f/mzbnjrnb" method="post">
                                     <div class="form-group">
-                                        <input type="email" name="email" class="email" value="" placeholder="Seu melhor e-mail" autocomplete="on" required="">
-                                        <button type="submit">
-                                            <i class="far fa-paper-plane"></i>
+                                        <input type="email" name="email" class="email" placeholder="Seu melhor e-mail" autocomplete="email" inputmode="email" spellcheck="false" aria-label="Seu melhor e-mail" required>
+                                        <button type="submit" aria-label="Cadastrar e-mail na newsletter">
+                                            <i class="far fa-paper-plane" aria-hidden="true"></i>
                                             <span class="btn-title"></span>
                                         </button>
                                     </div>
                                 </form>
-                                <div class="notify"><div class="icon"><i class="fa-regular fa-bell"></i></div> Cadastre-se para ser avisado sobre novidades</div>
+                                <div class="notify"><div class="icon"><i class="fa-regular fa-bell" aria-hidden="true"></i></div> Cadastre-se para ser avisado sobre novidades</div>
                             </div>
                         </div>
                     </div>
