@@ -128,6 +128,31 @@
   object-fit: contain;
 }
 
+/* Barra superior (header-top): favicon + texto e redes em branco */
+.page-wrapper.home-five .header-style6 .header-top .list-style-1 li {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ml-color-white) !important;
+}
+
+.page-wrapper.home-five .header-style6 .header-top .list-style-1 li .header-top__favicon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+}
+
+.page-wrapper.home-five .header-style6 .header-top .social-icon-one .menu-follow_title,
+.page-wrapper.home-five .header-style6 .header-top .social-icon-one li a {
+  color: var(--ml-color-white) !important;
+}
+
+.page-wrapper.home-five .header-style6 .header-top .social-icon-one li a:hover {
+  color: var(--ml-color-blue) !important;
+}
+
 /* Hero */
 .page-wrapper.home-five .hero-section.style-5 {
   isolation: isolate;
@@ -137,6 +162,11 @@
   background-color: var(--ml-color-ink);
   position: relative;
   z-index: 0;
+}
+
+/* Ícone da mão (PNG) — tom próximo ao azul do projeto #3FACFF */
+.page-wrapper.home-five .hero-section.style-5 .hero-content .sub-title .icon-small-hand {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(96%) saturate(2238%) hue-rotate(177deg) brightness(102%) contrast(101%);
 }
 
 .page-wrapper.home-five .hero-section.style-5 .hero-title_shape {
@@ -156,6 +186,61 @@
   object-position: center 40%;
 }
 
+/* Mobile: foto ao lado de “CEO.” menor, alinhada à altura do título */
+@media (max-width: 991.98px) {
+  .page-wrapper.home-five .hero-section.style-5 .hero-content .title {
+    text-wrap: wrap;
+  }
+
+  /* Quebra após a imagem: “Empresário.” na linha seguinte */
+  .page-wrapper.home-five .hero-section.style-5 .hero-content .title br.hero-title-br {
+    display: none;
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-content .title .hero-title-empresario {
+    display: block;
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-content .title .hero-title_shape {
+    top: 0;
+    vertical-align: middle;
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-title_shape {
+    width: 120px;
+    height: 40px;
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-title_shape img {
+    width: 107px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-wrapper.home-five .hero-section.style-5 .hero-title_shape {
+    width: 100px;
+    height: 34px;
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-title_shape img {
+    width: 90px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 430px) {
+  .page-wrapper.home-five .hero-section.style-5 .hero-title_shape {
+    width: 86px;
+    height: 30px;
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-title_shape img {
+    width: 78px;
+    height: 30px;
+  }
+}
+
 .page-wrapper.home-five .hero-section.style-5 .hero-right .image-box {
   width: calc(100% + max(24px, (100vw - var(--main-container)) / 2));
   margin-left: 0 !important;
@@ -172,6 +257,11 @@
   max-width: none !important;
   height: 751px;
   object-fit: cover;
+}
+
+.page-wrapper.home-five .hero-section.style-5 .hero-social-proof .social img {
+  object-fit: cover;
+  object-position: center 28%;
 }
 
 .page-wrapper.home-five .hero-section.style-5 .hero-social-proof .rating-viewers {
@@ -380,6 +470,27 @@
   margin-top: 1rem;
 }
 
+/* Selo com texto em rotação: centro com favicon (evita filter global de .circle-box .logo-box img) */
+.page-wrapper.home-five .about-section.style-4 .circle-box .logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  margin: auto;
+  width: 72px;
+  height: 72px;
+}
+
+.page-wrapper.home-five .about-section.style-4 .circle-box .logo-box img {
+  filter: none !important;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .page-wrapper.home-five .about-section.style-4 .about-image-wrapper .about-image {
   width: min(516px, 100%);
   height: 625px;
@@ -537,6 +648,23 @@
 /* ============================================================
    Qualificação — Formação & Especializações
    ============================================================ */
+
+/* Mobile / tablet: cabeçalho alinhado à esquerda (evita text-center do tema) */
+@media (max-width: 991.98px) {
+  .qualificacao-section .title-area.three {
+    text-align: left !important;
+  }
+
+  .qualificacao-section .title-area.three .sub-title {
+    justify-content: flex-start;
+  }
+
+  .qualificacao-section .title-area.three .sec-text {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+  }
+}
 
 /* Stats bar */
 .qualificacao-section .qual-stats {
@@ -779,6 +907,18 @@
 /* ============================================================
    Impacto social — Programas Sociais
    ============================================================ */
+
+@media (max-width: 991.98px) {
+  .programas-sociais-section .title-area.three.programas-sociais__header {
+    text-align: left !important;
+  }
+
+  .programas-sociais-section .programas-sociais__copy {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+  }
+}
 
 .programas-sociais-section .programas-sociais__header {
   margin-bottom: 2.5rem;
@@ -1069,6 +1209,24 @@
     width: 100%;
     height: 100%;
   }
+}
+
+/* Overlay na foto do contato: ícone WhatsApp (substitui font icon) */
+.page-wrapper.home-five .contact-section .contact-content-wrap .contact-img .contact-info .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+}
+
+.page-wrapper.home-five .contact-section .contact-content-wrap .contact-img .contact-info .icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
 }
 
 /* Footer */
