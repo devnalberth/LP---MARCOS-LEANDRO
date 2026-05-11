@@ -47,6 +47,15 @@
   filter: brightness(0) saturate(100%) invert(6%) sepia(19%) saturate(1483%) hue-rotate(185deg) brightness(96%) contrast(101%) !important;
 }
 
+.page-wrapper.home-five .service-section.style-5 .service-box-five .inner-box .icon img {
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .page-wrapper.home-five .service-section.style-5 .service-box-five .serial {
   color: #0B111E !important;
 }
@@ -126,13 +135,11 @@
   color: #3FACFF !important;
 }
 
-/* Especialização e Impacto social: fundo limpo, sem textura/assets decorativos */
-.page-wrapper.home-five .about-section.style-5,
+/* Especialização (choose) e Impacto social: fundo limpo, sem textura/assets decorativos */
 .page-wrapper.home-five .choose-section.style-5 {
   background: #FFFFFF !important;
 }
 
-.page-wrapper.home-five .about-section.style-5 > .p-bottom-left,
 .page-wrapper.home-five .choose-section.style-5 > .p-top-right,
 .page-wrapper.home-five .choose-section.style-5 > .p-bottom-right {
   display: none !important;
