@@ -1508,6 +1508,35 @@ CSS TABLE OF CONTENTS
             });
         }
 
+        // Training Slider
+        if ($('.treinamentos-slider').length) {
+            new Swiper(".treinamentos-slider", {
+                spaceBetween: 24,
+                speed: 1500,
+                loop: true,
+                autoplay: false,
+                pagination: false,
+                navigation: {
+                    prevEl: ".treinamentos-prev",
+                    nextEl: ".treinamentos-next",
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
+
         // Service Slider Two
         if ($('.service-slider-2').length) {
             new Swiper(".service-slider-2", {

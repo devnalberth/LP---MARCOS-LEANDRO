@@ -84,6 +84,42 @@
   color: var(--ml-color-blue) !important;
 }
 
+.page-wrapper.home-five .textured-flow {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 32%, #f3faff 100%);
+}
+
+.page-wrapper.home-five .textured-flow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 17, 30, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(11, 17, 30, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px, 72px 72px;
+  pointer-events: none;
+}
+
+.page-wrapper.home-five .textured-flow > section {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+.page-wrapper.home-five .textured-flow--consultoria {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 34%, #f2f9ff 100%);
+}
+
+.page-wrapper.home-five .textured-flow--autoridade {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 36%, #f3faff 100%);
+}
+
 .page-wrapper.home-five :is(
   .counter-section.style-2 .bg.image,
   .marquee-section.style-3 .bg.image,
@@ -463,6 +499,111 @@
 .page-wrapper.home-five .service-section.overflow-hidden .service-contact .contact-btn .theme-btn {
   background: var(--ml-color-blue) !important;
   color: var(--ml-color-white) !important;
+}
+
+.page-wrapper.home-five .treinamentos-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-section__cta {
+  justify-content: flex-start;
+}
+
+.page-wrapper.home-five .treinamentos-section .array-button :is(.treinamentos-prev, .treinamentos-next) {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 60px;
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-slider {
+  overflow: hidden;
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-slider .swiper-slide {
+  height: auto;
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-card {
+  height: 100%;
+  min-height: 430px;
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-card .inner-box {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-card .text {
+  flex: 1 1 auto;
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-card .theme-btn.service-btn {
+  margin-top: 22px;
+}
+
+.page-wrapper.home-five .treinamentos-section .icon.icon--treinamento {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ml-blue-soft);
+  color: var(--ml-color-blue) !important;
+  font-size: 26px;
+}
+
+.page-wrapper.home-five .treinamentos-section .icon.icon--treinamento i,
+.page-wrapper.home-five .treinamentos-section .icon.icon--treinamento i::before {
+  color: var(--ml-color-blue) !important;
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-card--featured {
+  box-shadow: 0 24px 70px rgba(63, 172, 255, 0.2);
+  border: 1px solid rgba(63, 172, 255, 0.35);
+}
+
+.page-wrapper.home-five .treinamentos-section .treinamentos-card__badge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: var(--ml-color-white);
+  background: var(--ml-color-blue);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media (max-width: 1199.98px) {
+  .page-wrapper.home-five .treinamentos-section .treinamentos-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .page-wrapper.home-five .treinamentos-section .treinamentos-section__cta {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-wrapper.home-five .treinamentos-section .treinamentos-card__badge {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 18px;
+  }
 }
 
 /* About */
@@ -901,6 +1042,257 @@
 
   .qualificacao-section .qual-stat:last-child {
     border-bottom: none;
+  }
+}
+
+/* ============================================================
+   Trajetória — pessoal e profissional
+   ============================================================ */
+
+.trajetoria-section {
+  position: relative;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+.trajetoria-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 17, 30, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(11, 17, 30, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px, 72px 72px;
+  pointer-events: none;
+}
+
+.textured-flow .trajetoria-section::before {
+  display: none;
+}
+
+.trajetoria-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.trajetoria-section .trajetoria-section__header {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.trajetoria-section .trajetoria-section__header .sec-text {
+  max-width: 620px;
+}
+
+.trajetoria-section .trajetoria-section__dot {
+  color: var(--ml-color-blue);
+}
+
+.trajetoria-section .trajetoria-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto 48px;
+  padding: 6px;
+  gap: 6px;
+  border: 1px solid var(--ml-border-light);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 45px rgba(11, 17, 30, 0.08);
+}
+
+.trajetoria-section .trajetoria-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ml-color-ink-2);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    color var(--ml-motion-base),
+    background-color var(--ml-motion-base),
+    border-color var(--ml-motion-base),
+    box-shadow var(--ml-motion-base);
+}
+
+.trajetoria-section .trajetoria-tab:hover,
+.trajetoria-section .trajetoria-tab.is-active {
+  color: var(--ml-color-white);
+  background: var(--ml-color-blue);
+  border-color: rgba(11, 17, 30, 0.12);
+  box-shadow: 0 14px 30px rgba(63, 172, 255, 0.28);
+}
+
+.trajetoria-section .trajetoria-panels {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.trajetoria-section .trajetoria-panel.is-active {
+  animation: trajetoriaPanelIn 260ms ease-out both;
+}
+
+.trajetoria-section .trajetoria-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 38px;
+}
+
+.trajetoria-section .trajetoria-timeline::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  bottom: 18px;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(63, 172, 255, 0.2), rgba(63, 172, 255, 0.8), rgba(63, 172, 255, 0.2));
+}
+
+.trajetoria-section .trajetoria-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 0 34px;
+}
+
+.trajetoria-section .trajetoria-item:last-child {
+  padding-bottom: 0;
+}
+
+.trajetoria-section .trajetoria-item__marker {
+  position: absolute;
+  left: -38px;
+  top: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ml-color-white);
+  background: var(--ml-color-blue);
+  border: 4px solid var(--ml-color-white);
+  box-shadow: 0 10px 24px rgba(63, 172, 255, 0.3);
+  font-size: 14px;
+}
+
+.trajetoria-section .trajetoria-item__content {
+  padding: 3px 0 0;
+}
+
+.trajetoria-section .trajetoria-item__date {
+  margin: 0 0 8px;
+  color: var(--ml-color-blue);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+
+.trajetoria-section .trajetoria-item__title {
+  margin: 0 0 10px;
+  color: var(--ml-color-ink);
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.trajetoria-section .trajetoria-item__text {
+  max-width: 780px;
+  margin: 0;
+  color: var(--ml-color-ink-2);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@keyframes trajetoriaPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .trajetoria-section .title-area.three.trajetoria-section__header {
+    text-align: left !important;
+  }
+
+  .trajetoria-section .title-area.three.trajetoria-section__header .sub-title {
+    justify-content: flex-start;
+  }
+
+  .trajetoria-section .trajetoria-section__header,
+  .trajetoria-section .trajetoria-section__header .sec-text {
+    max-width: none;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .trajetoria-section .trajetoria-tabs {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .trajetoria-section .trajetoria-tabs {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .trajetoria-section .trajetoria-tab {
+    flex: 1 1 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .trajetoria-section .trajetoria-timeline {
+    padding-left: 32px;
+  }
+
+  .trajetoria-section .trajetoria-timeline::before {
+    left: 15px;
+  }
+
+  .trajetoria-section .trajetoria-item {
+    padding-bottom: 30px;
+  }
+
+  .trajetoria-section .trajetoria-item__marker {
+    left: -32px;
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+    font-size: 12px;
+  }
+
+  .trajetoria-section .trajetoria-item__text {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trajetoria-section .trajetoria-panel.is-active {
+    animation: none;
   }
 }
 
