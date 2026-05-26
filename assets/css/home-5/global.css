@@ -1154,8 +1154,8 @@
   content: '';
   position: absolute;
   left: 17px;
-  top: 42px;
-  bottom: 42px;
+  top: 18px;
+  bottom: 18px;
   width: 1px;
   background: linear-gradient(180deg, rgba(63, 172, 255, 0.2), rgba(63, 172, 255, 0.8), rgba(63, 172, 255, 0.2));
 }
@@ -1174,7 +1174,7 @@
 .trajetoria-section .trajetoria-item__marker {
   position: absolute;
   left: -38px;
-  top: 24px;
+  top: 8px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -1225,87 +1225,6 @@
     transform: translateY(10px);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Expand button */
-.trajetoria-section .trajetoria-expand-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.trajetoria-section .trajetoria-expand-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 30px;
-  background: #fff;
-  border: 1.5px solid rgba(0, 0, 0, 0.13);
-  border-radius: 100px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--ml-color-ink);
-  cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  font-family: inherit;
-  text-decoration: none;
-  letter-spacing: 0;
-}
-
-.trajetoria-section .trajetoria-expand-btn:hover {
-  border-color: var(--ml-color-blue);
-  color: var(--ml-color-blue);
-  box-shadow: 0 4px 18px rgba(63, 172, 255, 0.18);
-}
-
-.trajetoria-section .trajetoria-expand-btn__icon {
-  font-size: 12px;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.trajetoria-section .trajetoria-expand-btn[aria-expanded="true"] .trajetoria-expand-btn__icon {
-  transform: rotate(180deg);
-}
-
-/* Extra wrapper: hidden by default, flex column when open */
-.trajetoria-extra {
-  display: none;
-}
-
-.trajetoria-extra:not([hidden]) {
-  display: flex;
-  flex-direction: column;
-}
-
-.trajetoria-extra .trajetoria-item:last-child {
-  padding-bottom: 0;
-}
-
-/* Extra items animation */
-.trajetoria-extra .trajetoria-item {
-  animation: trajetoriaExtraIn 350ms ease-out both;
-}
-
-.trajetoria-extra .trajetoria-item:nth-child(2) { animation-delay: 40ms; }
-.trajetoria-extra .trajetoria-item:nth-child(3) { animation-delay: 80ms; }
-.trajetoria-extra .trajetoria-item:nth-child(4) { animation-delay: 120ms; }
-.trajetoria-extra .trajetoria-item:nth-child(5) { animation-delay: 160ms; }
-.trajetoria-extra .trajetoria-item:nth-child(6) { animation-delay: 200ms; }
-.trajetoria-extra .trajetoria-item:nth-child(7) { animation-delay: 240ms; }
-.trajetoria-extra .trajetoria-item:nth-child(8) { animation-delay: 280ms; }
-.trajetoria-extra .trajetoria-item:nth-child(9) { animation-delay: 320ms; }
-.trajetoria-extra .trajetoria-item:nth-child(10) { animation-delay: 360ms; }
-
-@keyframes trajetoriaExtraIn {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
