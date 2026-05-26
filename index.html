@@ -42,6 +42,7 @@
     <link href="assets/css/home-5/global.css" rel="stylesheet">
     <link href="assets/css/home-5/sections/trajetoria.css" rel="stylesheet">
     <link href="assets/css/home-5/sections/como-funciona.css" rel="stylesheet">
+    <link href="assets/css/home-5/sections/palestras.css" rel="stylesheet">
 
 </head>
 
@@ -91,6 +92,7 @@
                                         <li class="active"><a href="#inicio">Início</a></li>
                                         <li><a href="#consultoria">Consultoria</a></li>
                                         <li><a href="#impacto-social">Impacto social</a></li>
+                                        <li><a href="#palestras">Palestras</a></li>
                                         <li><a href="#sobre">Sobre</a></li>
                                         <li><a href="#contato">Contato</a></li>
                                     </ul>
@@ -2123,6 +2125,73 @@
         </section>
 
         <!--==============================
+        Palestras
+        ==============================-->
+        <section class="palestras-section space" id="palestras" aria-labelledby="palestras-heading">
+            <div class="container">
+                <header class="title-area three text-center palestras-section__header">
+                    <span class="palestras-section__eyebrow">Agende</span>
+                    <h2 class="sec-title" id="palestras-heading">Palestras que viram <span class="bold">chave</span><span class="palestras-section__dot" aria-hidden="true">.</span></h2>
+                    <p class="sec-text text-gray mx-auto">Conteúdos que levo a empresas, eventos e instituições para inspirar times, gerar virada de mentalidade e entregar método aplicável no dia seguinte.</p>
+                </header>
+
+                <div class="palestras-bento" id="palestras-bento" data-palestras-rotator aria-live="polite" aria-label="Palestras em destaque">
+                    <article class="palestras-card palestras-card--featured" data-palestra="cliente">
+                        <div class="palestras-card__media">
+                            <img src="assets/images/marcosleandro/DSC07914.webp" width="700" height="470" alt="Marcos Leandro em palestra sobre atendimento e experiência do cliente" loading="lazy" decoding="async">
+                        </div>
+                        <div class="palestras-card__body">
+                            <span class="palestras-card__badge">Destaque</span>
+                            <h3 class="palestras-card__title">O Cliente Não Esquece</h3>
+                            <p class="palestras-card__text">Atendimento não é simpatia: é processo, escuta e recuperação de erro. Capacito sua equipe a transformar reclamação em fidelização e atendimento médio em vantagem competitiva. Cases reais, frameworks aplicáveis e exercícios práticos.</p>
+                            <a class="palestras-card__link" href="#contato">Saiba mais <i class="fa-regular fa-arrow-right-long" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="palestras-card palestras-card--compact" data-palestra="roca">
+                        <div class="palestras-card__media">
+                            <img src="assets/images/marcosleandro/DSC08096.webp" width="800" height="1200" alt="Marcos Leandro — palestra Da Roça à Mesa de CEO" loading="lazy" decoding="async">
+                        </div>
+                        <div class="palestras-card__body">
+                            <div class="palestras-card__copy">
+                                <span class="palestras-card__badge">Destaque</span>
+                                <h3 class="palestras-card__title">Da Roça à Mesa de CEO</h3>
+                                <p class="palestras-card__text">Uma palestra-narrativa que conecta origem humilde e alta performance. Mostro, com histórias reais, os 7 pontos de virada que separam quem sonha em empreender de quem constrói. Inspiração com método — sai de lá com clareza, não só com emoção.</p>
+                            </div>
+                            <a class="palestras-card__link" href="#contato">Saiba mais <i class="fa-regular fa-arrow-right-long" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="palestras-card palestras-card--compact" data-palestra="vender">
+                        <div class="palestras-card__media">
+                            <img src="assets/images/marcosleandro/DSC08213.webp" width="800" height="1200" alt="Marcos Leandro — palestra Vender é Encarar o Não" loading="lazy" decoding="async">
+                        </div>
+                        <div class="palestras-card__body">
+                            <div class="palestras-card__copy">
+                                <span class="palestras-card__badge">Destaque</span>
+                                <h3 class="palestras-card__title">Vender é Encarar o Não</h3>
+                                <p class="palestras-card__text">Vender é repertório, resiliência e leitura de gente. Uma imersão em técnicas de prospecção, quebra de objeção e fechamento — combinando neurovendas, SPIN e a escola dura da rua. Para times que precisam parar de &quot;tentar&quot; e começar a converter.</p>
+                            </div>
+                            <a class="palestras-card__link" href="#contato">Saiba mais <i class="fa-regular fa-arrow-right-long" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="palestras-rotator-nav" role="tablist" aria-label="Alternar palestra em destaque">
+                    <button type="button" class="palestras-rotator-nav__btn is-active" role="tab" aria-selected="true" aria-controls="palestras-bento" data-palestras-index="0">
+                        <span class="sr-only">O Cliente Não Esquece</span>
+                    </button>
+                    <button type="button" class="palestras-rotator-nav__btn" role="tab" aria-selected="false" aria-controls="palestras-bento" data-palestras-index="1">
+                        <span class="sr-only">Da Roça à Mesa de CEO</span>
+                    </button>
+                    <button type="button" class="palestras-rotator-nav__btn" role="tab" aria-selected="false" aria-controls="palestras-bento" data-palestras-index="2">
+                        <span class="sr-only">Vender é Encarar o Não</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!--==============================
         Contact Section (formulário — index.html)
         ==============================-->
         <section class="contact-section space bg-white" id="contato">
@@ -2429,6 +2498,129 @@
                 }
             });
         });
+    })();
+
+    /* Palestras — rotação automática do card em destaque */
+    (function() {
+        var bento = document.getElementById('palestras-bento');
+        if (!bento) return;
+
+        var palestraOrder = { cliente: 0, roca: 1, vender: 2 };
+        var cards = Array.prototype.slice.call(bento.querySelectorAll('.palestras-card'));
+        cards.sort(function(a, b) {
+            return (palestraOrder[a.getAttribute('data-palestra')] || 0) - (palestraOrder[b.getAttribute('data-palestra')] || 0);
+        });
+        var nav = document.querySelector('.palestras-rotator-nav');
+        var mobileMq = window.matchMedia('(max-width: 991.98px)');
+        var navBtns = nav ? Array.prototype.slice.call(nav.querySelectorAll('.palestras-rotator-nav__btn')) : [];
+        var activeIndex = 0;
+        var timer = null;
+        var INTERVAL = 5200;
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function setGridRows() {
+            var slot = 1;
+            cards.forEach(function(card, i) {
+                card.classList.remove('palestras-card--grid-row-1', 'palestras-card--grid-row-2');
+                if (i !== activeIndex) {
+                    card.classList.add(slot === 1 ? 'palestras-card--grid-row-1' : 'palestras-card--grid-row-2');
+                    slot += 1;
+                }
+            });
+        }
+
+        function setFeatured(index, userInitiated) {
+            if (index < 0 || index >= cards.length) return;
+            activeIndex = index;
+
+            cards.forEach(function(card, i) {
+                var isFeatured = i === index;
+                card.classList.toggle('palestras-card--featured', isFeatured);
+                card.classList.toggle('palestras-card--compact', !isFeatured);
+                if (isFeatured && !reducedMotion) {
+                    card.classList.add('palestras-card--entering');
+                    window.setTimeout(function() {
+                        card.classList.remove('palestras-card--entering');
+                    }, 420);
+                }
+            });
+
+            setGridRows();
+            if (mobileMq.matches) {
+                bento.insertBefore(cards[index], bento.firstChild);
+            }
+            bento.setAttribute('data-active-index', String(index));
+
+            navBtns.forEach(function(btn, i) {
+                var selected = i === index;
+                btn.classList.toggle('is-active', selected);
+                btn.setAttribute('aria-selected', selected ? 'true' : 'false');
+                btn.tabIndex = selected ? 0 : -1;
+            });
+
+            if (userInitiated) start();
+        }
+
+        function next() {
+            setFeatured((activeIndex + 1) % cards.length, false);
+        }
+
+        function start() {
+            stop();
+            if (reducedMotion) return;
+            timer = window.setInterval(next, INTERVAL);
+        }
+
+        function stop() {
+            if (timer) {
+                window.clearInterval(timer);
+                timer = null;
+            }
+        }
+
+        navBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var idx = parseInt(btn.getAttribute('data-palestras-index'), 10);
+                if (!isNaN(idx)) setFeatured(idx, true);
+            });
+            btn.addEventListener('keydown', function(e) {
+                var i = navBtns.indexOf(btn);
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    setFeatured((i + 1) % navBtns.length, true);
+                    navBtns[(i + 1) % navBtns.length].focus();
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    setFeatured((i - 1 + navBtns.length) % navBtns.length, true);
+                    navBtns[(i - 1 + navBtns.length) % navBtns.length].focus();
+                }
+            });
+        });
+
+        bento.addEventListener('mouseenter', stop);
+        bento.addEventListener('mouseleave', start);
+        bento.addEventListener('focusin', stop);
+        bento.addEventListener('focusout', function(e) {
+            if (!bento.contains(e.relatedTarget) && (!nav || !nav.contains(e.relatedTarget))) start();
+        });
+        if (nav) {
+            nav.addEventListener('mouseenter', stop);
+            nav.addEventListener('mouseleave', start);
+        }
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) stop();
+            else start();
+        });
+
+        if (typeof mobileMq.addEventListener === 'function') {
+            mobileMq.addEventListener('change', function() {
+                setFeatured(activeIndex, false);
+            });
+        }
+
+        setFeatured(0, false);
+        start();
     })();
     </script>
 

@@ -1717,6 +1717,17 @@
 
   .page-wrapper.home-five .hero-section.style-5 .hero-right .image-box {
     width: 100%;
+    overflow: hidden;
+    border-radius: var(--ml-radius-md, 18px);
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-right .image-box .image {
+    border-radius: var(--ml-radius-md, 18px);
+    overflow: hidden;
+  }
+
+  .page-wrapper.home-five .hero-section.style-5 .hero-right .image-box img {
+    border-radius: var(--ml-radius-md, 18px);
   }
 }
 
