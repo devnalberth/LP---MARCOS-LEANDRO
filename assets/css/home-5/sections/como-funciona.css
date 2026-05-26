@@ -1,0 +1,147 @@
+/* ============================================================
+   Como funciona — frame da imagem (texturas hero, minimal)
+   assets/css/home-5/sections/como-funciona.css
+   ============================================================ */
+
+.page-wrapper.home-five .choose-section.style-7 .choose-media {
+  position: relative;
+  width: min(700px, 100%);
+  max-width: 100%;
+  margin-right: 48px;
+  padding: 28px 20px 36px 12px;
+  isolation: isolate;
+}
+
+.page-wrapper.home-five .choose-section.style-7 .choose-media__decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+/* Textura geométrica do hero — versão suave */
+.page-wrapper.home-five .choose-section.style-7 .choose-media__pattern {
+  position: absolute;
+  inset: -8%;
+  background: url('../../../images/banner/hm5-hero_bg.jpg') center / cover no-repeat;
+  opacity: 0.16;
+  filter: saturate(0.85);
+}
+
+/* Malha curva do hero — recorte lateral */
+.page-wrapper.home-five .choose-section.style-7 .choose-media__mesh {
+  position: absolute;
+  left: -18%;
+  bottom: -6%;
+  width: 72%;
+  max-width: 420px;
+  opacity: 0.22;
+  line-height: 0;
+}
+
+.page-wrapper.home-five .choose-section.style-7 .choose-media__mesh img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Placa azul clara atrás da foto */
+.page-wrapper.home-five .choose-section.style-7 .choose-media__plate {
+  position: absolute;
+  left: 6%;
+  top: 10%;
+  right: 2%;
+  bottom: 6%;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(63, 172, 255, 0.16) 0%,
+    rgba(63, 172, 255, 0.05) 55%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  border: 1px solid rgba(63, 172, 255, 0.22);
+  z-index: 1;
+}
+
+/* Semicírculo azul (eco do hero) */
+.page-wrapper.home-five .choose-section.style-7 .choose-media__arc {
+  position: absolute;
+  right: -20px;
+  bottom: 56px;
+  width: clamp(140px, 28vw, 220px);
+  height: clamp(140px, 28vw, 220px);
+  border-radius: 50%;
+  background: var(--ml-color-blue, #3facff);
+  opacity: 0.9;
+  clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+  z-index: 2;
+  box-shadow: 0 16px 40px rgba(63, 172, 255, 0.28);
+}
+
+.page-wrapper.home-five .choose-section.style-7 .choose-media__dot {
+  position: absolute;
+  right: 18%;
+  bottom: 42%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ml-color-blue, #3facff);
+  z-index: 2;
+  box-shadow: 0 0 0 6px rgba(63, 172, 255, 0.12);
+}
+
+/* Foto em destaque — não “solta” no branco */
+.page-wrapper.home-five .choose-section.style-7 .choose-media .choose-left {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin-right: 0 !important;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow:
+    0 22px 50px rgba(11, 17, 30, 0.1),
+    0 10px 28px rgba(63, 172, 255, 0.12);
+}
+
+.page-wrapper.home-five .choose-section.style-7 .choose-media .choose-left::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(11, 17, 30, 0.06);
+}
+
+@media (max-width: 991.98px) {
+  .page-wrapper.home-five .choose-section.style-7 .choose-media {
+    margin-right: 0;
+    padding: 24px 12px 28px;
+  }
+
+  .page-wrapper.home-five .choose-section.style-7 .choose-media__arc {
+    right: -8px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-wrapper.home-five .choose-section.style-7 .choose-media__mesh {
+    left: -28%;
+    opacity: 0.16;
+  }
+
+  .page-wrapper.home-five .choose-section.style-7 .choose-media__pattern {
+    opacity: 0.12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-wrapper.home-five .choose-section.style-7 .choose-media__arc,
+  .page-wrapper.home-five .choose-section.style-7 .choose-media__dot {
+    box-shadow: none;
+  }
+}

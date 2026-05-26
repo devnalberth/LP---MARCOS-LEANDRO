@@ -702,14 +702,13 @@
   line-height: 1.55;
 }
 
-/* Como funciona */
+/* Como funciona — dimensões da foto (frame em como-funciona.css) */
 .page-wrapper.home-five .choose-section.style-7 .choose-left {
   position: relative;
   width: min(700px, 100%);
   height: 470px;
   max-width: 100%;
   overflow: hidden;
-  border-radius: 14px;
 }
 
 .page-wrapper.home-five .choose-section.style-7 .choose-left img {
