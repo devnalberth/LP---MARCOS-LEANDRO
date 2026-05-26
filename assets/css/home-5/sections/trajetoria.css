@@ -3,48 +3,78 @@
    assets/css/home-5/sections/trajetoria.css
    ============================================================ */
 
-/* ---------- Tab wrapper (pill container) ---------- */
-.traj-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-bottom: 52px;
-  background: #fff;
-  border: 1.5px solid rgba(11, 17, 30, 0.10);
-  border-radius: 100px;
-  padding: 5px;
-  width: fit-content;
+.trajetoria-section {
+  position: relative;
+  z-index: 1;
+}
+
+.trajetoria-section__header {
+  max-width: 720px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 2px 12px rgba(11, 17, 30, 0.07);
+  margin-bottom: 40px;
+}
+
+.trajetoria-section__header .sec-text {
+  max-width: 620px;
+}
+
+/* ---------- Tab wrapper (pill container) ---------- */
+.traj-tabs {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0 auto 52px;
+  background: #fff;
+  border: 1.5px solid rgba(11, 17, 30, 0.08);
+  border-radius: 100px;
+  padding: 5px;
+  box-shadow: 0 4px 20px rgba(11, 17, 30, 0.06);
 }
 
 .traj-tab {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 10px 22px;
+  min-height: 44px;
+  padding: 10px 24px;
   border-radius: 100px;
   border: none;
   background: transparent;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: #0b111e;
   cursor: pointer;
   font-family: inherit;
-  transition: background 0.22s, color 0.22s, box-shadow 0.22s;
+  transition:
+    background-color 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.22s ease;
   white-space: nowrap;
+  touch-action: manipulation;
+}
+
+.traj-tab i {
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 .traj-tab.active {
   background: #3facff;
   color: #fff;
-  box-shadow: 0 4px 14px rgba(63, 172, 255, 0.32);
+  box-shadow: 0 6px 18px rgba(63, 172, 255, 0.35);
 }
 
 .traj-tab:hover:not(.active) {
   color: #3facff;
-  background: rgba(63, 172, 255, 0.07);
+  background: rgba(63, 172, 255, 0.08);
+}
+
+.traj-tab:focus-visible {
+  outline: 2px solid #3facff;
+  outline-offset: 3px;
 }
 
 /* ---------- Panels ---------- */
@@ -59,15 +89,26 @@
   animation: trajFadeIn 280ms ease-out both;
 }
 
+.traj-panel[hidden] {
+  display: none !important;
+}
+
 @keyframes trajFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ---------- Timeline container ---------- */
 .traj-timeline {
   position: relative;
-  padding-left: 56px;
+  padding-left: 58px;
 }
 
 /* Linha vertical azul */
@@ -75,15 +116,15 @@
   content: '';
   position: absolute;
   left: 18px;
-  top: 20px;
-  bottom: 20px;
+  top: 22px;
+  bottom: 22px;
   width: 2px;
   background: linear-gradient(
     180deg,
-    rgba(63, 172, 255, 0.12) 0%,
-    rgba(63, 172, 255, 0.75) 18%,
-    rgba(63, 172, 255, 0.75) 82%,
-    rgba(63, 172, 255, 0.12) 100%
+    rgba(63, 172, 255, 0.15) 0%,
+    rgba(63, 172, 255, 0.85) 12%,
+    rgba(63, 172, 255, 0.85) 88%,
+    rgba(63, 172, 255, 0.15) 100%
   );
   border-radius: 2px;
 }
@@ -91,26 +132,26 @@
 /* ---------- Item ---------- */
 .traj-item {
   position: relative;
-  padding-bottom: 38px;
+  padding-bottom: 40px;
 }
 
 .traj-item:last-child {
   padding-bottom: 0;
 }
 
-/* ---------- Marcador azul (círculo com ícone) ---------- */
+/* ---------- Marcador azul (círculo com ícone + glow) ---------- */
 .traj-marker {
   position: absolute;
-  left: -56px;
-  top: 0;
+  left: -58px;
+  top: 2px;
   width: 38px;
   height: 38px;
   border-radius: 50%;
   background: #3facff;
-  border: 4px solid #fff;
+  border: 3px solid #fff;
   box-shadow:
-    0 0 0 1.5px rgba(63, 172, 255, 0.25),
-    0 6px 18px rgba(63, 172, 255, 0.30);
+    0 0 0 6px rgba(63, 172, 255, 0.14),
+    0 8px 22px rgba(63, 172, 255, 0.32);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,10 +166,10 @@
   display: block;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #3facff;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-variant-numeric: tabular-nums;
   line-height: 1;
 }
@@ -145,11 +186,34 @@
 
 /* ---------- Descrição ---------- */
 .traj-text {
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.68;
   color: #4f5d73;
   margin: 0;
   max-width: 680px;
+}
+
+/* Centraliza tabs */
+#trajetoria .container > .traj-tabs {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 991.98px) {
+  .trajetoria-section__header {
+    text-align: left !important;
+  }
+
+  .trajetoria-section__header .sub-title {
+    justify-content: flex-start;
+  }
+
+  #trajetoria .container > .traj-tabs {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* ---------- Responsivo tablet ---------- */
@@ -182,12 +246,15 @@
 /* ---------- Responsivo mobile ---------- */
 @media (max-width: 479px) {
   .traj-tabs {
+    display: flex;
+    width: 100%;
     border-radius: 14px;
     padding: 4px;
   }
 
   .traj-tab {
-    padding: 9px 14px;
+    flex: 1 1 0;
+    padding: 9px 12px;
     font-size: 14px;
     gap: 6px;
   }
@@ -201,7 +268,10 @@
     width: 30px;
     height: 30px;
     font-size: 12px;
-    border-width: 3px;
+    border-width: 2px;
+    box-shadow:
+      0 0 0 4px rgba(63, 172, 255, 0.14),
+      0 6px 16px rgba(63, 172, 255, 0.28);
   }
 
   .traj-timeline::before {
@@ -213,10 +283,20 @@
   }
 
   .traj-text {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .traj-item {
     padding-bottom: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .traj-panel.active {
+    animation: none;
+  }
+
+  .traj-tab {
+    transition: none;
   }
 }
