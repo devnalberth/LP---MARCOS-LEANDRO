@@ -139,6 +139,15 @@
   padding-bottom: 0;
 }
 
+/* Colapsado: exibe só os 5 primeiros tópicos */
+.traj-timeline.is-collapsed .traj-item:nth-child(n + 6) {
+  display: none;
+}
+
+.traj-timeline.is-collapsed .traj-item:nth-child(5) {
+  padding-bottom: 0;
+}
+
 /* ---------- Marcador azul (círculo com ícone + glow) ---------- */
 .traj-marker {
   position: absolute;
@@ -174,14 +183,63 @@
   line-height: 1;
 }
 
-/* ---------- Título ---------- */
+/* ---------- Título (-2px) ---------- */
 .traj-title {
-  font-size: clamp(20px, 2.1vw, 28px);
+  font-size: clamp(18px, 2.1vw, 26px);
   font-weight: 800;
   color: #0b111e;
   margin: 0 0 10px;
   line-height: 1.15;
   letter-spacing: -0.01em;
+}
+
+/* ---------- Botão Ver mais / Ver menos ---------- */
+.traj-expand-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.traj-expand-wrap[hidden] {
+  display: none !important;
+}
+
+.traj-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 11px 26px;
+  border-radius: 999px;
+  border: 1.5px solid #0b111e;
+  background: #fff;
+  color: #3facff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.traj-expand-btn__icon {
+  font-size: 12px;
+  transition: transform 0.22s ease;
+}
+
+.traj-expand-btn:hover {
+  border-color: #3facff;
+  background: rgba(63, 172, 255, 0.06);
+  color: #2a9ae8;
+}
+
+.traj-expand-btn:focus-visible {
+  outline: 2px solid #3facff;
+  outline-offset: 3px;
 }
 
 /* ---------- Descrição ---------- */
@@ -279,7 +337,14 @@
   }
 
   .traj-title {
-    font-size: 19px;
+    font-size: 17px;
+  }
+
+  .traj-expand-btn {
+    width: 100%;
+    max-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .traj-text {

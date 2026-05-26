@@ -1596,7 +1596,7 @@
                 </div>
 
                 <div class="traj-panel active" id="traj-pessoal" role="tabpanel" aria-labelledby="traj-btn-pessoal">
-                    <div class="traj-timeline">
+                    <div class="traj-timeline is-collapsed" data-traj-visible="5">
 
                         <div class="traj-item">
                             <div class="traj-marker"><i class="fa-solid fa-seedling"></i></div>
@@ -1697,10 +1697,16 @@
                         </div>
 
                     </div>
+                    <div class="traj-expand-wrap">
+                        <button type="button" class="traj-expand-btn" aria-expanded="false" data-traj-expand>
+                            <span class="traj-expand-btn__label">Ver mais</span>
+                            <i class="fa-solid fa-chevron-down traj-expand-btn__icon" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="traj-panel" id="traj-profissional" role="tabpanel" aria-labelledby="traj-btn-profissional" hidden>
-                    <div class="traj-timeline">
+                    <div class="traj-timeline is-collapsed" data-traj-visible="5">
 
                         <div class="traj-item">
                             <div class="traj-marker"><i class="fa-regular fa-file-lines"></i></div>
@@ -1772,6 +1778,12 @@
                             <p class="traj-text">Empreendendo em tempo integral. Mais de 15 anos de experiência, Master Black Belt em Lean Seis Sigma, 25+ MBAs e Pós-graduações, atuação como mentor e investidor anjo.</p>
                         </div>
 
+                    </div>
+                    <div class="traj-expand-wrap">
+                        <button type="button" class="traj-expand-btn" aria-expanded="false" data-traj-expand>
+                            <span class="traj-expand-btn__label">Ver mais</span>
+                            <i class="fa-solid fa-chevron-down traj-expand-btn__icon" aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -2324,11 +2336,47 @@
     })();
     </script>
 
-    <!-- Trajetória tabs -->
+    <!-- Trajetória tabs + expandir timeline -->
     <script>
     (function() {
+        var VISIBLE_COUNT = 5;
         var tabs = document.querySelectorAll('.traj-tab[data-tab]');
+        var panels = document.querySelectorAll('.traj-panel');
         if (!tabs.length) return;
+
+        function initExpand(panel) {
+            var timeline = panel.querySelector('.traj-timeline');
+            var wrap = panel.querySelector('.traj-expand-wrap');
+            var btn = panel.querySelector('[data-traj-expand]');
+            if (!timeline || !wrap || !btn) return;
+
+            var items = timeline.querySelectorAll('.traj-item');
+            var limit = parseInt(timeline.getAttribute('data-traj-visible'), 10) || VISIBLE_COUNT;
+
+            if (items.length <= limit) {
+                wrap.hidden = true;
+                timeline.classList.remove('is-collapsed');
+                return;
+            }
+
+            wrap.hidden = false;
+            timeline.classList.add('is-collapsed');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.querySelector('.traj-expand-btn__label').textContent = 'Ver mais';
+            btn.querySelector('.traj-expand-btn__icon').className =
+                'fa-solid fa-chevron-down traj-expand-btn__icon';
+
+            btn.addEventListener('click', function() {
+                var expanded = timeline.classList.toggle('is-collapsed') === false;
+                btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+                btn.querySelector('.traj-expand-btn__label').textContent =
+                    expanded ? 'Ver menos' : 'Ver mais';
+                btn.querySelector('.traj-expand-btn__icon').className =
+                    'fa-solid fa-chevron-' + (expanded ? 'up' : 'down') + ' traj-expand-btn__icon';
+            });
+        }
+
+        panels.forEach(initExpand);
 
         function activateTab(btn) {
             var id = btn.getAttribute('data-tab');
@@ -2337,7 +2385,7 @@
                 b.setAttribute('aria-selected', 'false');
                 b.tabIndex = -1;
             });
-            document.querySelectorAll('.traj-panel').forEach(function(panel) {
+            panels.forEach(function(panel) {
                 panel.classList.remove('active');
                 panel.setAttribute('hidden', '');
             });
