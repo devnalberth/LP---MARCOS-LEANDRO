@@ -1,0 +1,8 @@
+# Configuração com senha do painel admin
+config.php
+
+# Banco de dados SQLite com dados dos contatos
+data/
+
+# Sistema
+.DS_Store
